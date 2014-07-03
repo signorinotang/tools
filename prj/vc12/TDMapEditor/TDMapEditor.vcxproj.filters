@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{15986034-fd44-4b1f-9a7a-d17581e44eac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gamelib">
+      <UniqueIdentifier>{e788cba6-535d-4a64-b847-1d98b50519b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\common\GfxAppDelegate.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UIFileBrowser.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UILogList.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapData.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\Brush.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushBlockType.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\EditorApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapBlockNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\UIEditorRoot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapGridNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\EditValueCommand.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UICheckBox.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UIListItemETBool.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UIListItemETEnum.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UIListItemETFloat.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UIListItemETInt.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UIListItemETString.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UIPopList.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\UIPropertyList.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushObjectEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushObjectNew.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_Tree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_Tree.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_GemCave.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_GemCave.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Camera.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Renderable.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\SceneNode.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_SpawnPoint.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_SpawnPoint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapBlockCliffNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\TableBase.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapBlockCornerNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushDecoration.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\UIListItemDecorationImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapDecoration.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapDecorationImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\BinaryHeap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushCollision.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapCollision.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_HeroField.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_HeroField.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_Building.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_Building.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_Tree1x1.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_Tree1x1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapDecorationDesc.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\Animation.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\AnimationController.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\UIListItemDecorationAnimation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapDecorationAnimation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushSSO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapSSO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\StateScript.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\StateScriptObject.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_Cage.cpp">
+      <Filter>gamelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_Cage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\common\GfxAppDelegate.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UIFileBrowser.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UILogList.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapData.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\Brush.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushBlockType.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\EditorApp.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapBlockNode.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\UIEditorRoot.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapGridNode.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\EditValueCommand.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UICheckBox.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UIListItemETBool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UIListItemETEnum.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UIListItemETFloat.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UIListItemETInt.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UIListItemETString.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UIPopList.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\UIPropertyList.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushObjectEdit.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushObjectNew.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_Tree.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_Tree.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_GemCave.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_GemCave.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Camera.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Renderable.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\SceneNode.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_SpawnPoint.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_SpawnPoint.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapBlockCliffNode.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\TableBase.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapBlockCornerNode.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushDecoration.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\UIListItemDecorationImage.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapDecoration.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapDecorationImage.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\BinaryHeap.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushCollision.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapCollision.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_HeroField.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_HeroField.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_Building.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_Building.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_Tree1x1.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_Tree1x1.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapDecorationDesc.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\Animation.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\AnimationController.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\UIListItemDecorationAnimation.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapDecorationAnimation.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushSSO.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapSSO.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\StateScript.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\StateScriptObject.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_Cage.h">
+      <Filter>gamelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_Cage.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

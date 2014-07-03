@@ -1,0 +1,38 @@
+//
+//  vnUIFactory.cpp
+//  vngfx
+//
+//  Created by Wayne on 13-12-17.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnUIFactory.h"
+
+_vn_begin
+
+void UIFactory::_register(const c8 *name, UIElement *(*creator)()) {
+    m_factoryE[name] = creator;
+}
+
+void UIFactory::_register(const c8 *name, UILocator *(*creator)(UIElement *)) {
+    m_factoryL[name] = creator;
+}
+
+UIElement * UIFactory::createElement(const str8 &name) {
+    ElementFactory::iterator it = m_factoryE.find(name);
+    if (it == m_factoryE.end()) {
+        return 0;
+    }
+    return it->second();
+}
+
+UILocator * UIFactory::createLocator(const str8 &name, UIElement *owner) {
+    vnassert(owner != 0);
+    LocatorFactory::iterator it = m_factoryL.find(name);
+    if (it == m_factoryL.end()) {
+        return 0;
+    }
+    return it->second(owner);
+}
+
+_vn_end

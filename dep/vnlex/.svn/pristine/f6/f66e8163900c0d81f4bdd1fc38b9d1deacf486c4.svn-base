@@ -1,0 +1,44 @@
+//
+//  vnVariableJSON.h
+//  vnlex
+//
+//  Created by Wayne on 13-8-23.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#ifndef vnlex_vnVariableJSON_h
+#define vnlex_vnVariableJSON_h
+
+#include "vnLexer.h"
+#include "vnLR_Parser.h"
+#include "vnVariable.h"
+
+_vn_begin
+
+class _vn_lex_api VariableJSON {
+public:
+    VariableJSON();
+    
+    Variable_object * parse(u32 fsId, const c8 *fileName);
+    Variable_object * parse(const c8 *text, size_t length, const Token::File *file);
+    
+    const str8 & error() const;
+protected:
+    Lexer m_lexer;
+	LR_Parser m_parser;
+    str8 m_errorMsg;
+    
+    
+    void _makeErrorMsg(const c8 *format, ...);
+    void _appendErrorMsg(const c8 *format, ...);
+    static void _build_object(LR_Node *node, Variable_object *object);
+    static void _build_item_list(LR_Node *node, Variable_object *object);
+    static void _build_item(LR_Node *node, Variable_object *object);
+    static Variable * _build_value(LR_Node *node);
+    static Variable * _build_array(LR_Node *node);
+    static void _build_value_list(LR_Node *node, Variable_array *array);
+};
+
+_vn_end
+
+#endif

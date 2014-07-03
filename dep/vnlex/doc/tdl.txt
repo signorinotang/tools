@@ -1,0 +1,62 @@
+value
+	: 'true'
+	| 'false'
+	| number
+	| '+' number
+	| '-' number
+	| @string_literal
+	| array
+	| object
+	| node
+	;
+
+number
+	: @integer
+	| @long_integer
+	| @float
+	| @double
+	;
+
+value_list
+	: value
+	| value_list value
+	;
+
+attribute
+	: @identifier '=' value
+	;
+
+attribute_list
+	: attribute
+	| attribute_list attribute
+	;
+
+attributes
+	: '{' '}'
+	| '{' attribute_list '}'
+	;
+
+object
+	: '@' @identifier attributes
+	;
+
+node
+	: '@<' @identifier '@>' @identifier
+	| '@<' @identifier attributes '@>' @identifier
+	| '@<' @identifier node_children '@>' @identifier
+	| '@<' @identifier attributes  node_children '@>' @identifier
+	;
+
+node_children
+	: node
+	| node_children node
+	;
+
+array
+	: '[' ']'
+	| '[' value_list ']'
+	;
+
+script
+	: node_children
+	;

@@ -1,0 +1,34 @@
+﻿生成启动时间为 2014/7/2 10:59:06。
+     1>项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vnbase\prj\vc12\vnbase.vcxproj”在节点 2 上(Build 个目标)。
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\tblcoder\Release\vnbase.lib" /NOLOGO /LTCG Release\vnAllocatedObject.obj
+         Release\vnBuffer.obj
+         Release\vnCommandList.obj
+         Release\vnDataStream.obj
+         Release\vnEditType.obj
+         Release\vnEditTypeFactory.obj
+         Release\vnEditValue.obj
+         Release\vnFileManager.obj
+         Release\vnFilePath.obj
+         Release\vnLog.obj
+         Release\vnMemory.obj
+         Release\vnMemoryTracker.obj
+         Release\vnNonCopyable.obj
+         Release\vnRefCounted.obj
+         Release\vnSingletonManager.obj
+         Release\vnSmallObject.obj
+         Release\vnTreeData.obj
+         Release\vnUnicode.obj
+         Release\vnVariable.obj
+         Release\vnAtomic.obj
+         Release\vnConditionMutex.obj
+         Release\vnFastMutex.obj
+         Release\vnFileSystem.obj
+         Release\vnMutex.obj
+         Release\vnThread.obj
+         vnbase.vcxproj -> C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\tblcoder\Release\vnbase.lib
+     1>已完成生成项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vnbase\prj\vc12\vnbase.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.62

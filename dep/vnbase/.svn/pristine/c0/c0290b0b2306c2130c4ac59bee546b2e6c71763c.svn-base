@@ -1,0 +1,101 @@
+﻿//
+//  vnFileManager.cpp
+//  vnbase
+//
+//  Created by Wayne on 13-6-13.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnFileManager.h"
+#include "vnFileSystem.h"
+
+_vn_begin
+
+FileManager::FileManager() {
+	m_systems[0] = vnnew FileSystemOS();
+}
+
+FileManager::~FileManager() {
+	for (FileSystemMap::iterator it = m_systems.begin(); it != m_systems.end(); ++it) {
+		it->second->drop();
+	}
+}
+
+FileStream * FileManager::open(u32 fsId, const c8 *fileName, bool readOnly) {
+	FileSystemMap::iterator it = m_systems.find(fsId);
+	if (it != m_systems.end()) {
+		return it->second->open(fileName, readOnly);
+	}
+	return 0;
+}
+
+FileStream * FileManager::open(const vn::FilePath &path, bool readOnly) {
+    return open(path.fsId, path.fileName.c_str(), readOnly);
+}
+
+FileStream * FileManager::create(u32 fsId, const c8 *fileName, bool writeOnly) {
+	FileSystemMap::iterator it = m_systems.find(fsId);
+	if (it != m_systems.end()) {
+		return it->second->create(fileName, writeOnly);
+	}
+	return 0;
+}
+
+FileStream * FileManager::create(const vn::FilePath &path, bool writeOnly) {
+    return create(path.fsId, path.fileName.c_str(), writeOnly);
+}
+
+bool FileManager::remove(u32 fsId, const c8 *path) {
+	FileSystemMap::iterator it = m_systems.find(fsId);
+	if (it != m_systems.end()) {
+		return it->second->remove(path);
+	}
+	return false;
+}
+
+bool FileManager::list(u32 fsId, const c8 *path, std::list<str8> &result) {
+	FileSystemMap::iterator it = m_systems.find(fsId);
+	if (it != m_systems.end()) {
+		return it->second->list(path, result);
+	}
+	return false;
+}
+
+bool FileManager::mkdir(u32 fsId, const c8 *path) {
+	FileSystemMap::iterator it = m_systems.find(fsId);
+	if (it != m_systems.end()) {
+		return it->second->mkdir(path);
+	}
+	return false;
+}
+
+
+FileSystem * FileManager::get_file_system(u32 fsId) {
+	FileSystemMap::iterator it = m_systems.find(fsId);
+	if (it != m_systems.end()) {
+		return it->second;
+	}
+	return 0;
+}
+
+void FileManager::set_file_system(u32 fsId, FileSystem *fs, bool grab) {
+	if (fs) {
+		if (grab) {
+			fs->grab();
+		}
+		std::pair<FileSystemMap::iterator, bool> ret = m_systems.insert(std::make_pair(fsId, fs));
+		if (!ret.second) {
+			ret.first->second->drop();
+			ret.first->second = fs;
+		}
+	} else {
+		FileSystemMap::iterator it = m_systems.find(fsId);
+		if (it != m_systems.end()) {
+			it->second->drop();
+			m_systems.erase(it);
+		}
+	}
+}
+
+
+_vn_end

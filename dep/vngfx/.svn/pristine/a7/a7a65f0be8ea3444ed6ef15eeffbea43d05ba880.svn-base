@@ -1,0 +1,67 @@
+//
+//  vnUIFactory.h
+//  vngfx
+//
+//  Created by Wayne on 13-12-17.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#ifndef vngfx_vnUIFactory_h
+#define vngfx_vnUIFactory_h
+
+#include "vnGfxDef.h"
+#include "vnSingleton.h"
+
+#include <map>
+
+_vn_begin
+
+class UIElement;
+class UILocator;
+
+
+class _vn_gfx_api UIFactory : public Singleton<UIFactory> {
+public:
+    typedef std::map<str8, UIElement *> ElementMap;
+    
+    UIElement * createElement(const str8 &name);
+	UILocator * createLocator(const str8 &name, UIElement *owner);
+	
+	void _register(const c8 *name, UIElement *(*creator)());
+	void _register(const c8 *name, UILocator *(*creator)(UIElement *));
+	
+private:
+	typedef std::map<str8, UIElement *(*)()> ElementFactory;
+	typedef std::map<str8, UILocator *(*)(UIElement *)> LocatorFactory;
+	ElementFactory m_factoryE;
+	LocatorFactory m_factoryL;
+};
+
+_vn_end
+
+#define VN_DECL_UI_ELEMENT() \
+    public:\
+        static _vn_ns::UIElement * create();
+
+#define VN_IMPL_UI_ELEMENT(cls, name) \
+    struct _auto_reg_##cls {\
+        _auto_reg_##cls() {\
+            _vn_ns::UIFactory::instance()._register(name, cls::create);\
+        }\
+    } _auto_reg_##cls##_ins;\
+    _vn_ns::UIElement * cls::create() { return vnnew cls(); }
+
+#define VN_DECL_UI_LOCATOR() \
+    public:\
+        static _vn_ns::UILocator * create(_vn_ns::UIElement *owner);
+
+#define VN_IMPL_UI_LOCATOR(cls, name) \
+    struct _auto_reg_##cls {\
+        _auto_reg_##cls() {\
+            _vn_ns::UIFactory::instance()._register(name, cls::create);\
+        }\
+    } _auto_reg_##cls##_ins;\
+    _vn_ns::UILocator * cls::create(_vn_ns::UIElement *owner) { return vnnew cls(owner); }
+
+
+#endif

@@ -1,0 +1,11 @@
+//
+//  vnUIRenderer.cpp
+//  vngfx
+//
+//  Created by Wayne on 13-12-17.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnUIRenderer.h"
+
+

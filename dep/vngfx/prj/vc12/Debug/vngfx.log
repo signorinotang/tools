@@ -1,0 +1,75 @@
+﻿生成启动时间为 2014/6/26 13:33:41。
+     1>项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vngfx\prj\vc12\vngfx.vcxproj”在节点 3 上(Build 个目标)。
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\TDMapEditor\Debug\vngfx.lib" /NOLOGO Debug\png.obj
+         Debug\pngerror.obj
+         Debug\pngget.obj
+         Debug\pngmem.obj
+         Debug\pngpread.obj
+         Debug\pngread.obj
+         Debug\pngrio.obj
+         Debug\pngrtran.obj
+         Debug\pngrutil.obj
+         Debug\pngset.obj
+         Debug\pngtrans.obj
+         Debug\pngwio.obj
+         Debug\pngwrite.obj
+         Debug\pngwtran.obj
+         Debug\pngwutil.obj
+         Debug\adler32.obj
+         Debug\compress.obj
+         Debug\crc32.obj
+         Debug\deflate.obj
+         Debug\gzclose.obj
+         Debug\gzlib.obj
+         Debug\gzread.obj
+         Debug\gzwrite.obj
+         Debug\infback.obj
+         Debug\inffast.obj
+         Debug\inflate.obj
+         Debug\inftrees.obj
+         Debug\trees.obj
+         Debug\uncompr.obj
+         Debug\zutil.obj
+         Debug\vnColor.obj
+         Debug\vnFontFreeType.obj
+         Debug\vnFontManager.obj
+         Debug\vnGfxApplication.obj
+         Debug\vnPicture.obj
+         Debug\vnPictureManager.obj
+         Debug\vnRender2DInterface.obj
+         Debug\vnRenderText.obj
+         Debug\vnTexture.obj
+         Debug\vnTexture2D.obj
+         Debug\vnTextureManager.obj
+         Debug\vnUIButton.obj
+         Debug\vnUIButtonDefault.obj
+         Debug\vnUIElement.obj
+         Debug\vnUIFactory.obj
+         Debug\vnUIFrame.obj
+         Debug\vnUILabel.obj
+         Debug\vnUIList.obj
+         Debug\vnUIListItem.obj
+         Debug\vnUILocator.obj
+         Debug\vnUILocatorBorder.obj
+         Debug\vnUILocatorBox.obj
+         Debug\vnUILocatorRect.obj
+         Debug\vnUILogic.obj
+         Debug\vnUIPicture.obj
+         Debug\vnUIRenderer.obj
+         Debug\vnUIRenderPicture.obj
+         Debug\vnUIRenderText.obj
+         Debug\vnUIRoot.obj
+         Debug\vnUIScrollBar.obj
+         Debug\vnUITextField.obj
+         Debug\vnUIWindow.obj
+         Debug\vnGfxApplicationImpl.obj
+         Debug\vnPNGLoader.obj
+         Debug\vnRender2DDeviceImpl.obj
+         Debug\vnTexture2DImp.obj
+         vngfx.vcxproj -> C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\TDMapEditor\Debug\vngfx.lib
+     1>已完成生成项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vngfx\prj\vc12\vngfx.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.63

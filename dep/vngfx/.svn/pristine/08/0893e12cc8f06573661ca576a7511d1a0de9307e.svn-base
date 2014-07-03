@@ -1,0 +1,127 @@
+//
+//  vnUIButton.cpp
+//  vngfx
+//
+//  Created by Wayne on 13-12-19.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnUIButton.h"
+#include "vnUIRoot.h"
+
+_vn_begin
+
+UIButton::UIButton()
+: m_state(kNormal)
+, m_pushed(false)
+, m_mouseEntered(false)
+, m_pressed(false) {
+    
+}
+
+UIButton * UIButton::clone() const {
+    return vnnew UIButton(*this);
+}
+
+UIButton::State UIButton::state() const {
+    return m_state;
+}
+
+bool UIButton::isPushed() const {
+    return m_pushed;
+}
+
+void UIButton::setPushed(bool pushed) {
+    if (m_pushed != pushed) {
+        m_pushed = pushed;
+        _updateState();
+    }
+}
+
+void UIButton::setEnabled(bool enabled) {
+    if (m_enabled != enabled) {
+        m_enabled = enabled;
+        _updateState();
+    }
+}
+
+void UIButton::init(const TreeDataObject *object, UIFactory::ElementMap &namedElements) {
+    UIElement::init(object, namedElements);
+    m_pushed = object->queryAttributeBoolean("pushed", m_pushed);
+}
+
+void UIButton::bindAction_Clicked(const function<void (vn::UIElement *)> &func) {
+    m_fnClicked = func;
+}
+
+void UIButton::onMouseEnter() {
+    m_mouseEntered = true;
+    _updateState();
+}
+
+void UIButton::onMouseLeave() {
+    m_mouseEntered = false;
+    _updateState();
+}
+
+void UIButton::onMouseCaptureCancelled() {
+    m_pressed = false;
+    _updateState();
+}
+
+void UIButton::onMouseLeftDown(const vector2f &position) {
+    UIRoot::instance().captureMouse(this);
+    m_pressed = true;
+    _updateState();
+}
+
+void UIButton::onMouseLeftUp(const vector2f &position) {
+    UIRoot::instance().releaseMouse(this);
+    m_pressed = false;
+    _updateState();
+    if (m_mouseEntered) {
+        onClicked();
+    }
+}
+
+void UIButton::onClicked() {
+    if (!m_fnClicked.null()) {
+        m_fnClicked(this);
+    }
+}
+
+bool UIButton::_bindAction(const c8 *name, vn::RefCounted *func_impl) {
+    if (!strcmp(name, "clicked")) {
+        m_fnClicked.set(func_impl);
+        return !m_fnClicked.null();
+    }
+    return UIElement::_bindAction(name, func_impl);
+}
+
+void UIButton::_updateState() {
+    if (!m_enabled) {
+        m_state = kDisabled;
+    } else if (m_pushed) {
+        if (m_mouseEntered) {
+            if (m_pressed) {
+                m_state = kPushedPressed;
+            } else {
+                m_state = kPushedMouseEntered;
+            }
+        } else {
+            m_state = kPushed;
+        }
+    } else {
+        if (m_mouseEntered) {
+            if (m_pressed) {
+                m_state = kNormalPressed;
+            } else {
+                m_state = kNormalMouseEntered;
+            }
+        } else {
+            m_state = kNormal;
+        }
+    }
+}
+
+_vn_end

@@ -1,0 +1,147 @@
+@<FileBrowser {
+root =
+    @<Picture {
+        locator = @Border {}
+        color = 0x80000000
+    }
+    @<Window {
+        locator = @RectEx { x_align = 2 y_align = 2 width = 400 height = 400 }
+        min_width = 400
+        min_height = 400
+    }
+        // bkg
+        @<Picture {
+            locator = @Border {}
+            color = 0xFFE0E0E0
+            enabled = false
+        }
+        @>Picture
+
+        // title
+        @<Label {
+            id = "title"
+            locator = @RectEx {
+                y = 8
+                width = 1
+                height = 24
+                width_unit = 1
+            }
+            alignment = 3
+            color = 0xFF000000
+            text = "Title"
+        }
+        @>Label
+        
+        // up button
+        @<ButtonDefault {
+            id = "up"
+            locator = @Rect {
+                x = 16
+                y = 40
+                width = 40
+                height = 36
+            }
+            text = "Up"
+        }
+        @>ButtonDefault
+        
+        // path text
+        @<Picture {
+            locator = @BoxEx {
+                left = 72
+                top = 40
+                right = 16
+                bottom = 76
+                right_align = 1
+            }
+            color = 0xFF404040
+        }
+            @<TextField {
+                id = "path"
+                locator = @Border {left = 6 right = 6}
+                read_only = true
+                alignment = 12
+                text = "1:/res/test.imgs"
+            }
+            @>TextField
+        @>Picture
+        
+        // list
+        @<Picture {
+            locator = @BoxEx {
+                left = 16
+                top = 92
+                right = 16
+                bottom = 72
+                right_align = 1
+                bottom_align = 1
+            }
+            color = 0xFF404040
+        }
+            @<List {
+                id = "list"
+                locator = @Border {}
+                scroll_bar_size = 16
+                scroll_bar = @ScrollBar {
+                    slider_unit = 8
+                    slider_color = 0xFF808080
+                }
+            }
+            @>List
+        @>Picture
+        
+        // file text
+        @<Picture {
+            locator = @BoxEx {
+                left = 16
+                top = 52
+                right = 208
+                bottom = 16
+                right_align = 1
+                top_align = 1
+                bottom_align = 1
+            }
+            color = 0xFF404040
+        }
+            @<TextField {
+                id = "file"
+                locator = @Border {left = 6 right = 6}
+                alignment = 12
+            }
+            @>TextField
+        @>Picture
+
+        // ok button
+        @<ButtonDefault {
+            id = "ok"
+            locator = @RectEx {
+                x_align = 1
+                y_align = 1
+                x = 112
+                y = 16
+                width = 80
+                height = 36
+            }
+            text = "确认"
+        }
+        @>ButtonDefault
+        
+        // close button
+        @<ButtonDefault {
+            id = "close"
+            locator = @RectEx {
+                x_align = 1
+                y_align = 1
+                x = 16
+                y = 16
+                width = 80
+                height = 36
+            }
+            text = "关闭"
+        }
+        
+        @>ButtonDefault
+
+    @>Window
+    @>Element
+} @>FileBrowser

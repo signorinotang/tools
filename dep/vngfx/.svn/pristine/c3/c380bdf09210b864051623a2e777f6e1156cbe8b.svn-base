@@ -1,0 +1,42 @@
+//
+//  vnGLView.h
+//  vngfx
+//
+//  Created by Wayne on 13-12-4.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#import <Cocoa/Cocoa.h>
+
+#include "vnGfxDef.h"
+
+_vn_begin
+
+namespace internal {
+    class GfxApplicationImpl;
+}
+
+_vn_end
+
+@interface GLView : NSOpenGLView<NSTextInputClient> {
+    _vn_ns::internal::GfxApplicationImpl *m_app_impl;
+    CVDisplayLinkRef m_display_link;
+    NSRange m_marked_range;
+    NSPoint m_input_anchor;
+    bool m_input;
+}
+
+- (id)initWithFrame:(NSRect)frameRect andAppImpl:(_vn_ns::internal::GfxApplicationImpl *)app_impl;
+- (void)updateAndDraw;
+- (void)start;
+- (void)stop;
+
+- (void)thread_init;
+- (void)thread_lock;
+- (void)thread_unlock;
+
+- (bool)isTextInputEnabled;
+- (void)setTextInputEnabled:(bool)enabled;
+- (void)setTextInputPositionX:(float)x andY:(float)y;
+
+@end

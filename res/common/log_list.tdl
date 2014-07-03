@@ -1,0 +1,25 @@
+@<LogList {
+    root =
+        @<List {
+            locator = @Border {}
+            scroll_bar_size = 12
+            scroll_bar = @ScrollBar {
+                slider_unit = 8
+                slider_color = 0xFFB0B0B0
+            }
+            
+            item_prototype = @ListItemText {
+                height = 24
+                root = 
+                    @<Frame
+                        @<Label {
+                            id = "text"
+                            locator = @Border {}
+                        }
+                        @>Label
+                    @>Frame
+            }
+        }
+        @>List
+}
+@>LogList

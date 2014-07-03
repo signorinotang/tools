@@ -1,0 +1,212 @@
+// bkg
+@<Picture {
+    locator = @Border {}
+    color = 0xE0808080
+    enabled = false
+}
+
+@>Picture
+
+@<Label {
+    locator = @BoxEx {
+        left = 8
+        top = 8
+        right = 8
+        bottom = 32
+        right_align = 1
+    }
+    text = "装饰"
+}
+@>Label
+
+// create button
+@<ButtonDefault {
+    id = "create0"
+    locator = @BoxEx {
+        left = 8
+        top = 40
+        right = 0
+        bottom = 72
+        right_align = 2
+    }
+    text = "图片"
+    pushed = true
+}
+@>ButtonDefault
+
+@<ButtonDefault {
+    id = "create1"
+    locator = @BoxEx {
+        left = 0
+        top = 40
+        right = 8
+        bottom = 72
+        left_align = 2
+        right_align = 1
+    }
+    text = "动画"
+}
+@>ButtonDefault
+
+@<Picture {
+    locator = @BoxEx {
+        left = 8
+        right = 8
+        right_align = 1
+        top = 72
+        bottom = 128
+        bottom_align = 1
+    }
+    color = 0xFF202020
+}
+
+    @<List {
+        id = "image_list"
+        locator = @Border {}
+        item_prototype = @DecorationImage {
+            root =
+                @<Frame {
+                    locator = @Border {}
+                }
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @Border {}
+                        enabled = false
+                        color = 0xFFE0E0E0
+                    }
+                    @>Picture
+
+                    @<Picture {
+                    	id = "image"
+                    	locator = @RectEx {
+                    		height = 1
+                    		height_unit = 1
+                    		width = 32
+                    	}
+                    	enabled = false
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @Border { left = 32 }
+                        alignment = 12
+                    }
+                    @>Label
+
+                @>Frame
+                
+            height = 32
+        }
+		scroll_bar = @ScrollBar {
+			slider_uint = 8
+		}
+		scroll_bar_size = 12
+        
+        items = [
+            @item { text="石头" image="1002:/map.imgs|rock.png" }
+            @item { text="花1" image="1002:/map.imgs|flower1.png" }
+            @item { text="花2" image="1002:/map.imgs|flower2.png" }
+		]
+    }
+    @>List
+
+   @<List {
+        id = "anim_list"
+        locator = @Border {}
+        visible = false
+        item_prototype = @DecorationImage {
+            root =
+                @<Frame {
+                    locator = @Border {}
+                }
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @Border {}
+                        enabled = false
+                        color = 0xFFE0E0E0
+                    }
+                    @>Picture
+
+                    @<Picture {
+                    	id = "image"
+                    	locator = @RectEx {
+                    		height = 1
+                    		height_unit = 1
+                    		width = 32
+                    	}
+                    	enabled = false
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @Border { left = 32 }
+                        alignment = 12
+                    }
+                    @>Label
+
+                @>Frame
+                
+            height = 32
+        }
+		scroll_bar = @ScrollBar {
+			slider_uint = 8
+		}
+		scroll_bar_size = 12
+        
+        items = [
+
+		]
+    }
+    @>List
+
+@>Picture
+
+
+// flipX
+@<ButtonDefault {
+    id = "flip_x"
+    locator = @BoxEx {
+        left = 8
+        top = 120
+        right = 0
+        bottom = 88
+        top_align = 1
+        bottom_align = 1
+        right_align = 2
+    }
+    text = "横向翻转(J)"
+}
+@>ButtonDefault
+
+@<ButtonDefault {
+    id = "flip_y"
+    locator = @BoxEx {
+        left = 0
+        top = 120
+        right = 8
+        bottom = 88
+        top_align = 1
+        bottom_align = 1
+        left_align = 2
+        right_align = 1
+    }
+    text = "纵向翻转(K)"
+}
+@>ButtonDefault
+
+@<ButtonDefault {
+    id = "light"
+    locator = @BoxEx {
+        left = 8
+        top = 80
+        right = 8
+        bottom = 42
+        top_align = 1
+        bottom_align = 1
+        right_align = 1
+    }
+    text = "灯光模式(L)"
+}
+@>ButtonDefault

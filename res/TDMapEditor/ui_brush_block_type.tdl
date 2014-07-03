@@ -1,0 +1,96 @@
+// bkg
+@<Picture {
+    locator = @Border {}
+    color = 0xE0808080
+    enabled = false
+}
+
+@>Picture
+
+ // block list
+@<Label {
+    locator = @BoxEx {
+        left = 8
+        top = 8
+        right = 8
+        bottom = 32
+        right_align = 1
+    }
+    text = "类型"
+    //color = 0xFF000000
+}
+@>Label
+@<Picture {
+    locator = @BoxEx {
+        left = 8
+        right = 8
+        right_align = 1
+        top = 32
+        bottom = 176
+    }
+    color = 0xFF202020
+}
+
+    @<List {
+        id = "type_list"
+        locator = @Border {}
+        item_prototype = @ListItemText {
+            root =
+                @<Frame {
+                    locator = @Border {}
+                }
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @Border {}
+                        enabled = false
+                        color = 0xFF808080
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @Border {}
+                    }
+                    @>Label
+
+                @>Frame
+                
+            height = 24
+        }
+        
+        items = [
+            @item {
+                text = "Land 地 (G)"
+                text_normal_color = 0xFFFFFF00
+                text_selected_color = 0xFFFFFF00
+            }
+            @item {
+                text = "Water 水 (H)"
+                text_normal_color = 0xFF00FFFF
+                text_selected_color = 0xFF00FFFF
+            }
+            @item {
+                text = "Field_恶魔 (A)"
+                text_normal_color = 0xFFFF0000
+                text_selected_color = 0xFFFF0000
+            }
+            @item {
+                text = "Field_兽人 (S)"
+                text_normal_color = 0xFF00FF00
+                text_selected_color = 0xFF00FF00
+            }
+            @item {
+                text = "Field_亡灵 (D)"
+                text_normal_color = 0xFFFFFFFF
+                text_selected_color = 0xFFFFFFFF
+            }
+            @item {
+                text = "Field_高地 (F)"
+                text_normal_color = 0xFFFF00FF
+                text_selected_color = 0xFFFF00FF
+            }
+        ]
+    }
+    @>List
+
+@>Picture

@@ -1,0 +1,53 @@
+//
+//  vnUIPicture.cpp
+//  vngfx
+//
+//  Created by Wayne on 13-12-19.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnUIPicture.h"
+#include "vnUIRenderer.h"
+#include "vnPictureManager.h"
+
+_vn_begin
+
+UIPicture::UIPicture()
+: m_color(color_t::kWhite) {
+    
+}
+
+UIPicture * UIPicture::clone() const {
+    return vnnew UIPicture(*this);
+}
+
+const color_t & UIPicture::getColor() const {
+    return m_color;
+}
+
+void UIPicture::setColor(const color_t &color) {
+    m_color = color;
+}
+
+const PicturePtr & UIPicture::getPicture() const {
+    return m_picture;
+}
+
+void UIPicture::setPicture(const PicturePtr &picture) {
+    m_picture = picture;
+}
+
+void UIPicture::init(const TreeDataObject *object, UIFactory::ElementMap &namedElements) {
+    UIElement::init(object, namedElements);
+    m_color.convertFromBGRA(object->queryAttributeInteger("color", 0xFFFFFFFF));
+    const TreeDataString *tdstr = object->queryAttributeString("image");
+    if (tdstr) {
+        m_picture = PictureManager::instance().createPicture(tdstr->value().c_str());
+    }
+}
+
+void UIPicture::_onRender(UIRenderer *renderer) {
+    renderer->drawRect(m_boundingBox, m_color, m_picture.ptr());
+}
+
+_vn_end

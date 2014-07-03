@@ -1,0 +1,73 @@
+
+// bkg
+@<Picture {
+    locator = @Border {}
+    color = 0xE0808080
+    enabled = false
+}
+
+@>Picture
+
+@<Label {
+    locator = @BoxEx {
+        left = 8
+        top = 8
+        right = 8
+        bottom = 32
+        right_align = 1
+    }
+    text = "编辑"
+}
+@>Label
+
+@<ButtonDefault {
+    id = "move"
+    locator = @BoxEx {
+        left = 8
+        top = 40
+        right = 8
+        bottom = 72
+        right_align = 1
+    }
+    text = "移动(A)"
+}
+@>ButtonDefault
+
+@<ButtonDefault {
+    id = "copy"
+    locator = @BoxEx {
+        left = 8
+        top = 80
+        right = 8
+        bottom = 112
+        right_align = 1
+    }
+    text = "拷贝(S)"
+}
+@>ButtonDefault
+
+@<ButtonDefault {
+    id = "remove"
+    locator = @BoxEx {
+        left = 8
+        top = 120
+        right = 8
+        bottom = 152
+        right_align = 1
+    }
+    text = "移除(D)"
+}
+@>ButtonDefault
+
+@<Frame {
+	id = "properties"
+    locator = @BoxEx {
+        left = 8
+        right = 8
+        right_align = 1
+        top = 160
+        bottom = 8
+		bottom_align = 1
+    }
+}
+@>Frame

@@ -1,0 +1,7 @@
+*
+!.gitignore
+!*.cpp
+!*.sln
+!*.vcxproj
+!*.vcxproj.filters
+

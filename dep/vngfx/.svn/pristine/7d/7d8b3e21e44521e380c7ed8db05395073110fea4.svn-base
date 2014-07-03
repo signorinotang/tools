@@ -1,0 +1,236 @@
+//
+//  vnUILocatorEx.cpp
+//  vngfx
+//
+//  Created by Wayne on 13-12-18.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnUILocatorEx.h"
+#include "vnUIElement.h"
+#include "vnUIRoot.h"
+
+_vn_begin
+
+UILocatorEx::UILocatorEx(UIElement *owner)
+: UILocator(owner)
+, m_alignX(kLittle)
+, m_alignY(kLittle)
+, m_unitX(kValue)
+, m_unitY(kValue)
+, m_unitWidth(kValue)
+, m_unitHeight(kValue) {
+    
+}
+
+UILocatorEx::UILocatorEx(const UILocatorEx &other, UIElement *owner)
+: UILocator(other, owner)
+, m_alignX(other.m_alignX)
+, m_alignY(other.m_alignY)
+, m_unitX(other.m_unitX)
+, m_unitY(other.m_unitY)
+, m_unitWidth(other.m_unitWidth)
+, m_unitHeight(other.m_unitHeight) {
+    
+}
+
+UILocatorEx * UILocatorEx::clone(UIElement *owner) const {
+    return vnnew UILocatorEx(*this, owner);
+}
+
+UILocatorEx::Alignment UILocatorEx::getPositionXAlignment() const {
+    return m_alignX;
+}
+
+void UILocatorEx::setPositionXAlignment(Alignment xAlignment) {
+    if (m_alignX != xAlignment) {
+        m_alignX = xAlignment;
+        m_dirty = true;
+    }
+}
+
+UILocatorEx::Alignment UILocatorEx::getPositionYAlignment() const {
+    return m_alignY;
+}
+
+void UILocatorEx::setPositionYAlignment(Alignment yAlignment) {
+    if (m_alignY != yAlignment) {
+        m_alignY = yAlignment;
+        m_dirty = true;
+    }
+}
+
+UILocatorEx::Unit UILocatorEx::getPositionXUnit() const {
+    return m_unitX;
+}
+
+void UILocatorEx::setPositionXUnit(Unit xUnit) {
+    if (m_unitX != xUnit) {
+        m_unitX = xUnit;
+        m_dirty = true;
+    }
+}
+
+UILocatorEx::Unit UILocatorEx::getPositionYUnit() const {
+    return m_unitY;
+}
+
+void UILocatorEx::setPositionYUnit(Unit yUnit) {
+    if (m_unitY != yUnit) {
+        m_unitY = yUnit;
+        m_dirty = true;
+    }
+}
+
+UILocatorEx::Unit UILocatorEx::getWidthUnit() const {
+    return m_unitWidth;
+}
+
+void UILocatorEx::setWidthUnit(Unit widthUnit) {
+    if (m_unitWidth != widthUnit) {
+        m_unitWidth = widthUnit;
+        m_dirty = true;
+    }
+}
+
+UILocatorEx::Unit UILocatorEx::getHeightUnit() const {
+    return m_unitHeight;
+}
+
+void UILocatorEx::setHeightUnit(Unit heightUnit) {
+    if (m_unitHeight != heightUnit) {
+        m_unitHeight = heightUnit;
+        m_dirty = true;
+    }
+}
+
+void UILocatorEx::init(const TreeDataObject *object) {
+    UILocator::init(object);
+    m_alignX = (Alignment)object->queryAttributeInteger("x_align");
+    m_alignY = (Alignment)object->queryAttributeInteger("y_align");
+    m_unitX = (Unit)object->queryAttributeInteger("x_unit");
+    m_unitY = (Unit)object->queryAttributeInteger("y_unit");
+    m_unitWidth = (Unit)object->queryAttributeInteger("width_unit");
+    m_unitHeight = (Unit)object->queryAttributeInteger("height_unit");
+}
+
+void UILocatorEx::_set(const aabox2f &location) {
+    UIElement *parent = m_owner->parent();
+    aabox2f parentRect;
+    if (parent) {
+        parentRect = parent->boundingBox();
+    } else {
+        parentRect.max_corner = UIRoot::instance().getViewSize();
+    }
+    vector2f parentSize = parentRect.size();
+    vector2f size = location.size();
+    if (m_unitWidth == kValue) {
+        m_size.x = size.x;
+    } else {
+        m_size.x = size.x / parentSize.x;
+    }
+    if (m_unitHeight == kValue) {
+        m_size.y = size.y;
+    } else {
+        m_size.y = size.y / parentSize.y;
+    }
+    
+    vector2f pos;
+    switch (m_alignX) {
+        case kBig:
+            pos.x = parentRect.max_corner.x - location.max_corner.x;
+            break;
+        case kHalf:
+            pos.x = (location.min_corner.x + location.max_corner.x - parentRect.min_corner.x + parentRect.max_corner.x) * 0.5f;
+            break;
+        default:
+            pos.x = location.min_corner.x - parentRect.min_corner.x;
+            break;
+    }
+    switch (m_alignY) {
+        case kBig:
+            pos.y = parentRect.max_corner.y - location.max_corner.y;
+            break;
+        case kHalf:
+            pos.y = (location.min_corner.y + location.max_corner.y - parentRect.min_corner.y - parentRect.max_corner.y) * 0.5f;
+            break;
+        default:
+            pos.y = location.min_corner.y - parentRect.min_corner.y;
+            break;
+    }
+    if (m_unitX == kValue) {
+        m_position.x = pos.x;
+    } else {
+        m_position.x = pos.x / parentSize.x;
+    }
+    if (m_unitY == kValue) {
+        m_position.y = pos.y;
+    } else {
+        m_position.y = pos.y / parentSize.y;
+    }
+}
+
+void UILocatorEx::_updateBoundingBox() {
+    UIElement *parent = m_owner->parent();
+    aabox2f parentRect;
+    if (parent) {
+        parentRect = parent->boundingBox();
+    } else {
+        parentRect.max_corner = UIRoot::instance().getViewSize();
+    }
+    vector2f parentSize = parentRect.size();
+    vector2f size;
+    if (m_unitWidth == kValue) {
+        size.x = m_size.x;
+    } else {
+        size.x = parentSize.x * m_size.x;
+    }
+    if (m_unitHeight == kValue) {
+        size.y = m_size.y;
+    } else {
+        size.y = parentSize.y * m_size.y;
+    }
+    vector2f offset;
+    if (m_unitX == kValue) {
+        offset.x = m_position.x;
+    } else {
+        offset.x = parentSize.x * m_position.x;
+    }
+    if (m_unitY == kValue) {
+        offset.y = m_position.y;
+    } else {
+        offset.y = parentSize.y * m_position.y;
+    }
+    aabox2f rect;
+    switch (m_alignX) {
+        case kBig:
+            rect.max_corner.x = parentRect.max_corner.x - offset.x;
+            rect.min_corner.x = rect.max_corner.x - size.x;
+            break;
+        case kHalf:
+            rect.min_corner.x = parentRect.min_corner.x + offset.x + (parentSize.x - size.x) * 0.5f;
+            rect.max_corner.x = rect.min_corner.x + size.x;
+            break;
+        default:
+            rect.min_corner.x = parentRect.min_corner.x + offset.x;
+            rect.max_corner.x = rect.min_corner.x + size.x;
+            break;
+    }
+    switch (m_alignY) {
+        case kBig:
+            rect.max_corner.y = parentRect.max_corner.y - offset.y;
+            rect.min_corner.y = rect.max_corner.y - size.y;
+            break;
+        case kHalf:
+            rect.min_corner.y = parentRect.min_corner.y + offset.y + (parentSize.y - size.y) * 0.5f;
+            rect.max_corner.y = rect.min_corner.y + size.y;
+            break;
+        default:
+            rect.min_corner.y = parentRect.min_corner.y + offset.y;
+            rect.max_corner.y = rect.min_corner.y + size.y;
+            break;
+    }
+    _setOwnerBoundingBox(rect);
+}
+
+_vn_end

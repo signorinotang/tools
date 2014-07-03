@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B055A68018CDA2D100655A25 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B055A67F18CDA2D100655A25 /* Cocoa.framework */; };
+		B055A68A18CDA2D100655A25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B055A68818CDA2D100655A25 /* InfoPlist.strings */; };
+		B055A68C18CDA2D100655A25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B055A68B18CDA2D100655A25 /* main.m */; };
+		B055A69318CDA2D100655A25 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B055A69218CDA2D100655A25 /* AppDelegate.mm */; };
+		B055A69618CDA2D100655A25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B055A69418CDA2D100655A25 /* MainMenu.xib */; };
+		B055A69818CDA2D100655A25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B055A69718CDA2D100655A25 /* Images.xcassets */; };
+		B055A6D718CDA4E600655A25 /* vngfx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B055A6D418CDA49B00655A25 /* vngfx.a */; };
+		B055A6D818CDA4EB00655A25 /* vnbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B055A6C518CDA48200655A25 /* vnbase.a */; };
+		B055A6D918CDA4F000655A25 /* vnlex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B055A6CB18CDA48D00655A25 /* vnlex.a */; };
+		B055A6EA18CDA5CB00655A25 /* Animations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B055A6E218CDA5CB00655A25 /* Animations.cpp */; };
+		B055A6EB18CDA5CB00655A25 /* EditorApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B055A6E418CDA5CB00655A25 /* EditorApp.cpp */; };
+		B055A6EC18CDA5CB00655A25 /* UIListItemCheckBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B055A6E618CDA5CB00655A25 /* UIListItemCheckBox.cpp */; };
+		B055A6ED18CDA5CB00655A25 /* UIPictureSetup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B055A6E818CDA5CB00655A25 /* UIPictureSetup.cpp */; };
+		B055A6F118CDA68D00655A25 /* UIFileBrowser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B055A6EF18CDA68D00655A25 /* UIFileBrowser.cpp */; };
+		B055A6F418CDA6CC00655A25 /* GfxAppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B055A6F218CDA6CC00655A25 /* GfxAppDelegate.cpp */; };
+		B055A6F618CDA6E500655A25 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B055A6F518CDA6E500655A25 /* OpenGL.framework */; };
+		B055A6FB18CDA77F00655A25 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B055A6FA18CDA77F00655A25 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B055A6C418CDA48200655A25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B055A6C018CDA48200655A25 /* vnbase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B0BFFED2184EF8D6000DEC1A;
+			remoteInfo = vnbase;
+		};
+		B055A6CA18CDA48D00655A25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B055A6C618CDA48D00655A25 /* vnlex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B0BFFEED184F0466000DEC1A;
+			remoteInfo = vnlex;
+		};
+		B055A6D318CDA49B00655A25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B055A6CC18CDA49B00655A25 /* vngfx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B0BFFEFF184F05C2000DEC1A;
+			remoteInfo = vngfx;
+		};
+		B055A6D518CDA4D800655A25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B055A6CC18CDA49B00655A25 /* vngfx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BFFEFE184F05C2000DEC1A;
+			remoteInfo = vngfx;
+		};
+		B055A6DA18CDA50100655A25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B055A6C018CDA48200655A25 /* vnbase.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BFFED1184EF8D6000DEC1A;
+			remoteInfo = vnbase;
+		};
+		B055A6DC18CDA50400655A25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B055A6C618CDA48D00655A25 /* vnlex.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BFFEEC184F0466000DEC1A;
+			remoteInfo = vnlex;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B055A67C18CDA2D100655A25 /* AnimEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B055A67F18CDA2D100655A25 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B055A68218CDA2D100655A25 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B055A68318CDA2D100655A25 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B055A68418CDA2D100655A25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B055A68718CDA2D100655A25 /* AnimEditor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnimEditor-Info.plist"; sourceTree = "<group>"; };
+		B055A68918CDA2D100655A25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B055A68B18CDA2D100655A25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B055A68D18CDA2D100655A25 /* AnimEditor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimEditor-Prefix.pch"; sourceTree = "<group>"; };
+		B055A69118CDA2D100655A25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B055A69218CDA2D100655A25 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		B055A69518CDA2D100655A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B055A69718CDA2D100655A25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B055A6C018CDA48200655A25 /* vnbase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vnbase.xcodeproj; path = vnbase/prj/osx/vnbase.xcodeproj; sourceTree = "<group>"; };
+		B055A6C618CDA48D00655A25 /* vnlex.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vnlex.xcodeproj; path = vnlex/prj/osx/vnlex.xcodeproj; sourceTree = "<group>"; };
+		B055A6CC18CDA49B00655A25 /* vngfx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vngfx.xcodeproj; path = vngfx/prj/osx/vngfx.xcodeproj; sourceTree = "<group>"; };
+		B055A6E218CDA5CB00655A25 /* Animations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animations.cpp; sourceTree = "<group>"; };
+		B055A6E318CDA5CB00655A25 /* Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animations.h; sourceTree = "<group>"; };
+		B055A6E418CDA5CB00655A25 /* EditorApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EditorApp.cpp; sourceTree = "<group>"; };
+		B055A6E518CDA5CB00655A25 /* EditorApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorApp.h; sourceTree = "<group>"; };
+		B055A6E618CDA5CB00655A25 /* UIListItemCheckBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIListItemCheckBox.cpp; sourceTree = "<group>"; };
+		B055A6E718CDA5CB00655A25 /* UIListItemCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIListItemCheckBox.h; sourceTree = "<group>"; };
+		B055A6E818CDA5CB00655A25 /* UIPictureSetup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIPictureSetup.cpp; sourceTree = "<group>"; };
+		B055A6E918CDA5CB00655A25 /* UIPictureSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPictureSetup.h; sourceTree = "<group>"; };
+		B055A6EF18CDA68D00655A25 /* UIFileBrowser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIFileBrowser.cpp; path = ../common/UIFileBrowser.cpp; sourceTree = "<group>"; };
+		B055A6F018CDA68D00655A25 /* UIFileBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIFileBrowser.h; path = ../common/UIFileBrowser.h; sourceTree = "<group>"; };
+		B055A6F218CDA6CC00655A25 /* GfxAppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GfxAppDelegate.cpp; path = ../common/GfxAppDelegate.cpp; sourceTree = "<group>"; };
+		B055A6F318CDA6CC00655A25 /* GfxAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GfxAppDelegate.h; path = ../common/GfxAppDelegate.h; sourceTree = "<group>"; };
+		B055A6F518CDA6E500655A25 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B055A6FA18CDA77F00655A25 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B055A67918CDA2D100655A25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B055A6D718CDA4E600655A25 /* vngfx.a in Frameworks */,
+				B055A6D918CDA4F000655A25 /* vnlex.a in Frameworks */,
+				B055A6D818CDA4EB00655A25 /* vnbase.a in Frameworks */,
+				B055A6F618CDA6E500655A25 /* OpenGL.framework in Frameworks */,
+				B055A6FB18CDA77F00655A25 /* QuartzCore.framework in Frameworks */,
+				B055A68018CDA2D100655A25 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B055A67318CDA2D100655A25 = {
+			isa = PBXGroup;
+			children = (
+				B055A6B918CDA42800655A25 /* Libraries */,
+				B055A68518CDA2D100655A25 /* AnimEditor */,
+				B055A6E118CDA5A700655A25 /* Sources */,
+				B055A67E18CDA2D100655A25 /* Frameworks */,
+				B055A67D18CDA2D100655A25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B055A67D18CDA2D100655A25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B055A67C18CDA2D100655A25 /* AnimEditor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B055A67E18CDA2D100655A25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B055A6FA18CDA77F00655A25 /* QuartzCore.framework */,
+				B055A6F518CDA6E500655A25 /* OpenGL.framework */,
+				B055A67F18CDA2D100655A25 /* Cocoa.framework */,
+				B055A68118CDA2D100655A25 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B055A68118CDA2D100655A25 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B055A68218CDA2D100655A25 /* AppKit.framework */,
+				B055A68318CDA2D100655A25 /* CoreData.framework */,
+				B055A68418CDA2D100655A25 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B055A68518CDA2D100655A25 /* AnimEditor */ = {
+			isa = PBXGroup;
+			children = (
+				B055A69118CDA2D100655A25 /* AppDelegate.h */,
+				B055A69218CDA2D100655A25 /* AppDelegate.mm */,
+				B055A69418CDA2D100655A25 /* MainMenu.xib */,
+				B055A69718CDA2D100655A25 /* Images.xcassets */,
+				B055A68618CDA2D100655A25 /* Supporting Files */,
+			);
+			path = AnimEditor;
+			sourceTree = "<group>";
+		};
+		B055A68618CDA2D100655A25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B055A68718CDA2D100655A25 /* AnimEditor-Info.plist */,
+				B055A68818CDA2D100655A25 /* InfoPlist.strings */,
+				B055A68B18CDA2D100655A25 /* main.m */,
+				B055A68D18CDA2D100655A25 /* AnimEditor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B055A6B918CDA42800655A25 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B055A6CC18CDA49B00655A25 /* vngfx.xcodeproj */,
+				B055A6C618CDA48D00655A25 /* vnlex.xcodeproj */,
+				B055A6C018CDA48200655A25 /* vnbase.xcodeproj */,
+			);
+			name = Libraries;
+			path = ../../../dep;
+			sourceTree = "<group>";
+		};
+		B055A6C118CDA48200655A25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B055A6C518CDA48200655A25 /* vnbase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B055A6C718CDA48D00655A25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B055A6CB18CDA48D00655A25 /* vnlex.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B055A6CD18CDA49B00655A25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B055A6D418CDA49B00655A25 /* vngfx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B055A6E118CDA5A700655A25 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B055A6EE18CDA67E00655A25 /* common */,
+				B055A6E218CDA5CB00655A25 /* Animations.cpp */,
+				B055A6E318CDA5CB00655A25 /* Animations.h */,
+				B055A6E418CDA5CB00655A25 /* EditorApp.cpp */,
+				B055A6E518CDA5CB00655A25 /* EditorApp.h */,
+				B055A6E618CDA5CB00655A25 /* UIListItemCheckBox.cpp */,
+				B055A6E718CDA5CB00655A25 /* UIListItemCheckBox.h */,
+				B055A6E818CDA5CB00655A25 /* UIPictureSetup.cpp */,
+				B055A6E918CDA5CB00655A25 /* UIPictureSetup.h */,
+			);
+			name = Sources;
+			path = ../../../src/AMEditor;
+			sourceTree = "<group>";
+		};
+		B055A6EE18CDA67E00655A25 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				B055A6F218CDA6CC00655A25 /* GfxAppDelegate.cpp */,
+				B055A6F318CDA6CC00655A25 /* GfxAppDelegate.h */,
+				B055A6EF18CDA68D00655A25 /* UIFileBrowser.cpp */,
+				B055A6F018CDA68D00655A25 /* UIFileBrowser.h */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B055A67B18CDA2D100655A25 /* AnimEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B055A6AD18CDA2D100655A25 /* Build configuration list for PBXNativeTarget "AnimEditor" */;
+			buildPhases = (
+				B055A67818CDA2D100655A25 /* Sources */,
+				B055A67918CDA2D100655A25 /* Frameworks */,
+				B055A67A18CDA2D100655A25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B055A6DB18CDA50100655A25 /* PBXTargetDependency */,
+				B055A6DD18CDA50400655A25 /* PBXTargetDependency */,
+				B055A6D618CDA4D800655A25 /* PBXTargetDependency */,
+			);
+			name = AnimEditor;
+			productName = AnimEditor;
+			productReference = B055A67C18CDA2D100655A25 /* AnimEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B055A67418CDA2D100655A25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = viichi.com;
+			};
+			buildConfigurationList = B055A67718CDA2D100655A25 /* Build configuration list for PBXProject "AnimEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B055A67318CDA2D100655A25;
+			productRefGroup = B055A67D18CDA2D100655A25 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B055A6C118CDA48200655A25 /* Products */;
+					ProjectRef = B055A6C018CDA48200655A25 /* vnbase.xcodeproj */;
+				},
+				{
+					ProductGroup = B055A6CD18CDA49B00655A25 /* Products */;
+					ProjectRef = B055A6CC18CDA49B00655A25 /* vngfx.xcodeproj */;
+				},
+				{
+					ProductGroup = B055A6C718CDA48D00655A25 /* Products */;
+					ProjectRef = B055A6C618CDA48D00655A25 /* vnlex.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B055A67B18CDA2D100655A25 /* AnimEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B055A6C518CDA48200655A25 /* vnbase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = vnbase.a;
+			remoteRef = B055A6C418CDA48200655A25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B055A6CB18CDA48D00655A25 /* vnlex.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = vnlex.a;
+			remoteRef = B055A6CA18CDA48D00655A25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B055A6D418CDA49B00655A25 /* vngfx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = vngfx.a;
+			remoteRef = B055A6D318CDA49B00655A25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B055A67A18CDA2D100655A25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B055A68A18CDA2D100655A25 /* InfoPlist.strings in Resources */,
+				B055A69818CDA2D100655A25 /* Images.xcassets in Resources */,
+				B055A69618CDA2D100655A25 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B055A67818CDA2D100655A25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B055A6EC18CDA5CB00655A25 /* UIListItemCheckBox.cpp in Sources */,
+				B055A6F118CDA68D00655A25 /* UIFileBrowser.cpp in Sources */,
+				B055A69318CDA2D100655A25 /* AppDelegate.mm in Sources */,
+				B055A6ED18CDA5CB00655A25 /* UIPictureSetup.cpp in Sources */,
+				B055A6F418CDA6CC00655A25 /* GfxAppDelegate.cpp in Sources */,
+				B055A68C18CDA2D100655A25 /* main.m in Sources */,
+				B055A6EB18CDA5CB00655A25 /* EditorApp.cpp in Sources */,
+				B055A6EA18CDA5CB00655A25 /* Animations.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B055A6D618CDA4D800655A25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = vngfx;
+			targetProxy = B055A6D518CDA4D800655A25 /* PBXContainerItemProxy */;
+		};
+		B055A6DB18CDA50100655A25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = vnbase;
+			targetProxy = B055A6DA18CDA50100655A25 /* PBXContainerItemProxy */;
+		};
+		B055A6DD18CDA50400655A25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = vnlex;
+			targetProxy = B055A6DC18CDA50400655A25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B055A68818CDA2D100655A25 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B055A68918CDA2D100655A25 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B055A69418CDA2D100655A25 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B055A69518CDA2D100655A25 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B055A6AB18CDA2D100655A25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../../dep/vnbase/inc ../../../dep/vnlex/inc ../../../dep/vngfx/inc ../../../dep/vnmath/inc ../../../../gamelib/src";
+			};
+			name = Debug;
+		};
+		B055A6AC18CDA2D100655A25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../../dep/vnbase/inc ../../../dep/vnlex/inc ../../../dep/vngfx/inc ../../../dep/vnmath/inc ../../../../gamelib/src";
+			};
+			name = Release;
+		};
+		B055A6AE18CDA2D100655A25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnimEditor/AnimEditor-Prefix.pch";
+				INFOPLIST_FILE = "AnimEditor/AnimEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B055A6AF18CDA2D100655A25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnimEditor/AnimEditor-Prefix.pch";
+				INFOPLIST_FILE = "AnimEditor/AnimEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B055A67718CDA2D100655A25 /* Build configuration list for PBXProject "AnimEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B055A6AB18CDA2D100655A25 /* Debug */,
+				B055A6AC18CDA2D100655A25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B055A6AD18CDA2D100655A25 /* Build configuration list for PBXNativeTarget "AnimEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B055A6AE18CDA2D100655A25 /* Debug */,
+				B055A6AF18CDA2D100655A25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B055A67418CDA2D100655A25 /* Project object */;
+}

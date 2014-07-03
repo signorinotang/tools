@@ -1,0 +1,86 @@
+// bkg
+@<Picture {
+    locator = @Border {}
+    color = 0xE0808080
+    enabled = false
+}
+
+@>Picture
+
+@<Label {
+    locator = @BoxEx {
+        left = 8
+        top = 8
+        right = 8
+        bottom = 32
+        right_align = 1
+    }
+    text = "物件"
+    //color = 0xFF000000
+}
+@>Label
+
+@<Picture {
+    locator = @BoxEx {
+        left = 8
+        right = 8
+        right_align = 1
+        top = 32
+        bottom = 240
+    }
+    color = 0xFF202020
+}
+
+    @<List {
+        id = "object_list"
+        locator = @Border {}
+        item_prototype = @ListItemText {
+            root =
+                @<Frame {
+                    locator = @Border {}
+                }
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @Border {}
+                        enabled = false
+                        color = 0xFFE0E0E0
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @Border {}
+                    }
+                    @>Label
+
+                @>Frame
+                
+            height = 24
+        }
+		scroll_bar = @ScrollBar {
+			slider_uint = 8
+		}
+		scroll_bar_size = 12
+        
+        items = [
+            @item { text = "Tree" }
+            @item { text = "GemCave" }
+            @item { text = "SpawnPoint" }
+		]
+    }
+    @>List
+
+@>Picture
+
+@<Frame {
+	id = "properties"
+    locator = @BoxEx {
+        left = 8
+        right = 8
+        right_align = 1
+        top = 248
+        bottom = 8
+		bottom_align = 1
+    }
+}
+@>Frame

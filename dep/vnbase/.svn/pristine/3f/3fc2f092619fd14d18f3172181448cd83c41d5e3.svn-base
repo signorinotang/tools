@@ -1,0 +1,115 @@
+//
+//  vnTreeData.cpp
+//  vnbase
+//
+//  Created by Wayne on 13-12-18.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnTreeData.h"
+
+_vn_begin
+
+void TreeData::save(TreeData *value, DataStream &ds) {
+    vnassert(value);
+    ds << (u8)value->type();
+    value->_save(ds);
+}
+
+bool TreeData::load(DataStream &ds, TreeDataPtr &result) {
+    try {
+        u8 type = 0;
+        ds >> type;
+        switch (type) {
+            case kNull:
+                result.release();
+                return true;
+                
+            case kBoolean:
+                result = vnnew TreeDataBoolean();
+                break;
+            
+            case kInteger:
+                result = vnnew TreeDataInteger();
+                break;
+                
+            case kLongInteger:
+                result = vnnew TreeDataLongInteger();
+                break;
+                
+            case kFloat:
+                result = vnnew TreeDataFloat();
+                break;
+                
+            case kDouble:
+                result = vnnew TreeDataDouble();
+                break;
+                
+            case kString:
+                result = vnnew TreeDataString();
+                break;
+                
+            case kArray:
+                result = vnnew TreeDataArray();
+                break;
+                
+            case kObject:
+                result = vnnew TreeDataObject();
+                break;
+                
+            case kNode:
+                result = vnnew TreeDataNode();
+                break;
+            
+            default:
+                result.release();
+                return false;
+        }
+        result->_load(ds);
+    } catch (DataStream::Exception &e) {
+        result.release();
+        throw e;
+    }
+    return true;
+}
+
+///////////////////////////////////////////////////
+
+TreeDataBoolean::TreeDataBoolean()
+: m_value(false) {
+    
+}
+
+TreeDataBoolean::TreeDataBoolean(bool _value)
+: m_value(_value) {
+    
+}
+
+TreeDataBoolean::TreeDataBoolean(const TreeDataBoolean &other)
+: m_value(other.m_value) {
+    
+}
+
+TreeDataBoolean * TreeDataBoolean::clone() const {
+    return vnnew TreeDataBoolean(m_value);
+}
+
+bool & TreeDataBoolean::value() {
+    return m_value;
+}
+
+bool TreeDataBoolean::value() const {
+    return m_value;
+}
+
+void TreeDataBoolean::_save(DataStream &ds) const {
+    ds << m_value;
+}
+
+void TreeDataBoolean::_load(DataStream &ds) {
+    ds >> m_value;
+}
+
+//////////////////////////////////////////////////
+
+_vn_end

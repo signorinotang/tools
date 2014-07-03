@@ -1,0 +1,23 @@
+@<ListItemETFloat {
+	height = 24
+	root = 
+		@<Frame { locator = @Border{} }
+			@<Label {
+				id = "text"
+				locator = @Border{}
+			}
+			@>Label
+			
+			@<TextField {
+				id = "editbox"
+				locator = @BoxEx {
+					left_align = 2
+					right_align = 1
+					bottom_align = 1
+				}
+				alignment = 14
+			}
+			@>TextField
+		@>Frame
+}
+@>ListItemETFloat

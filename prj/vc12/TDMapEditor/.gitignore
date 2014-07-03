@@ -1,0 +1,6 @@
+*
+!.gitignore
+!main.cpp
+!TDMapEditor.sln
+!TDMapEditor.vcxproj
+!TDMapEditor.vcxproj.filters

@@ -1,0 +1,40 @@
+value
+	: 'null'
+	| 'true'
+	| 'false'
+	| @integer
+	| @long_integer
+	| @float
+	| @double
+	| @string_literal
+	| array
+	| object
+	;
+
+value_list
+	: value
+	| value_list ',' value
+	;
+
+item
+	: @string_literal ':' value
+	;
+
+item_list
+	: item
+	| item_list ',' item
+	;
+
+array
+	: '[' ']'
+	| '[' value_list ']'
+	;
+
+object
+	: '{' '}'
+	| '{' item_list '}'
+	;
+
+script
+	: object
+	;

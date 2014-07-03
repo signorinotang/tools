@@ -1,0 +1,937 @@
+﻿//******************************base*******************************
+@< Picture {
+		locator = @RectEx {
+			x = 0
+			y = 0
+			width = 360
+			height = 1
+			height_unit = 1
+		}
+		color = 0xFF222222
+	}	
+@> Picture
+
+@< Picture {
+		locator = @RectEx {
+			y = 15
+			x_align = 0
+			y_align = 2
+			width = 240
+			height = 30
+		}
+		color = 0xFF0000FF
+	}
+
+	 @< Label {
+            locator = @RectEx {
+                width = 1
+                height = 1
+                width_unit = 1
+                height_unit = 1
+            }
+            color = 0xFFFFFFFF
+            text = "Property         Value"
+            alignment = 12
+        }
+      @> Label
+
+@> Picture
+
+
+
+
+
+//***********************button*******************************
+@< ButtonDefault {   
+		id = "new"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 0
+			y = 0
+		}
+		text = "新建"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "delete"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 60
+			y = 0
+		}
+		text = "删除"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "+"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 120
+			y = 0
+		}
+		text = "+"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "-"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 180
+			y = 0
+		}
+		text = "-"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "E+"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 240
+			y = 0
+		}
+		text = "E+"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "E-"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 300
+			y = 0
+		}
+		text = "E-"
+	}
+@> ButtonDefalut
+
+
+@< ButtonDefault {   
+		id = "play"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 360
+			y = 0
+		}
+		text = "播放"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "stop"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 420
+			y = 0
+		}
+		text = "停止"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "save"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 480
+			y = 0
+		}
+		text = "保存"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "load"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 540
+			y = 0
+		}
+		text = "载入"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "import"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 600
+			y = 0
+		}
+		text = "导入"
+	}
+@> ButtonDefalut
+
+@< ButtonDefault {   
+		id = "export"
+		locator = @RectEx
+		{
+			width = 60
+			height = 40
+			x = 660
+			y = 0
+		}
+		text = "导出"
+	}
+@> ButtonDefalut
+//**********************list*********************************
+@< List {
+    id = "animationsList"
+    locator = @RectEx {
+        x = 0
+        y = 70
+        width = 120
+        height = 300
+    }
+    style = 2
+    item_prototype = @ListItemText {
+        root = 
+            @<Frame
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        color = 0x80FFFFFF
+						enabled = false
+                        //visible = false
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        alignment = 15
+                    }
+                    @>Label
+            @>Frame
+        height = 24
+		text_normal_color = 0xFFFFFFFF
+    }
+    scroll_bar_size = 16
+    scroll_bar = @ScrollBar {
+        slider_unit = 8
+    }
+}
+@> List
+
+
+@< List {
+    id = "picturesList"
+    locator = @RectEx {
+        x = 120
+        y = 70
+        width = 120
+        height = 300
+    }
+    style = 2
+    item_prototype = @ListItemText {
+        root = 
+            @<Frame
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        color = 0x80FFFFFF
+						enabled = false
+                        //visible = false
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        alignment = 15
+                    }
+                    @>Label
+            @>Frame
+        height = 24
+		text_normal_color = 0xFF008800
+    }
+    scroll_bar_size = 16
+    scroll_bar = @ScrollBar {
+        slider_unit = 8
+    }
+}
+@> List
+
+
+@< List {
+    id = "dummyList"
+    locator = @RectEx {
+        x = 240
+        y = 70
+        width = 120
+        height = 300
+    }
+    style = 2
+    item_prototype = @ListItemText {
+        root = 
+            @<Frame
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        color = 0x80FFFFFF
+						enabled = false
+                        //visible = false
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        alignment = 15
+                    }
+                    @>Label
+            @>Frame
+        height = 24
+		text_normal_color = 0xFF008800
+    }
+    scroll_bar_size = 16
+    scroll_bar = @ScrollBar {
+        slider_unit = 8
+    }
+}
+@> List
+
+
+//**********************pair*********************************
+@< List {
+    id = "parametersList"
+    locator = @RectEx {
+        x = 0
+        y = 180
+		x_align = 0
+        y_align = 2
+        width = 120
+        height = 300
+		
+    }
+    style = 2
+    item_prototype = @ListItemText {
+        root = 
+            @<Frame
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        color = 0x80FFFFFF
+						enabled = false
+                        //visible = false
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        alignment = 12
+                    }
+                    @>Label
+            @>Frame
+        height = 24
+		text_normal_color = 0xFFFFFFFF
+    }
+    scroll_bar_size = 16
+    scroll_bar = @ScrollBar {
+        slider_unit = 8
+    }
+}
+@> List
+
+@< List {
+    id = "valueList"
+    locator = @RectEx {
+        x = 120
+        y = 180
+		x_align = 0
+        y_align = 2
+        width = 120
+        height = 300
+		
+    }
+    style = 2
+    item_prototype = @ListItemText {
+        root = 
+            @<Frame
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        color = 0x80FFFFFF
+						enabled = false
+                        //visible = false
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        alignment = 12
+                    }
+                    @>Label
+            @>Frame
+        height = 24
+		text_normal_color = 0xFFFFFFFF
+    }
+    scroll_bar_size = 16
+    scroll_bar = @ScrollBar {
+        slider_unit = 8
+    }
+}
+@> List
+
+
+//*********************textField*****************************
+@< Picture {
+		id = "bkg"
+		locator = @RectEx {
+			x = 0
+			y = 40
+			width = 120
+			height = 24			
+		}
+		color = 0xFF000000
+	}
+	@< TextField {
+	id = "animationsName"
+		locator = @RectEx
+		{
+			width = 120
+			height = 24
+			x = 0
+			y = 0
+		}
+		alignment = 15	
+	}
+	@> TextField
+
+@> Picture
+//*********************DummyTextField*****************************
+
+@< Picture {
+		id = "dummybkg"
+		locator = @RectEx {
+			x = 0
+			y = 40
+			width = 120
+			height = 24			
+		}
+		color = 0xFF000000
+	}
+	@< TextField {
+	id = "dummyName"
+		locator = @RectEx
+		{
+			width = 120
+			height = 24
+			x = 0
+			y = 0
+		}
+		alignment = 15	
+	}
+	@> TextField
+
+@> Picture
+
+//************************textField****************************
+@< Picture {
+		id = "valuebkg"
+		locator = @RectEx {
+			x = 0
+			y = 40
+			width = 120
+			height = 24			
+		}
+		color = 0xFF000000
+	}
+	@< TextField {
+	id = "valueTextFiled"
+		locator = @RectEx
+		{
+			width = 120
+			height = 24
+			x = 0
+			y = 0
+		}
+		alignment = 15	
+	}
+	@> TextField
+
+@> Picture
+
+//*********************testUIPictureSetup*********************
+
+
+@< PictureSetup {
+		id = "axis"
+		locator = @RectEx {
+			x = 512
+			y = 384
+			width = 300
+			height = 300
+
+		}
+		color = 0xFF00FF00
+	}
+
+	@< Picture {
+		locator = @RectEx {
+			x = 4
+			y = 4
+			width = 296
+			height = 296			
+		}
+		color = 0xFF555555
+	}
+	@> Picture
+
+	@< PictureSetup {
+		id = "picturesetup"
+		locator = @RectEx {
+			x = 4
+			y = 4
+			width = 200
+			height = 200
+		}
+		color = 0xFFAAAAAA
+	}
+		@< PictureSetup {
+			id = "dummy"
+			locator = @RectEx {
+			x = -25
+			y = -25
+			width = 50
+			height = 50
+			}
+			color = 0x33FFFF00	
+		}
+			@< Picture {
+				locator = @RectEx {
+					width = 1
+					height = 1
+					x_align = 2
+					y_align = 0
+					//width_unit = 1
+					height_unit = 1
+				}
+				color = 0xFF0000FF
+			}	
+			@> Picture
+
+			@< Picture {
+				locator = @RectEx {
+					width = 1
+					height = 1
+					x_align = 0
+					y_align = 2
+					width_unit = 1
+					//height_unit = 1
+				}
+				color = 0xFF0000FF
+			}	
+			@> Picture
+
+		@> PictureSetup
+	
+	@> PictureSetup
+
+
+@> PictureSetup
+
+
+//*************************testWindows***************************
+@< Picture {
+	id = "lineTop"
+	locator = @RectEx {
+        width = 1
+        height = 0.5
+        x_align = 2
+        y_align = 0
+		height_unit = 1
+    }
+    clipping = true
+    color = 0xFF005500
+    image = @Image0 {
+	}
+}
+@> Picture
+
+@< Picture {
+	id = "lineLeft"
+	locator = @RectEx {
+        width = 0.5
+        height = 1
+        x_align = 0
+        y_align = 2
+		width_unit = 1
+    }
+    clipping = true
+    color = 0xFF005500
+    image = @Image0 {
+	}
+}
+@> Picture
+
+@< Picture {
+	id = "lineBottom"
+	locator = @RectEx {
+        width = 1
+        height = 0.5
+        x_align = 2
+        y_align = 1
+		height_unit = 1
+    }
+    clipping = true
+    color = 0xFF005500
+    image = @Image0 {
+	}
+}
+@> Picture
+
+@< Picture {
+	id = "lineRight"
+	locator = @RectEx {
+        width = 0.5
+        height = 1
+        x_align = 1
+        y_align = 2
+		width_unit = 1
+    }
+    clipping = true
+    color = 0xFF005500
+    image = @Image0 {
+	}
+}
+@> Picture
+
+
+@<Window {
+	id = "window"
+    locator = @RectEx {
+        x = 100
+        y = 100
+        width = 620
+        height = 380
+    }
+    //sizeable = false
+    min_width = 300
+    min_height = 250
+}
+    @<Picture {
+        locator = @Border {}
+        color = 0xFF666666
+        enabled = false
+    }
+    @>Picture
+    
+    @<Picture {
+        locator = @Border {
+            left = 8
+            top = 8
+            right = 8
+            bottom = 8
+        }
+        color = 0xFFBBBBBB
+        enabled = false
+    }
+    @>Picture
+    
+    @<Label {
+        locator = @Rect {
+            x = 20
+            y = 20
+            width = 200
+            height = 24
+        }
+		color = 0xFF222222
+        text = "Pictures"
+    }
+    @>Label
+
+	@<Label {
+        locator = @Rect {
+            x = 270
+            y = 20
+            width = 200
+            height = 24
+        }
+		color = 0xFF222222
+        text = "Preview"
+    }
+    @>Label
+
+  
+
+	@< List {
+    id = "checkBoxList"
+    locator = @RectEx {
+        x = 30
+        y = 50
+        width = 200
+        height = 0.7
+		height_unit = 1
+    }
+    style = 2
+    item_prototype = @ListItemCheckBox {
+        root = 
+            @<Frame
+                    @<Picture {
+                        id = "bkg_selected"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        color = 0x80111111
+						enabled = false
+                        //visible = false
+                    }
+                    @>Picture
+
+                    @<Label {
+                        id = "text"
+                        locator = @RectEx {
+                            width = 1
+                            height = 1
+                            width_unit = 1
+                            height_unit = 1
+                        }
+                        alignment = 15
+						
+                    }
+                    @>Label
+
+					@< ButtonDefault {
+						id = "checkbox"
+						locator = @RectEx {
+							width = 15
+							height = 15
+							x_align = 0
+							y_align = 2
+						}
+						//alignment = 11
+					}
+					@> ButtonDefalut
+            @>Frame
+        height = 24
+		text_normal_color = 0xFF222222
+    }
+    scroll_bar_size = 16
+    scroll_bar = @ScrollBar {
+        slider_unit = 8
+    }
+}
+@> List
+
+@< Picture {
+		id = "preview"
+		locator = @RectEx {
+			x = 280
+			y = 50
+			width = 250
+			height = 250			
+		}
+		color = 0xFF000000
+}
+@> Picture
+
+ @<ButtonDefault {
+        id = "selectAll"
+        locator = @RectEx {
+            x = 290
+            y = 30
+			x_align = 1
+			y_align = 1
+            width = 80
+            height = 36
+        }
+        text = "全选"
+    }
+    @>ButtonDefault
+
+	@<ButtonDefault {
+        id = "invertSelect"
+        locator = @RectEx {
+            x = 210
+            y = 30
+			x_align = 1
+			y_align = 1
+            width = 80
+            height = 36
+        }
+        text = "反选"
+    }
+    @>ButtonDefault
+
+	@<ButtonDefault {
+        id = "confirm"
+        locator = @RectEx {
+            x = 130
+            y = 30
+			x_align = 1
+			y_align = 1
+            width = 80
+            height = 36
+        }
+        text = "确定"
+    }
+    @>ButtonDefault
+
+	@<ButtonDefault {
+        id = "close"
+        locator = @RectEx {
+			x_align = 1
+			y_align = 1
+            x = 50
+            y = 30
+            width = 80
+            height = 36
+        }
+        text = "关闭"
+    }
+    @>ButtonDefault
+
+	@<ButtonDefault {
+        id = "1-"
+        locator = @RectEx {
+            x = 375
+            y = 16
+            width = 30
+            height = 30
+        }
+        text = "1-"
+    }
+    @>ButtonDefault
+
+	@<ButtonDefault {
+        id = "2-"
+        locator = @RectEx {
+            x = 415
+            y = 16
+            width = 30
+            height = 30
+        }
+        text = "2-"
+    }
+    @>ButtonDefault
+
+	@<ButtonDefault {
+        id = "3-"
+        locator = @RectEx {
+            x = 455
+            y = 16
+            width = 30
+            height = 30
+        }
+        text = "3-"
+    }
+    @>ButtonDefault
+
+	@<ButtonDefault {
+        id = "4-"
+        locator = @RectEx {
+            x = 495
+            y = 16
+            width = 30
+            height = 30
+        }
+        text = "4-"
+    }
+    @>ButtonDefault
+
+	@<ButtonDefault {
+        id = "5-"
+        locator = @RectEx {
+            x = 535
+            y = 16
+            width = 30
+            height = 30
+        }
+        text = "5-"
+    }
+    @>ButtonDefault
+
+	@<ButtonDefault {
+        id = "6-"
+        locator = @RectEx {
+            x = 575
+            y = 16
+            width = 30
+            height = 30
+        }
+        text = "6-"
+    }
+    @>ButtonDefault
+
+@>Window
+

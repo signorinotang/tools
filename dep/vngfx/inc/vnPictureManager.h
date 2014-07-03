@@ -1,0 +1,45 @@
+//
+//  vnPictureManager.h
+//  vngfx
+//
+//  Created by Wayne on 13-12-10.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#ifndef vngfx_vnPictureManager_h
+#define vngfx_vnPictureManager_h
+
+#include "vnGfxDef.h"
+#include "vnSingleton.h"
+#include "vnPicture.h"
+#include "vnFilePath.h"
+
+#include <map>
+#include <vector>
+#include <list>
+
+_vn_begin
+
+class _vn_gfx_api PictureManager : public Singleton<PictureManager> {
+public:
+    Picture * createPicture(const c8 *name);
+	bool list(const FilePath &file, std::list<str8> &result);
+    ~PictureManager();
+private:
+    struct PictureInfo {
+        FilePath *texture;
+        aabox2i rect;
+    };
+    struct PictureSetInfo : AllocatedObject {
+        typedef std::map<str8, PictureInfo> PictureMap;
+        PictureMap pictures;
+        typedef std::vector<FilePath> Textures;
+        Textures textures;
+    };
+    typedef std::map<FilePath, PictureSetInfo *> PictureSetInfoMap;
+    PictureSetInfoMap m_info;
+};
+
+_vn_end
+
+#endif

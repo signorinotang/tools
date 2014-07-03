@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9BB20D13-A64C-46C8-BC02-14CCC13BA050}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TDMapEditor</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\dep\vnbase\inc;..\..\..\dep\vnlex\inc;..\..\..\dep\vngfx\inc;..\..\..\dep\vnmath\inc;..\..\..\..\gamelib\src;..\..\..\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\dep\vnbase\inc;..\..\..\dep\vnlex\inc;..\..\..\dep\vngfx\inc;..\..\..\dep\vnmath\inc;..\..\..\..\gamelib\src;..\..\..\src\common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gamelib\src\Animation.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\AnimationController.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapData.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapDecorationDesc.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_Building.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_Cage.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_GemCave.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_HeroField.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_SpawnPoint.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_Tree.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\MapObjectDesc_Tree1x1.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\StateScript.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\StateScriptObject.cpp" />
+    <ClCompile Include="..\..\..\..\gamelib\src\TableBase.cpp" />
+    <ClCompile Include="..\..\..\src\common\Camera.cpp" />
+    <ClCompile Include="..\..\..\src\common\EditValueCommand.cpp" />
+    <ClCompile Include="..\..\..\src\common\GfxAppDelegate.cpp" />
+    <ClCompile Include="..\..\..\src\common\Renderable.cpp" />
+    <ClCompile Include="..\..\..\src\common\SceneNode.cpp" />
+    <ClCompile Include="..\..\..\src\common\UICheckBox.cpp" />
+    <ClCompile Include="..\..\..\src\common\UIFileBrowser.cpp" />
+    <ClCompile Include="..\..\..\src\common\UIListItemETBool.cpp" />
+    <ClCompile Include="..\..\..\src\common\UIListItemETEnum.cpp" />
+    <ClCompile Include="..\..\..\src\common\UIListItemETFloat.cpp" />
+    <ClCompile Include="..\..\..\src\common\UIListItemETInt.cpp" />
+    <ClCompile Include="..\..\..\src\common\UIListItemETString.cpp" />
+    <ClCompile Include="..\..\..\src\common\UILogList.cpp" />
+    <ClCompile Include="..\..\..\src\common\UIPopList.cpp" />
+    <ClCompile Include="..\..\..\src\common\UIPropertyList.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\BinaryHeap.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\Brush.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushBlockType.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushCollision.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushDecoration.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushObjectEdit.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushObjectNew.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\BrushSSO.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\EditorApp.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapBlockCliffNode.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapBlockCornerNode.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapBlockNode.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapCollision.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapDecoration.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapDecorationAnimation.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapDecorationImage.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapGridNode.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_Building.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_Cage.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_GemCave.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_HeroField.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_SpawnPoint.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_Tree.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapObject_Tree1x1.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\MapSSO.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\UIEditorRoot.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\UIListItemDecorationAnimation.cpp" />
+    <ClCompile Include="..\..\..\src\TDMapEditor\UIListItemDecorationImage.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\gamelib\src\Animation.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\AnimationController.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapData.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapDecorationDesc.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_Building.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_Cage.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_GemCave.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_HeroField.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_SpawnPoint.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_Tree.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\MapObjectDesc_Tree1x1.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\StateScript.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\StateScriptObject.h" />
+    <ClInclude Include="..\..\..\..\gamelib\src\TableBase.h" />
+    <ClInclude Include="..\..\..\src\common\Camera.h" />
+    <ClInclude Include="..\..\..\src\common\EditValueCommand.h" />
+    <ClInclude Include="..\..\..\src\common\GfxAppDelegate.h" />
+    <ClInclude Include="..\..\..\src\common\Renderable.h" />
+    <ClInclude Include="..\..\..\src\common\SceneNode.h" />
+    <ClInclude Include="..\..\..\src\common\UICheckBox.h" />
+    <ClInclude Include="..\..\..\src\common\UIFileBrowser.h" />
+    <ClInclude Include="..\..\..\src\common\UIListItemETBool.h" />
+    <ClInclude Include="..\..\..\src\common\UIListItemETEnum.h" />
+    <ClInclude Include="..\..\..\src\common\UIListItemETFloat.h" />
+    <ClInclude Include="..\..\..\src\common\UIListItemETInt.h" />
+    <ClInclude Include="..\..\..\src\common\UIListItemETString.h" />
+    <ClInclude Include="..\..\..\src\common\UILogList.h" />
+    <ClInclude Include="..\..\..\src\common\UIPopList.h" />
+    <ClInclude Include="..\..\..\src\common\UIPropertyList.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\BinaryHeap.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\Brush.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushBlockType.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushCollision.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushDecoration.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushObjectEdit.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushObjectNew.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\BrushSSO.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\EditorApp.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapBlockCliffNode.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapBlockCornerNode.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapBlockNode.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapCollision.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapDecoration.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapDecorationAnimation.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapDecorationImage.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapGridNode.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_Building.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_Cage.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_GemCave.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_HeroField.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_SpawnPoint.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_Tree.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapObject_Tree1x1.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\MapSSO.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\UIEditorRoot.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\UIListItemDecorationAnimation.h" />
+    <ClInclude Include="..\..\..\src\TDMapEditor\UIListItemDecorationImage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\dep\vnbase\prj\vc12\vnbase.vcxproj">
+      <Project>{e6a1bd1b-b448-48a8-b734-7f1a91fa0c6f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\dep\vngfx\dep\freetype\builds\windows\vc2013\freetype.vcxproj">
+      <Project>{78b079bd-9fc7-4b9e-b4a6-96da0f00248b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\dep\vngfx\prj\vc12\vngfx.vcxproj">
+      <Project>{fcd60638-cc6e-4541-ad23-a13a4b53ae8a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\dep\vnlex\prj\vc12\vnlex.vcxproj">
+      <Project>{ea5898e2-651f-471b-9e6a-b3301cdaf79b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\dep\vnmath\prj\vc12\vnmath.vcxproj">
+      <Project>{c80115fa-06ed-47a0-9e88-424cea27fcc3}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,111 @@
+
+@<Window {
+    locator = @RectEx {
+        x = 100
+        y = 100
+        width = 400
+        height = 300
+    }
+    //sizeable = false
+    min_width = 300
+    min_height = 250
+}
+    @<Picture {
+        locator = @Border {}
+        color = 0xFF00FF00
+        enabled = false
+    }
+    @>Picture
+    
+    @<Picture {
+        locator = @Border {
+            left = 8
+            top = 8
+            right = 8
+            bottom = 8
+        }
+        image = @Image9 {
+            image22 = "1:/test/test.imgs|apple.png"
+            height_top = 8
+            height_bottom = 8
+            width_left = 8
+            width_right = 8
+        }
+        color = 0xFFFFFFFF
+        enabled = false
+    }
+    @>Picture
+    
+    
+    @<Label {
+        locator = @Rect {
+            x = 50
+            y = 50
+            width = 200
+            height = 24
+        }
+        text = "Hello, World."
+    }
+    @>Label
+
+    @<Picture {
+        locator = @Rect {
+            x = 50
+            y = 100
+            width = 200
+            height = 24
+        }
+        color = 0xFF404040
+    }
+        @<TextField {
+            id = "text"
+            locator = @Border {}
+        }
+        @>TextField
+
+    @>Picture
+
+	@<PopList {
+		id = "poplist"
+		locator = @Rect {
+			x = 50
+			y = 150
+			width = 80
+			height = 36
+		}
+		items = 
+			[
+				"Item0"
+				"AABBCCEE"
+				"我的中国心"
+			]
+	}
+		@<ButtonDefault {
+			id = "button"
+			locator = @Border {}
+			text = "按钮"
+		}
+		@>ButtonDefault
+	@>PopList
+	
+	@<CheckBox {
+		id = "checkbox"
+		locator = @Rect {
+			x = 150
+			y = 150
+			width = 20
+			height = 20
+		}
+	}
+	@>CheckBox
+
+@>Window
+
+@<Picture {
+    id = "list_bkg"
+	locator = @Rect { x = 500 y = 100 width = 300 height = 500 }
+	color = 0xFF202020
+}
+@>Picture
+
+

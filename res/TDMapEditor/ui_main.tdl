@@ -1,0 +1,227 @@
+
+
+
+@<ButtonDefault {
+    id = "new"
+    locator = @Rect { width=80 height=35 }
+    text = "新建"
+}
+@>ButtonDefault
+
+@<ButtonDefault {
+    id = "open"
+    locator = @Rect { x=80 width=80 height=35 }
+    text = "打开"
+}
+@>ButtonDefault
+
+@<ButtonDefault {
+    id = "save"
+    locator = @Rect { x=160 width=80 height=35 }
+    text = "保存"
+}
+@>ButtonDefault
+
+@<ButtonDefault {
+    id = "save_as"
+    locator = @Rect { x=240 width=80 height=35 }
+    text = "另存"
+}
+@>ButtonDefault
+
+@<ButtonDefault {
+    id = "refresh"
+    locator = @Rect { x=360 width=80 height=35 }
+    text = "刷新"
+}
+@>ButtonDefault
+
+// log
+@<Picture {
+    id = "wnd_log"
+    locator = @RectEx {
+        y_align = 1
+        width = 1
+        width_unit = 1
+        height = 72
+    }
+    color = 0x60000000
+}
+@>Picture
+
+// brush list
+@<Window {
+    locator = @Rect { x=0 y=40 width=140 height=184 }
+    sizeable = false
+}
+    // bkg
+    @<Picture {
+        locator = @Border {}
+        color = 0xE0808080
+        enabled = false
+    }
+    @>Picture
+    
+    @<Label {
+        locator = @BoxEx {
+            left = 8
+            top = 8
+            right = 8
+            bottom = 32
+            right_align = 1
+        }
+        text = "工具"
+        //color = 0xFF000000
+    }
+    @>Label
+
+    @<Picture {
+        locator = @BoxEx {
+            left = 8
+            right = 8
+            right_align = 1
+            top = 32
+            bottom = 176
+        }
+        color = 0xFF202020
+    }
+
+
+        @<List {
+            id = "brush_list"
+            locator = @Border {}
+            item_prototype = @ListItemText {
+                root =
+                    @<Frame {
+                        locator = @Border {}
+                    }
+                        @<Picture {
+                            id = "bkg_selected"
+                            locator = @Border {}
+                            enabled = false
+                            color = 0xFF808080
+                        }
+                        @>Picture
+
+                        @<Label {
+                            id = "text"
+                            locator = @Border {}
+                        }
+                        @>Label
+
+                    @>Frame
+
+                height = 24
+            }
+            
+            items = [
+                @item { text="摄像机(Q)" }
+                @item { text="地形(W)" }
+				@item { text="物件_新建(E)" }
+				@item { text="物件_编辑(R)" }
+                @item { text="装饰(T)" }
+            ]
+        }
+        @>List
+
+    @>Picture
+
+@>Window
+
+///// new window /////
+@<Picture {
+    id = "new_map_root"
+    locator = @Border {}
+    color = 0x80000000
+    visible = false
+}
+    @<Window {
+        locator = @RectEx { x_align = 2 y_align = 2 width = 400 height = 158 }
+        sizeable = false
+    }
+        // bkg
+        @<Picture {
+            locator = @Border {}
+            color = 0xFFE0E0E0
+            enabled = false
+        }
+        @>Picture
+
+        // title
+        @<Label {
+            locator = @RectEx {
+                y = 8
+                width = 1
+                height = 24
+                width_unit = 1
+            }
+            alignment = 3
+            color = 0xFF000000
+            text = "新建"
+        }
+        @>Label
+
+        @<Label {
+            locator = @Rect {
+                x = 16
+                y = 40
+                width = 64
+                height = 36
+            }
+            alignment = 12
+            color = 0xFF000000
+            text = "地图高："
+        }
+        @>Label
+
+        // text - height 
+        @<Picture {
+            locator = @BoxEx {
+                left = 96
+                top = 40
+                right = 16
+                bottom = 76
+                right_align = 1
+            }
+            color = 0xFF404040
+        }
+            @<TextField {
+                id = "new_map_height"
+                locator = @Border {left = 6 right = 6}
+                alignment = 15
+                text = "20"
+            }
+            @>TextField
+        @>Picture
+
+        // ok button
+        @<ButtonDefault {
+            id = "new_map_ok"
+            locator = @RectEx {
+                x_align = 1
+                y_align = 1
+                x = 112
+                y = 16
+                width = 80
+                height = 36
+            }
+            text = "确定"
+        }
+        @>ButtonDefault
+        
+        // cancel button
+        @<ButtonDefault {
+            id = "new_map_cancel"
+            locator = @RectEx {
+                x_align = 1
+                y_align = 1
+                x = 16
+                y = 16
+                width = 80
+                height = 36
+            }
+            text = "取消"
+        }
+        @>ButtonDefault
+    @>Window
+@>Picture

@@ -1,0 +1,844 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0186FFC187E7A0500C9ACAE /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0186FF6187E7A0500C9ACAE /* Camera.cpp */; };
+		B0186FFD187E7A0500C9ACAE /* Renderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0186FF8187E7A0500C9ACAE /* Renderable.cpp */; };
+		B0186FFE187E7A0500C9ACAE /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0186FFA187E7A0500C9ACAE /* SceneNode.cpp */; };
+		B01BCF661907A53000A286BC /* MapCollision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B01BCF641907A53000A286BC /* MapCollision.cpp */; };
+		B01BCF6C1907C0C300A286BC /* BrushCollision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B01BCF6A1907C0C300A286BC /* BrushCollision.cpp */; };
+		B01BCF6F1907CBA600A286BC /* BinaryHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B01BCF6D1907CBA600A286BC /* BinaryHeap.cpp */; };
+		B02BA9EE1924CEFF0027FDB1 /* MapDecorationDesc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02BA9EB1924CD980027FDB1 /* MapDecorationDesc.cpp */; };
+		B034D33A1910C1AC00FBDBF4 /* MapObjectDesc_Building.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B034D3371910C15A00FBDBF4 /* MapObjectDesc_Building.cpp */; };
+		B034D33E1910C9F200FBDBF4 /* MapObject_Building.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B034D33B1910C9AB00FBDBF4 /* MapObject_Building.cpp */; };
+		B0357027187115040042AF3B /* UIEditorRoot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0357025187115040042AF3B /* UIEditorRoot.cpp */; };
+		B035703318711CAD0042AF3B /* UILogList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B035703118711CAD0042AF3B /* UILogList.cpp */; };
+		B035704518715F8D0042AF3B /* MapBlockNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B035704318715F8D0042AF3B /* MapBlockNode.cpp */; };
+		B035704818716D870042AF3B /* Brush.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B035704618716D870042AF3B /* Brush.cpp */; };
+		B03932AD1890EC610051738C /* MapObjectDesc_SpawnPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03932AB1890EC610051738C /* MapObjectDesc_SpawnPoint.cpp */; };
+		B03932B11890EF790051738C /* MapObject_SpawnPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03932AE1890EEC50051738C /* MapObject_SpawnPoint.cpp */; };
+		B0405638187C385600917F74 /* BrushObjectNew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0405636187C385600917F74 /* BrushObjectNew.cpp */; };
+		B0405649187C517B00917F74 /* UICheckBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0405639187C517B00917F74 /* UICheckBox.cpp */; };
+		B040564A187C517B00917F74 /* UIListItemETBool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B040563B187C517B00917F74 /* UIListItemETBool.cpp */; };
+		B040564B187C517B00917F74 /* UIListItemETEnum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B040563D187C517B00917F74 /* UIListItemETEnum.cpp */; };
+		B040564C187C517B00917F74 /* UIListItemETFloat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B040563F187C517B00917F74 /* UIListItemETFloat.cpp */; };
+		B040564D187C517B00917F74 /* UIListItemETInt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0405641187C517B00917F74 /* UIListItemETInt.cpp */; };
+		B040564E187C517B00917F74 /* UIListItemETString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0405643187C517B00917F74 /* UIListItemETString.cpp */; };
+		B040564F187C517B00917F74 /* UIPopList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0405645187C517B00917F74 /* UIPopList.cpp */; };
+		B0405650187C517B00917F74 /* UIPropertyList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0405647187C517B00917F74 /* UIPropertyList.cpp */; };
+		B047553618EA8BAA00377BD8 /* MapDecoration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B047553418EA8BAA00377BD8 /* MapDecoration.cpp */; };
+		B047553C18EAAED200377BD8 /* MapDecorationImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B047553A18EAAED200377BD8 /* MapDecorationImage.cpp */; };
+		B04C353418E9135300E07E41 /* BrushDecoration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B04C353218E9135300E07E41 /* BrushDecoration.cpp */; };
+		B04C353718E9530300E07E41 /* UIListItemDecorationImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B04C353518E9530300E07E41 /* UIListItemDecorationImage.cpp */; };
+		B05FCF3718728F30001505FD /* BrushBlockType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B05FCF3518728F30001505FD /* BrushBlockType.cpp */; };
+		B05FCF3D1872B85F001505FD /* MapBlockCornerNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B05FCF3B1872B85F001505FD /* MapBlockCornerNode.cpp */; };
+		B06BAAC1186C2BC7000B7B7B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06BAAC0186C2BC7000B7B7B /* Cocoa.framework */; };
+		B06BAACB186C2BC7000B7B7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B06BAAC9186C2BC7000B7B7B /* InfoPlist.strings */; };
+		B06BAACD186C2BC7000B7B7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B06BAACC186C2BC7000B7B7B /* main.m */; };
+		B06BAAD4186C2BC7000B7B7B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B06BAAD3186C2BC7000B7B7B /* AppDelegate.mm */; };
+		B06BAAD7186C2BC7000B7B7B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06BAAD5186C2BC7000B7B7B /* MainMenu.xib */; };
+		B06BAB01186C2CCF000B7B7B /* GfxAppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B06BAAFD186C2CCF000B7B7B /* GfxAppDelegate.cpp */; };
+		B06BAB02186C2CCF000B7B7B /* UIFileBrowser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B06BAAFF186C2CCF000B7B7B /* UIFileBrowser.cpp */; };
+		B06BAB0B186C2D9C000B7B7B /* EditorApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B06BAB09186C2D9C000B7B7B /* EditorApp.cpp */; };
+		B06BAB29186C2E9E000B7B7B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06BAB28186C2E9E000B7B7B /* OpenGL.framework */; };
+		B06BAB2A186C2ED2000B7B7B /* vnbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B06BAB12186C2E53000B7B7B /* vnbase.a */; };
+		B06BAB2B186C2ED5000B7B7B /* vngfx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B06BAB21186C2E6C000B7B7B /* vngfx.a */; };
+		B06BAB2C186C2ED9000B7B7B /* vnlex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B06BAB18186C2E5F000B7B7B /* vnlex.a */; };
+		B06BAB2E186C2F1F000B7B7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06BAB2D186C2F1F000B7B7B /* QuartzCore.framework */; };
+		B074F33E187BDCF10043F627 /* MapObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B074F33C187BDCF10043F627 /* MapObject.cpp */; };
+		B074F347187BEF810043F627 /* MapObject_Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B074F345187BEF810043F627 /* MapObject_Tree.cpp */; };
+		B07B4F90187CEFA000D50006 /* BrushObjectEdit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B07B4F8E187CEFA000D50006 /* BrushObjectEdit.cpp */; };
+		B07B4FA2187D36C200D50006 /* MapObject_GemCave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B07B4FA0187D36C200D50006 /* MapObject_GemCave.cpp */; };
+		B07D7791187AB12F00BAC6D6 /* MapGridNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B07D778F187AB12F00BAC6D6 /* MapGridNode.cpp */; };
+		B08E5BF21887DA4D00A2E60A /* MapData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B08E5BE81887DA4D00A2E60A /* MapData.cpp */; };
+		B08E5BF41887DA4D00A2E60A /* MapObjectDesc_GemCave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B08E5BEC1887DA4D00A2E60A /* MapObjectDesc_GemCave.cpp */; };
+		B08E5BF51887DA4D00A2E60A /* MapObjectDesc_Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B08E5BEE1887DA4D00A2E60A /* MapObjectDesc_Tree.cpp */; };
+		B08E5BF61887DA4D00A2E60A /* MapObjectDesc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B08E5BF01887DA4D00A2E60A /* MapObjectDesc.cpp */; };
+		B09B61E71946EDDE006BB8D6 /* StateScript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B09B61E51946EDDE006BB8D6 /* StateScript.cpp */; };
+		B09B61EA1946EE28006BB8D6 /* StateScriptObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B09B61E81946EE28006BB8D6 /* StateScriptObject.cpp */; };
+		B09B621C19482F0C006BB8D6 /* MapSSO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B09B621919482E7C006BB8D6 /* MapSSO.cpp */; };
+		B09B621F1948531E006BB8D6 /* BrushSSO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B09B621D1948531E006BB8D6 /* BrushSSO.cpp */; };
+		B0AE9AF0195AC6CB00265744 /* MapObjectDesc_Cage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0AE9AEE195AC6CB00265744 /* MapObjectDesc_Cage.cpp */; };
+		B0AE9AF4195ACD8900265744 /* MapObject_Cage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0AE9AF1195ACD0700265744 /* MapObject_Cage.cpp */; };
+		B0BDFF3A192C726E00437563 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0BDFF36192C726E00437563 /* Animation.cpp */; };
+		B0BDFF3B192C726E00437563 /* AnimationController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0BDFF38192C726E00437563 /* AnimationController.cpp */; };
+		B0BDFF3E192C7FC600437563 /* UIListItemDecorationAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0BDFF3C192C7FC600437563 /* UIListItemDecorationAnimation.cpp */; };
+		B0BDFF42192C8B3600437563 /* MapDecorationAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0BDFF3F192C8A6000437563 /* MapDecorationAnimation.cpp */; };
+		B0CCD95A190A2EC90086E84C /* MapObjectDesc_HeroField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CCD958190A2EC90086E84C /* MapObjectDesc_HeroField.cpp */; };
+		B0CCD95D190A2FA50086E84C /* MapObject_HeroField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CCD95B190A2FA50086E84C /* MapObject_HeroField.cpp */; };
+		B0D14EF6191C77A000B75122 /* MapObjectDesc_Tree1x1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D14EF4191C77A000B75122 /* MapObjectDesc_Tree1x1.cpp */; };
+		B0D14EFA191C79D900B75122 /* MapObject_Tree1x1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D14EF7191C785E00B75122 /* MapObject_Tree1x1.cpp */; };
+		B0E218EE18C86E5D00B8C491 /* MapBlockCliffNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E218EB18C86E4600B8C491 /* MapBlockCliffNode.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B06BAB11186C2E53000B7B7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06BAB0D186C2E53000B7B7B /* vnbase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B0BFFED2184EF8D6000DEC1A;
+			remoteInfo = vnbase;
+		};
+		B06BAB17186C2E5F000B7B7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06BAB13186C2E5F000B7B7B /* vnlex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B0BFFEED184F0466000DEC1A;
+			remoteInfo = vnlex;
+		};
+		B06BAB20186C2E6C000B7B7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06BAB19186C2E6C000B7B7B /* vngfx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B0BFFEFF184F05C2000DEC1A;
+			remoteInfo = vngfx;
+		};
+		B06BAB22186C2E80000B7B7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06BAB19186C2E6C000B7B7B /* vngfx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BFFEFE184F05C2000DEC1A;
+			remoteInfo = vngfx;
+		};
+		B06BAB24186C2E83000B7B7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06BAB13186C2E5F000B7B7B /* vnlex.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BFFEEC184F0466000DEC1A;
+			remoteInfo = vnlex;
+		};
+		B06BAB26186C2E85000B7B7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06BAB0D186C2E53000B7B7B /* vnbase.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BFFED1184EF8D6000DEC1A;
+			remoteInfo = vnbase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0186FF6187E7A0500C9ACAE /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = ../../../src/common/Camera.cpp; sourceTree = "<group>"; };
+		B0186FF7187E7A0500C9ACAE /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../../../src/common/Camera.h; sourceTree = "<group>"; };
+		B0186FF8187E7A0500C9ACAE /* Renderable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderable.cpp; path = ../../../src/common/Renderable.cpp; sourceTree = "<group>"; };
+		B0186FF9187E7A0500C9ACAE /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderable.h; path = ../../../src/common/Renderable.h; sourceTree = "<group>"; };
+		B0186FFA187E7A0500C9ACAE /* SceneNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneNode.cpp; path = ../../../src/common/SceneNode.cpp; sourceTree = "<group>"; };
+		B0186FFB187E7A0500C9ACAE /* SceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneNode.h; path = ../../../src/common/SceneNode.h; sourceTree = "<group>"; };
+		B01BCF641907A53000A286BC /* MapCollision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapCollision.cpp; path = ../../../src/TDMapEditor/MapCollision.cpp; sourceTree = "<group>"; };
+		B01BCF651907A53000A286BC /* MapCollision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapCollision.h; path = ../../../src/TDMapEditor/MapCollision.h; sourceTree = "<group>"; };
+		B01BCF6A1907C0C300A286BC /* BrushCollision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BrushCollision.cpp; path = ../../../src/TDMapEditor/BrushCollision.cpp; sourceTree = "<group>"; };
+		B01BCF6B1907C0C300A286BC /* BrushCollision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrushCollision.h; path = ../../../src/TDMapEditor/BrushCollision.h; sourceTree = "<group>"; };
+		B01BCF6D1907CBA600A286BC /* BinaryHeap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryHeap.cpp; path = ../../../src/TDMapEditor/BinaryHeap.cpp; sourceTree = "<group>"; };
+		B01BCF6E1907CBA600A286BC /* BinaryHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryHeap.h; path = ../../../src/TDMapEditor/BinaryHeap.h; sourceTree = "<group>"; };
+		B02BA9EB1924CD980027FDB1 /* MapDecorationDesc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapDecorationDesc.cpp; sourceTree = "<group>"; };
+		B02BA9EC1924CD980027FDB1 /* MapDecorationDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDecorationDesc.h; sourceTree = "<group>"; };
+		B034D3371910C15A00FBDBF4 /* MapObjectDesc_Building.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapObjectDesc_Building.cpp; sourceTree = "<group>"; };
+		B034D3381910C15A00FBDBF4 /* MapObjectDesc_Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObjectDesc_Building.h; sourceTree = "<group>"; };
+		B034D33B1910C9AB00FBDBF4 /* MapObject_Building.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapObject_Building.cpp; path = ../../../src/TDMapEditor/MapObject_Building.cpp; sourceTree = "<group>"; };
+		B034D33C1910C9AB00FBDBF4 /* MapObject_Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapObject_Building.h; path = ../../../src/TDMapEditor/MapObject_Building.h; sourceTree = "<group>"; };
+		B0357025187115040042AF3B /* UIEditorRoot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIEditorRoot.cpp; path = ../../../src/TDMapEditor/UIEditorRoot.cpp; sourceTree = "<group>"; };
+		B0357026187115040042AF3B /* UIEditorRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIEditorRoot.h; path = ../../../src/TDMapEditor/UIEditorRoot.h; sourceTree = "<group>"; };
+		B035703118711CAD0042AF3B /* UILogList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UILogList.cpp; path = ../../../src/common/UILogList.cpp; sourceTree = "<group>"; };
+		B035703218711CAD0042AF3B /* UILogList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UILogList.h; path = ../../../src/common/UILogList.h; sourceTree = "<group>"; };
+		B035704318715F8D0042AF3B /* MapBlockNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapBlockNode.cpp; path = ../../../src/TDMapEditor/MapBlockNode.cpp; sourceTree = "<group>"; };
+		B035704418715F8D0042AF3B /* MapBlockNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapBlockNode.h; path = ../../../src/TDMapEditor/MapBlockNode.h; sourceTree = "<group>"; };
+		B035704618716D870042AF3B /* Brush.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Brush.cpp; path = ../../../src/TDMapEditor/Brush.cpp; sourceTree = "<group>"; };
+		B035704718716D870042AF3B /* Brush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Brush.h; path = ../../../src/TDMapEditor/Brush.h; sourceTree = "<group>"; };
+		B03932AB1890EC610051738C /* MapObjectDesc_SpawnPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapObjectDesc_SpawnPoint.cpp; sourceTree = "<group>"; };
+		B03932AC1890EC610051738C /* MapObjectDesc_SpawnPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObjectDesc_SpawnPoint.h; sourceTree = "<group>"; };
+		B03932AE1890EEC50051738C /* MapObject_SpawnPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapObject_SpawnPoint.cpp; path = ../../../src/TDMapEditor/MapObject_SpawnPoint.cpp; sourceTree = "<group>"; };
+		B03932AF1890EEC50051738C /* MapObject_SpawnPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapObject_SpawnPoint.h; path = ../../../src/TDMapEditor/MapObject_SpawnPoint.h; sourceTree = "<group>"; };
+		B0405636187C385600917F74 /* BrushObjectNew.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BrushObjectNew.cpp; path = ../../../src/TDMapEditor/BrushObjectNew.cpp; sourceTree = "<group>"; };
+		B0405637187C385600917F74 /* BrushObjectNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrushObjectNew.h; path = ../../../src/TDMapEditor/BrushObjectNew.h; sourceTree = "<group>"; };
+		B0405639187C517B00917F74 /* UICheckBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UICheckBox.cpp; path = ../../../src/common/UICheckBox.cpp; sourceTree = "<group>"; };
+		B040563A187C517B00917F74 /* UICheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICheckBox.h; path = ../../../src/common/UICheckBox.h; sourceTree = "<group>"; };
+		B040563B187C517B00917F74 /* UIListItemETBool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIListItemETBool.cpp; path = ../../../src/common/UIListItemETBool.cpp; sourceTree = "<group>"; };
+		B040563C187C517B00917F74 /* UIListItemETBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListItemETBool.h; path = ../../../src/common/UIListItemETBool.h; sourceTree = "<group>"; };
+		B040563D187C517B00917F74 /* UIListItemETEnum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIListItemETEnum.cpp; path = ../../../src/common/UIListItemETEnum.cpp; sourceTree = "<group>"; };
+		B040563E187C517B00917F74 /* UIListItemETEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListItemETEnum.h; path = ../../../src/common/UIListItemETEnum.h; sourceTree = "<group>"; };
+		B040563F187C517B00917F74 /* UIListItemETFloat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIListItemETFloat.cpp; path = ../../../src/common/UIListItemETFloat.cpp; sourceTree = "<group>"; };
+		B0405640187C517B00917F74 /* UIListItemETFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListItemETFloat.h; path = ../../../src/common/UIListItemETFloat.h; sourceTree = "<group>"; };
+		B0405641187C517B00917F74 /* UIListItemETInt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIListItemETInt.cpp; path = ../../../src/common/UIListItemETInt.cpp; sourceTree = "<group>"; };
+		B0405642187C517B00917F74 /* UIListItemETInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListItemETInt.h; path = ../../../src/common/UIListItemETInt.h; sourceTree = "<group>"; };
+		B0405643187C517B00917F74 /* UIListItemETString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIListItemETString.cpp; path = ../../../src/common/UIListItemETString.cpp; sourceTree = "<group>"; };
+		B0405644187C517B00917F74 /* UIListItemETString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListItemETString.h; path = ../../../src/common/UIListItemETString.h; sourceTree = "<group>"; };
+		B0405645187C517B00917F74 /* UIPopList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIPopList.cpp; path = ../../../src/common/UIPopList.cpp; sourceTree = "<group>"; };
+		B0405646187C517B00917F74 /* UIPopList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIPopList.h; path = ../../../src/common/UIPopList.h; sourceTree = "<group>"; };
+		B0405647187C517B00917F74 /* UIPropertyList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIPropertyList.cpp; path = ../../../src/common/UIPropertyList.cpp; sourceTree = "<group>"; };
+		B0405648187C517B00917F74 /* UIPropertyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIPropertyList.h; path = ../../../src/common/UIPropertyList.h; sourceTree = "<group>"; };
+		B047553418EA8BAA00377BD8 /* MapDecoration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapDecoration.cpp; path = ../../../src/TDMapEditor/MapDecoration.cpp; sourceTree = "<group>"; };
+		B047553518EA8BAA00377BD8 /* MapDecoration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapDecoration.h; path = ../../../src/TDMapEditor/MapDecoration.h; sourceTree = "<group>"; };
+		B047553A18EAAED200377BD8 /* MapDecorationImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapDecorationImage.cpp; path = ../../../src/TDMapEditor/MapDecorationImage.cpp; sourceTree = "<group>"; };
+		B047553B18EAAED200377BD8 /* MapDecorationImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapDecorationImage.h; path = ../../../src/TDMapEditor/MapDecorationImage.h; sourceTree = "<group>"; };
+		B04C353218E9135300E07E41 /* BrushDecoration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BrushDecoration.cpp; path = ../../../src/TDMapEditor/BrushDecoration.cpp; sourceTree = "<group>"; };
+		B04C353318E9135300E07E41 /* BrushDecoration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrushDecoration.h; path = ../../../src/TDMapEditor/BrushDecoration.h; sourceTree = "<group>"; };
+		B04C353518E9530300E07E41 /* UIListItemDecorationImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIListItemDecorationImage.cpp; path = ../../../src/TDMapEditor/UIListItemDecorationImage.cpp; sourceTree = "<group>"; };
+		B04C353618E9530300E07E41 /* UIListItemDecorationImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListItemDecorationImage.h; path = ../../../src/TDMapEditor/UIListItemDecorationImage.h; sourceTree = "<group>"; };
+		B05FCF3518728F30001505FD /* BrushBlockType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BrushBlockType.cpp; path = ../../../src/TDMapEditor/BrushBlockType.cpp; sourceTree = "<group>"; };
+		B05FCF3618728F30001505FD /* BrushBlockType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrushBlockType.h; path = ../../../src/TDMapEditor/BrushBlockType.h; sourceTree = "<group>"; };
+		B05FCF3B1872B85F001505FD /* MapBlockCornerNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapBlockCornerNode.cpp; path = ../../../src/TDMapEditor/MapBlockCornerNode.cpp; sourceTree = "<group>"; };
+		B05FCF3C1872B85F001505FD /* MapBlockCornerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapBlockCornerNode.h; path = ../../../src/TDMapEditor/MapBlockCornerNode.h; sourceTree = "<group>"; };
+		B06BAABD186C2BC7000B7B7B /* TDMapEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDMapEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06BAAC0186C2BC7000B7B7B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B06BAAC3186C2BC7000B7B7B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B06BAAC4186C2BC7000B7B7B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B06BAAC5186C2BC7000B7B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B06BAAC8186C2BC7000B7B7B /* TDMapEditor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TDMapEditor-Info.plist"; sourceTree = "<group>"; };
+		B06BAACA186C2BC7000B7B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B06BAACC186C2BC7000B7B7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B06BAACE186C2BC7000B7B7B /* TDMapEditor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TDMapEditor-Prefix.pch"; sourceTree = "<group>"; };
+		B06BAAD2186C2BC7000B7B7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B06BAAD3186C2BC7000B7B7B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		B06BAAD6186C2BC7000B7B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B06BAAFD186C2CCF000B7B7B /* GfxAppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GfxAppDelegate.cpp; path = ../../../src/common/GfxAppDelegate.cpp; sourceTree = "<group>"; };
+		B06BAAFE186C2CCF000B7B7B /* GfxAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GfxAppDelegate.h; path = ../../../src/common/GfxAppDelegate.h; sourceTree = "<group>"; };
+		B06BAAFF186C2CCF000B7B7B /* UIFileBrowser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIFileBrowser.cpp; path = ../../../src/common/UIFileBrowser.cpp; sourceTree = "<group>"; };
+		B06BAB00186C2CCF000B7B7B /* UIFileBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIFileBrowser.h; path = ../../../src/common/UIFileBrowser.h; sourceTree = "<group>"; };
+		B06BAB09186C2D9C000B7B7B /* EditorApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EditorApp.cpp; path = ../../../src/TDMapEditor/EditorApp.cpp; sourceTree = "<group>"; };
+		B06BAB0A186C2D9C000B7B7B /* EditorApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorApp.h; path = ../../../src/TDMapEditor/EditorApp.h; sourceTree = "<group>"; };
+		B06BAB0D186C2E53000B7B7B /* vnbase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vnbase.xcodeproj; path = ../../../dep/vnbase/prj/osx/vnbase.xcodeproj; sourceTree = "<group>"; };
+		B06BAB13186C2E5F000B7B7B /* vnlex.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vnlex.xcodeproj; path = ../../../dep/vnlex/prj/osx/vnlex.xcodeproj; sourceTree = "<group>"; };
+		B06BAB19186C2E6C000B7B7B /* vngfx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vngfx.xcodeproj; path = ../../../dep/vngfx/prj/osx/vngfx.xcodeproj; sourceTree = "<group>"; };
+		B06BAB28186C2E9E000B7B7B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B06BAB2D186C2F1F000B7B7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B074F33C187BDCF10043F627 /* MapObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapObject.cpp; path = ../../../src/TDMapEditor/MapObject.cpp; sourceTree = "<group>"; };
+		B074F33D187BDCF10043F627 /* MapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapObject.h; path = ../../../src/TDMapEditor/MapObject.h; sourceTree = "<group>"; };
+		B074F345187BEF810043F627 /* MapObject_Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapObject_Tree.cpp; path = ../../../src/TDMapEditor/MapObject_Tree.cpp; sourceTree = "<group>"; };
+		B074F346187BEF810043F627 /* MapObject_Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapObject_Tree.h; path = ../../../src/TDMapEditor/MapObject_Tree.h; sourceTree = "<group>"; };
+		B07B4F8E187CEFA000D50006 /* BrushObjectEdit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BrushObjectEdit.cpp; path = ../../../src/TDMapEditor/BrushObjectEdit.cpp; sourceTree = "<group>"; };
+		B07B4F8F187CEFA000D50006 /* BrushObjectEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrushObjectEdit.h; path = ../../../src/TDMapEditor/BrushObjectEdit.h; sourceTree = "<group>"; };
+		B07B4FA0187D36C200D50006 /* MapObject_GemCave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapObject_GemCave.cpp; path = ../../../src/TDMapEditor/MapObject_GemCave.cpp; sourceTree = "<group>"; };
+		B07B4FA1187D36C200D50006 /* MapObject_GemCave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapObject_GemCave.h; path = ../../../src/TDMapEditor/MapObject_GemCave.h; sourceTree = "<group>"; };
+		B07D778F187AB12F00BAC6D6 /* MapGridNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapGridNode.cpp; path = ../../../src/TDMapEditor/MapGridNode.cpp; sourceTree = "<group>"; };
+		B07D7790187AB12F00BAC6D6 /* MapGridNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapGridNode.h; path = ../../../src/TDMapEditor/MapGridNode.h; sourceTree = "<group>"; };
+		B08E5BE81887DA4D00A2E60A /* MapData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapData.cpp; sourceTree = "<group>"; };
+		B08E5BE91887DA4D00A2E60A /* MapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapData.h; sourceTree = "<group>"; };
+		B08E5BEC1887DA4D00A2E60A /* MapObjectDesc_GemCave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapObjectDesc_GemCave.cpp; sourceTree = "<group>"; };
+		B08E5BED1887DA4D00A2E60A /* MapObjectDesc_GemCave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObjectDesc_GemCave.h; sourceTree = "<group>"; };
+		B08E5BEE1887DA4D00A2E60A /* MapObjectDesc_Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapObjectDesc_Tree.cpp; sourceTree = "<group>"; };
+		B08E5BEF1887DA4D00A2E60A /* MapObjectDesc_Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObjectDesc_Tree.h; sourceTree = "<group>"; };
+		B08E5BF01887DA4D00A2E60A /* MapObjectDesc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapObjectDesc.cpp; sourceTree = "<group>"; };
+		B08E5BF11887DA4D00A2E60A /* MapObjectDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObjectDesc.h; sourceTree = "<group>"; };
+		B09B61E51946EDDE006BB8D6 /* StateScript.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateScript.cpp; sourceTree = "<group>"; };
+		B09B61E61946EDDE006BB8D6 /* StateScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateScript.h; sourceTree = "<group>"; };
+		B09B61E81946EE28006BB8D6 /* StateScriptObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateScriptObject.cpp; sourceTree = "<group>"; };
+		B09B61E91946EE28006BB8D6 /* StateScriptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateScriptObject.h; sourceTree = "<group>"; };
+		B09B621919482E7C006BB8D6 /* MapSSO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapSSO.cpp; path = ../../../src/TDMapEditor/MapSSO.cpp; sourceTree = "<group>"; };
+		B09B621A19482E7C006BB8D6 /* MapSSO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapSSO.h; path = ../../../src/TDMapEditor/MapSSO.h; sourceTree = "<group>"; };
+		B09B621D1948531E006BB8D6 /* BrushSSO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BrushSSO.cpp; path = ../../../src/TDMapEditor/BrushSSO.cpp; sourceTree = "<group>"; };
+		B09B621E1948531E006BB8D6 /* BrushSSO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrushSSO.h; path = ../../../src/TDMapEditor/BrushSSO.h; sourceTree = "<group>"; };
+		B0AE9AEE195AC6CB00265744 /* MapObjectDesc_Cage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapObjectDesc_Cage.cpp; sourceTree = "<group>"; };
+		B0AE9AEF195AC6CB00265744 /* MapObjectDesc_Cage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObjectDesc_Cage.h; sourceTree = "<group>"; };
+		B0AE9AF1195ACD0700265744 /* MapObject_Cage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapObject_Cage.cpp; path = ../../../src/TDMapEditor/MapObject_Cage.cpp; sourceTree = "<group>"; };
+		B0AE9AF2195ACD0700265744 /* MapObject_Cage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapObject_Cage.h; path = ../../../src/TDMapEditor/MapObject_Cage.h; sourceTree = "<group>"; };
+		B0BDFF36192C726E00437563 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		B0BDFF37192C726E00437563 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		B0BDFF38192C726E00437563 /* AnimationController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationController.cpp; sourceTree = "<group>"; };
+		B0BDFF39192C726E00437563 /* AnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
+		B0BDFF3C192C7FC600437563 /* UIListItemDecorationAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIListItemDecorationAnimation.cpp; path = ../../../src/TDMapEditor/UIListItemDecorationAnimation.cpp; sourceTree = "<group>"; };
+		B0BDFF3D192C7FC600437563 /* UIListItemDecorationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListItemDecorationAnimation.h; path = ../../../src/TDMapEditor/UIListItemDecorationAnimation.h; sourceTree = "<group>"; };
+		B0BDFF3F192C8A6000437563 /* MapDecorationAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapDecorationAnimation.cpp; path = ../../../src/TDMapEditor/MapDecorationAnimation.cpp; sourceTree = "<group>"; };
+		B0BDFF40192C8A6000437563 /* MapDecorationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapDecorationAnimation.h; path = ../../../src/TDMapEditor/MapDecorationAnimation.h; sourceTree = "<group>"; };
+		B0CCD958190A2EC90086E84C /* MapObjectDesc_HeroField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapObjectDesc_HeroField.cpp; sourceTree = "<group>"; };
+		B0CCD959190A2EC90086E84C /* MapObjectDesc_HeroField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObjectDesc_HeroField.h; sourceTree = "<group>"; };
+		B0CCD95B190A2FA50086E84C /* MapObject_HeroField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapObject_HeroField.cpp; path = ../../../src/TDMapEditor/MapObject_HeroField.cpp; sourceTree = "<group>"; };
+		B0CCD95C190A2FA50086E84C /* MapObject_HeroField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapObject_HeroField.h; path = ../../../src/TDMapEditor/MapObject_HeroField.h; sourceTree = "<group>"; };
+		B0D14EF4191C77A000B75122 /* MapObjectDesc_Tree1x1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapObjectDesc_Tree1x1.cpp; sourceTree = "<group>"; };
+		B0D14EF5191C77A000B75122 /* MapObjectDesc_Tree1x1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObjectDesc_Tree1x1.h; sourceTree = "<group>"; };
+		B0D14EF7191C785E00B75122 /* MapObject_Tree1x1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapObject_Tree1x1.cpp; path = ../../../src/TDMapEditor/MapObject_Tree1x1.cpp; sourceTree = "<group>"; };
+		B0D14EF8191C785E00B75122 /* MapObject_Tree1x1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapObject_Tree1x1.h; path = ../../../src/TDMapEditor/MapObject_Tree1x1.h; sourceTree = "<group>"; };
+		B0E218EB18C86E4600B8C491 /* MapBlockCliffNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapBlockCliffNode.cpp; path = ../../../src/TDMapEditor/MapBlockCliffNode.cpp; sourceTree = "<group>"; };
+		B0E218EC18C86E4600B8C491 /* MapBlockCliffNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapBlockCliffNode.h; path = ../../../src/TDMapEditor/MapBlockCliffNode.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B06BAABA186C2BC7000B7B7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06BAB2B186C2ED5000B7B7B /* vngfx.a in Frameworks */,
+				B06BAB2C186C2ED9000B7B7B /* vnlex.a in Frameworks */,
+				B06BAB2A186C2ED2000B7B7B /* vnbase.a in Frameworks */,
+				B06BAB29186C2E9E000B7B7B /* OpenGL.framework in Frameworks */,
+				B06BAB2E186C2F1F000B7B7B /* QuartzCore.framework in Frameworks */,
+				B06BAAC1186C2BC7000B7B7B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B06BAAB4186C2BC7000B7B7B = {
+			isa = PBXGroup;
+			children = (
+				B06BAB0C186C2E32000B7B7B /* Libraries */,
+				B06BAAFA186C2C8E000B7B7B /* Sources */,
+				B06BAAC6186C2BC7000B7B7B /* TDMapEditor */,
+				B06BAAFB186C2C98000B7B7B /* Resources */,
+				B06BAABF186C2BC7000B7B7B /* Frameworks */,
+				B06BAABE186C2BC7000B7B7B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B06BAABE186C2BC7000B7B7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAABD186C2BC7000B7B7B /* TDMapEditor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B06BAABF186C2BC7000B7B7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAB2D186C2F1F000B7B7B /* QuartzCore.framework */,
+				B06BAB28186C2E9E000B7B7B /* OpenGL.framework */,
+				B06BAAC0186C2BC7000B7B7B /* Cocoa.framework */,
+				B06BAAC2186C2BC7000B7B7B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B06BAAC2186C2BC7000B7B7B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAAC3186C2BC7000B7B7B /* AppKit.framework */,
+				B06BAAC4186C2BC7000B7B7B /* CoreData.framework */,
+				B06BAAC5186C2BC7000B7B7B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B06BAAC6186C2BC7000B7B7B /* TDMapEditor */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAAD2186C2BC7000B7B7B /* AppDelegate.h */,
+				B06BAAD3186C2BC7000B7B7B /* AppDelegate.mm */,
+				B06BAAD5186C2BC7000B7B7B /* MainMenu.xib */,
+				B06BAAC7186C2BC7000B7B7B /* Supporting Files */,
+			);
+			path = TDMapEditor;
+			sourceTree = "<group>";
+		};
+		B06BAAC7186C2BC7000B7B7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAAC8186C2BC7000B7B7B /* TDMapEditor-Info.plist */,
+				B06BAAC9186C2BC7000B7B7B /* InfoPlist.strings */,
+				B06BAACC186C2BC7000B7B7B /* main.m */,
+				B06BAACE186C2BC7000B7B7B /* TDMapEditor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B06BAAFA186C2C8E000B7B7B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAAFC186C2CBD000B7B7B /* common */,
+				B0BA08F1186E967200795DDC /* gamelib */,
+				B01BCF6D1907CBA600A286BC /* BinaryHeap.cpp */,
+				B01BCF6E1907CBA600A286BC /* BinaryHeap.h */,
+				B035704618716D870042AF3B /* Brush.cpp */,
+				B035704718716D870042AF3B /* Brush.h */,
+				B05FCF3518728F30001505FD /* BrushBlockType.cpp */,
+				B05FCF3618728F30001505FD /* BrushBlockType.h */,
+				B01BCF6A1907C0C300A286BC /* BrushCollision.cpp */,
+				B01BCF6B1907C0C300A286BC /* BrushCollision.h */,
+				B04C353218E9135300E07E41 /* BrushDecoration.cpp */,
+				B04C353318E9135300E07E41 /* BrushDecoration.h */,
+				B07B4F8E187CEFA000D50006 /* BrushObjectEdit.cpp */,
+				B07B4F8F187CEFA000D50006 /* BrushObjectEdit.h */,
+				B0405636187C385600917F74 /* BrushObjectNew.cpp */,
+				B0405637187C385600917F74 /* BrushObjectNew.h */,
+				B09B621D1948531E006BB8D6 /* BrushSSO.cpp */,
+				B09B621E1948531E006BB8D6 /* BrushSSO.h */,
+				B06BAB09186C2D9C000B7B7B /* EditorApp.cpp */,
+				B06BAB0A186C2D9C000B7B7B /* EditorApp.h */,
+				B0E218EB18C86E4600B8C491 /* MapBlockCliffNode.cpp */,
+				B0E218EC18C86E4600B8C491 /* MapBlockCliffNode.h */,
+				B05FCF3B1872B85F001505FD /* MapBlockCornerNode.cpp */,
+				B05FCF3C1872B85F001505FD /* MapBlockCornerNode.h */,
+				B035704318715F8D0042AF3B /* MapBlockNode.cpp */,
+				B035704418715F8D0042AF3B /* MapBlockNode.h */,
+				B01BCF641907A53000A286BC /* MapCollision.cpp */,
+				B01BCF651907A53000A286BC /* MapCollision.h */,
+				B047553418EA8BAA00377BD8 /* MapDecoration.cpp */,
+				B047553518EA8BAA00377BD8 /* MapDecoration.h */,
+				B0BDFF3F192C8A6000437563 /* MapDecorationAnimation.cpp */,
+				B0BDFF40192C8A6000437563 /* MapDecorationAnimation.h */,
+				B047553A18EAAED200377BD8 /* MapDecorationImage.cpp */,
+				B047553B18EAAED200377BD8 /* MapDecorationImage.h */,
+				B07D778F187AB12F00BAC6D6 /* MapGridNode.cpp */,
+				B07D7790187AB12F00BAC6D6 /* MapGridNode.h */,
+				B074F33C187BDCF10043F627 /* MapObject.cpp */,
+				B074F33D187BDCF10043F627 /* MapObject.h */,
+				B034D33B1910C9AB00FBDBF4 /* MapObject_Building.cpp */,
+				B034D33C1910C9AB00FBDBF4 /* MapObject_Building.h */,
+				B0AE9AF1195ACD0700265744 /* MapObject_Cage.cpp */,
+				B0AE9AF2195ACD0700265744 /* MapObject_Cage.h */,
+				B07B4FA0187D36C200D50006 /* MapObject_GemCave.cpp */,
+				B07B4FA1187D36C200D50006 /* MapObject_GemCave.h */,
+				B0CCD95B190A2FA50086E84C /* MapObject_HeroField.cpp */,
+				B0CCD95C190A2FA50086E84C /* MapObject_HeroField.h */,
+				B03932AE1890EEC50051738C /* MapObject_SpawnPoint.cpp */,
+				B03932AF1890EEC50051738C /* MapObject_SpawnPoint.h */,
+				B074F345187BEF810043F627 /* MapObject_Tree.cpp */,
+				B074F346187BEF810043F627 /* MapObject_Tree.h */,
+				B0D14EF7191C785E00B75122 /* MapObject_Tree1x1.cpp */,
+				B0D14EF8191C785E00B75122 /* MapObject_Tree1x1.h */,
+				B09B621919482E7C006BB8D6 /* MapSSO.cpp */,
+				B09B621A19482E7C006BB8D6 /* MapSSO.h */,
+				B0357025187115040042AF3B /* UIEditorRoot.cpp */,
+				B0357026187115040042AF3B /* UIEditorRoot.h */,
+				B04C353518E9530300E07E41 /* UIListItemDecorationImage.cpp */,
+				B04C353618E9530300E07E41 /* UIListItemDecorationImage.h */,
+				B0BDFF3C192C7FC600437563 /* UIListItemDecorationAnimation.cpp */,
+				B0BDFF3D192C7FC600437563 /* UIListItemDecorationAnimation.h */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		B06BAAFB186C2C98000B7B7B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B06BAAFC186C2CBD000B7B7B /* common */ = {
+			isa = PBXGroup;
+			children = (
+				B0186FF6187E7A0500C9ACAE /* Camera.cpp */,
+				B0186FF7187E7A0500C9ACAE /* Camera.h */,
+				B0186FF8187E7A0500C9ACAE /* Renderable.cpp */,
+				B0186FF9187E7A0500C9ACAE /* Renderable.h */,
+				B0186FFA187E7A0500C9ACAE /* SceneNode.cpp */,
+				B0186FFB187E7A0500C9ACAE /* SceneNode.h */,
+				B0405639187C517B00917F74 /* UICheckBox.cpp */,
+				B040563A187C517B00917F74 /* UICheckBox.h */,
+				B040563B187C517B00917F74 /* UIListItemETBool.cpp */,
+				B040563C187C517B00917F74 /* UIListItemETBool.h */,
+				B040563D187C517B00917F74 /* UIListItemETEnum.cpp */,
+				B040563E187C517B00917F74 /* UIListItemETEnum.h */,
+				B040563F187C517B00917F74 /* UIListItemETFloat.cpp */,
+				B0405640187C517B00917F74 /* UIListItemETFloat.h */,
+				B0405641187C517B00917F74 /* UIListItemETInt.cpp */,
+				B0405642187C517B00917F74 /* UIListItemETInt.h */,
+				B0405643187C517B00917F74 /* UIListItemETString.cpp */,
+				B0405644187C517B00917F74 /* UIListItemETString.h */,
+				B0405645187C517B00917F74 /* UIPopList.cpp */,
+				B0405646187C517B00917F74 /* UIPopList.h */,
+				B0405647187C517B00917F74 /* UIPropertyList.cpp */,
+				B0405648187C517B00917F74 /* UIPropertyList.h */,
+				B06BAAFD186C2CCF000B7B7B /* GfxAppDelegate.cpp */,
+				B06BAAFE186C2CCF000B7B7B /* GfxAppDelegate.h */,
+				B06BAAFF186C2CCF000B7B7B /* UIFileBrowser.cpp */,
+				B06BAB00186C2CCF000B7B7B /* UIFileBrowser.h */,
+				B035703118711CAD0042AF3B /* UILogList.cpp */,
+				B035703218711CAD0042AF3B /* UILogList.h */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		B06BAB0C186C2E32000B7B7B /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAB19186C2E6C000B7B7B /* vngfx.xcodeproj */,
+				B06BAB13186C2E5F000B7B7B /* vnlex.xcodeproj */,
+				B06BAB0D186C2E53000B7B7B /* vnbase.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		B06BAB0E186C2E53000B7B7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAB12186C2E53000B7B7B /* vnbase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B06BAB14186C2E5F000B7B7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAB18186C2E5F000B7B7B /* vnlex.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B06BAB1A186C2E6C000B7B7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B06BAB21186C2E6C000B7B7B /* vngfx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0BA08F1186E967200795DDC /* gamelib */ = {
+			isa = PBXGroup;
+			children = (
+				B0BDFF36192C726E00437563 /* Animation.cpp */,
+				B0BDFF37192C726E00437563 /* Animation.h */,
+				B0BDFF38192C726E00437563 /* AnimationController.cpp */,
+				B0BDFF39192C726E00437563 /* AnimationController.h */,
+				B08E5BE81887DA4D00A2E60A /* MapData.cpp */,
+				B08E5BE91887DA4D00A2E60A /* MapData.h */,
+				B02BA9EB1924CD980027FDB1 /* MapDecorationDesc.cpp */,
+				B02BA9EC1924CD980027FDB1 /* MapDecorationDesc.h */,
+				B08E5BF01887DA4D00A2E60A /* MapObjectDesc.cpp */,
+				B08E5BF11887DA4D00A2E60A /* MapObjectDesc.h */,
+				B034D3371910C15A00FBDBF4 /* MapObjectDesc_Building.cpp */,
+				B034D3381910C15A00FBDBF4 /* MapObjectDesc_Building.h */,
+				B0AE9AEE195AC6CB00265744 /* MapObjectDesc_Cage.cpp */,
+				B0AE9AEF195AC6CB00265744 /* MapObjectDesc_Cage.h */,
+				B08E5BEC1887DA4D00A2E60A /* MapObjectDesc_GemCave.cpp */,
+				B08E5BED1887DA4D00A2E60A /* MapObjectDesc_GemCave.h */,
+				B0CCD958190A2EC90086E84C /* MapObjectDesc_HeroField.cpp */,
+				B0CCD959190A2EC90086E84C /* MapObjectDesc_HeroField.h */,
+				B03932AB1890EC610051738C /* MapObjectDesc_SpawnPoint.cpp */,
+				B03932AC1890EC610051738C /* MapObjectDesc_SpawnPoint.h */,
+				B08E5BEE1887DA4D00A2E60A /* MapObjectDesc_Tree.cpp */,
+				B08E5BEF1887DA4D00A2E60A /* MapObjectDesc_Tree.h */,
+				B0D14EF4191C77A000B75122 /* MapObjectDesc_Tree1x1.cpp */,
+				B0D14EF5191C77A000B75122 /* MapObjectDesc_Tree1x1.h */,
+				B09B61E51946EDDE006BB8D6 /* StateScript.cpp */,
+				B09B61E61946EDDE006BB8D6 /* StateScript.h */,
+				B09B61E81946EE28006BB8D6 /* StateScriptObject.cpp */,
+				B09B61E91946EE28006BB8D6 /* StateScriptObject.h */,
+			);
+			name = gamelib;
+			path = ../../../../gamelib/src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B06BAABC186C2BC7000B7B7B /* TDMapEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B06BAAEE186C2BC7000B7B7B /* Build configuration list for PBXNativeTarget "TDMapEditor" */;
+			buildPhases = (
+				B06BAAB9186C2BC7000B7B7B /* Sources */,
+				B06BAABA186C2BC7000B7B7B /* Frameworks */,
+				B06BAABB186C2BC7000B7B7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B06BAB27186C2E85000B7B7B /* PBXTargetDependency */,
+				B06BAB25186C2E83000B7B7B /* PBXTargetDependency */,
+				B06BAB23186C2E80000B7B7B /* PBXTargetDependency */,
+			);
+			name = TDMapEditor;
+			productName = TDMapEditor;
+			productReference = B06BAABD186C2BC7000B7B7B /* TDMapEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B06BAAB5186C2BC7000B7B7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = viichi.com;
+			};
+			buildConfigurationList = B06BAAB8186C2BC7000B7B7B /* Build configuration list for PBXProject "TDMapEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B06BAAB4186C2BC7000B7B7B;
+			productRefGroup = B06BAABE186C2BC7000B7B7B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B06BAB0E186C2E53000B7B7B /* Products */;
+					ProjectRef = B06BAB0D186C2E53000B7B7B /* vnbase.xcodeproj */;
+				},
+				{
+					ProductGroup = B06BAB1A186C2E6C000B7B7B /* Products */;
+					ProjectRef = B06BAB19186C2E6C000B7B7B /* vngfx.xcodeproj */;
+				},
+				{
+					ProductGroup = B06BAB14186C2E5F000B7B7B /* Products */;
+					ProjectRef = B06BAB13186C2E5F000B7B7B /* vnlex.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B06BAABC186C2BC7000B7B7B /* TDMapEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B06BAB12186C2E53000B7B7B /* vnbase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = vnbase.a;
+			remoteRef = B06BAB11186C2E53000B7B7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B06BAB18186C2E5F000B7B7B /* vnlex.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = vnlex.a;
+			remoteRef = B06BAB17186C2E5F000B7B7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B06BAB21186C2E6C000B7B7B /* vngfx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = vngfx.a;
+			remoteRef = B06BAB20186C2E6C000B7B7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B06BAABB186C2BC7000B7B7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06BAACB186C2BC7000B7B7B /* InfoPlist.strings in Resources */,
+				B06BAAD7186C2BC7000B7B7B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B06BAAB9186C2BC7000B7B7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04C353418E9135300E07E41 /* BrushDecoration.cpp in Sources */,
+				B0BDFF3B192C726E00437563 /* AnimationController.cpp in Sources */,
+				B06BAB02186C2CCF000B7B7B /* UIFileBrowser.cpp in Sources */,
+				B074F347187BEF810043F627 /* MapObject_Tree.cpp in Sources */,
+				B01BCF661907A53000A286BC /* MapCollision.cpp in Sources */,
+				B0D14EF6191C77A000B75122 /* MapObjectDesc_Tree1x1.cpp in Sources */,
+				B07B4F90187CEFA000D50006 /* BrushObjectEdit.cpp in Sources */,
+				B0357027187115040042AF3B /* UIEditorRoot.cpp in Sources */,
+				B06BAAD4186C2BC7000B7B7B /* AppDelegate.mm in Sources */,
+				B08E5BF61887DA4D00A2E60A /* MapObjectDesc.cpp in Sources */,
+				B01BCF6F1907CBA600A286BC /* BinaryHeap.cpp in Sources */,
+				B074F33E187BDCF10043F627 /* MapObject.cpp in Sources */,
+				B0186FFE187E7A0500C9ACAE /* SceneNode.cpp in Sources */,
+				B06BAB01186C2CCF000B7B7B /* GfxAppDelegate.cpp in Sources */,
+				B035704518715F8D0042AF3B /* MapBlockNode.cpp in Sources */,
+				B0BDFF42192C8B3600437563 /* MapDecorationAnimation.cpp in Sources */,
+				B0405649187C517B00917F74 /* UICheckBox.cpp in Sources */,
+				B06BAB0B186C2D9C000B7B7B /* EditorApp.cpp in Sources */,
+				B0186FFC187E7A0500C9ACAE /* Camera.cpp in Sources */,
+				B04C353718E9530300E07E41 /* UIListItemDecorationImage.cpp in Sources */,
+				B05FCF3D1872B85F001505FD /* MapBlockCornerNode.cpp in Sources */,
+				B05FCF3718728F30001505FD /* BrushBlockType.cpp in Sources */,
+				B0D14EFA191C79D900B75122 /* MapObject_Tree1x1.cpp in Sources */,
+				B09B621F1948531E006BB8D6 /* BrushSSO.cpp in Sources */,
+				B034D33E1910C9F200FBDBF4 /* MapObject_Building.cpp in Sources */,
+				B035704818716D870042AF3B /* Brush.cpp in Sources */,
+				B02BA9EE1924CEFF0027FDB1 /* MapDecorationDesc.cpp in Sources */,
+				B0E218EE18C86E5D00B8C491 /* MapBlockCliffNode.cpp in Sources */,
+				B040564E187C517B00917F74 /* UIListItemETString.cpp in Sources */,
+				B0CCD95A190A2EC90086E84C /* MapObjectDesc_HeroField.cpp in Sources */,
+				B0405650187C517B00917F74 /* UIPropertyList.cpp in Sources */,
+				B09B61EA1946EE28006BB8D6 /* StateScriptObject.cpp in Sources */,
+				B06BAACD186C2BC7000B7B7B /* main.m in Sources */,
+				B047553618EA8BAA00377BD8 /* MapDecoration.cpp in Sources */,
+				B0CCD95D190A2FA50086E84C /* MapObject_HeroField.cpp in Sources */,
+				B040564A187C517B00917F74 /* UIListItemETBool.cpp in Sources */,
+				B08E5BF41887DA4D00A2E60A /* MapObjectDesc_GemCave.cpp in Sources */,
+				B040564D187C517B00917F74 /* UIListItemETInt.cpp in Sources */,
+				B09B61E71946EDDE006BB8D6 /* StateScript.cpp in Sources */,
+				B09B621C19482F0C006BB8D6 /* MapSSO.cpp in Sources */,
+				B0AE9AF4195ACD8900265744 /* MapObject_Cage.cpp in Sources */,
+				B0AE9AF0195AC6CB00265744 /* MapObjectDesc_Cage.cpp in Sources */,
+				B0BDFF3A192C726E00437563 /* Animation.cpp in Sources */,
+				B03932AD1890EC610051738C /* MapObjectDesc_SpawnPoint.cpp in Sources */,
+				B07B4FA2187D36C200D50006 /* MapObject_GemCave.cpp in Sources */,
+				B0186FFD187E7A0500C9ACAE /* Renderable.cpp in Sources */,
+				B040564C187C517B00917F74 /* UIListItemETFloat.cpp in Sources */,
+				B035703318711CAD0042AF3B /* UILogList.cpp in Sources */,
+				B03932B11890EF790051738C /* MapObject_SpawnPoint.cpp in Sources */,
+				B040564B187C517B00917F74 /* UIListItemETEnum.cpp in Sources */,
+				B08E5BF21887DA4D00A2E60A /* MapData.cpp in Sources */,
+				B0405638187C385600917F74 /* BrushObjectNew.cpp in Sources */,
+				B0BDFF3E192C7FC600437563 /* UIListItemDecorationAnimation.cpp in Sources */,
+				B01BCF6C1907C0C300A286BC /* BrushCollision.cpp in Sources */,
+				B07D7791187AB12F00BAC6D6 /* MapGridNode.cpp in Sources */,
+				B034D33A1910C1AC00FBDBF4 /* MapObjectDesc_Building.cpp in Sources */,
+				B08E5BF51887DA4D00A2E60A /* MapObjectDesc_Tree.cpp in Sources */,
+				B040564F187C517B00917F74 /* UIPopList.cpp in Sources */,
+				B047553C18EAAED200377BD8 /* MapDecorationImage.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B06BAB23186C2E80000B7B7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = vngfx;
+			targetProxy = B06BAB22186C2E80000B7B7B /* PBXContainerItemProxy */;
+		};
+		B06BAB25186C2E83000B7B7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = vnlex;
+			targetProxy = B06BAB24186C2E83000B7B7B /* PBXContainerItemProxy */;
+		};
+		B06BAB27186C2E85000B7B7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = vnbase;
+			targetProxy = B06BAB26186C2E85000B7B7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B06BAAC9186C2BC7000B7B7B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B06BAACA186C2BC7000B7B7B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B06BAAD5186C2BC7000B7B7B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B06BAAD6186C2BC7000B7B7B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B06BAAEC186C2BC7000B7B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../../dep/vnbase/inc ../../../dep/vnlex/inc ../../../dep/vngfx/inc ../../../dep/vnmath/inc ../../../../gamelib/src";
+			};
+			name = Debug;
+		};
+		B06BAAED186C2BC7000B7B7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../../dep/vnbase/inc ../../../dep/vnlex/inc ../../../dep/vngfx/inc ../../../dep/vnmath/inc ../../../../gamelib/src";
+			};
+			name = Release;
+		};
+		B06BAAEF186C2BC7000B7B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDMapEditor/TDMapEditor-Prefix.pch";
+				INFOPLIST_FILE = "TDMapEditor/TDMapEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B06BAAF0186C2BC7000B7B7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDMapEditor/TDMapEditor-Prefix.pch";
+				INFOPLIST_FILE = "TDMapEditor/TDMapEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B06BAAB8186C2BC7000B7B7B /* Build configuration list for PBXProject "TDMapEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B06BAAEC186C2BC7000B7B7B /* Debug */,
+				B06BAAED186C2BC7000B7B7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B06BAAEE186C2BC7000B7B7B /* Build configuration list for PBXNativeTarget "TDMapEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B06BAAEF186C2BC7000B7B7B /* Debug */,
+				B06BAAF0186C2BC7000B7B7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B06BAAB5186C2BC7000B7B7B /* Project object */;
+}

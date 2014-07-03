@@ -1,0 +1,92 @@
+//
+//  vnUIElement.h
+//  vngfx
+//
+//  Created by Wayne on 13-12-17.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#ifndef vngfx_vnUIElement_h
+#define vngfx_vnUIElement_h
+
+
+#include "vnUIFactory.h"
+#include "vnRefCounted.h"
+#include "vnAABox2.h"
+
+#include <vector>
+
+_vn_begin
+
+class UIRenderer;
+
+class _vn_gfx_api UIElement : public RefCounted {
+    VN_DECL_UI_ELEMENT()
+    friend class UILocator;
+public:
+    // ctor & dtor
+    UIElement();
+    UIElement(const UIElement &other);
+    virtual UIElement * clone() const;
+    virtual ~UIElement();
+    
+    // properties
+	UIElement * parent() const;
+	const aabox2f & boundingBox() const;
+	UILocator * locator() const;
+	
+	virtual void setVisible(bool visible);
+	bool isVisible() const;
+	
+	virtual void setEnabled(bool enabled);
+	bool isEnabled() const;
+	
+	bool isClipping() const;
+	void setClipping(bool clipping);
+	
+	void setTag(u32 tag);
+	u32 getTag() const;
+    
+    // methods
+	void setLocation(const aabox2f &location);
+	void update(f32 deltaTime);
+	void render(UIRenderer *renderer);
+	void bringToTop();
+	u32 addChild(UIElement *child, bool grab = true);
+	void removeChild(UIElement *child);
+	void removeChildByIndex(u32 index);
+    void removeAllChildren();
+	void bringChildToTop(u32 index);
+	void bringChildToTop(UIElement *child);
+	u32 getChildIndex(UIElement *child);
+	UIElement * getChildByIndex(u32 index);
+	UIElement * getChildByTag(u32 tag);
+	u32 getNumChildren() const;
+    
+    virtual bool contains(const vector2f &point) const;
+	virtual UIElement * pick(const vector2f &point);
+    
+protected:
+	virtual void _onBoundingBoxUpdated();
+	virtual void _onUpdate(f32 deltaTime);
+	virtual void _onRender(UIRenderer *renderer);
+	
+	bool m_visible;
+	bool m_enabled;
+	bool m_clipping;
+	u32 m_tag;
+	
+	
+	aabox2f m_boundingBox;
+	UIElement *m_parent;
+	UILocator *m_locator;
+	
+	typedef std::vector<UIElement *> Elements;
+	Elements m_children;
+};
+
+typedef RefCountedPtr<UIElement> UIElementPtr;
+
+_vn_end
+
+#endif

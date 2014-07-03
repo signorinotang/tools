@@ -1,0 +1,475 @@
+//
+//  vnGfxApplicationImpl.cpp
+//  vngfx
+//
+//  Created by Wayne on 13-12-4.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnGfxApplicationImpl.h"
+#include <Windows.h>
+
+#pragma comment(lib, "winmm.lib")
+#pragma comment(lib, "Imm32.lib")
+
+
+
+_vn_begin
+
+namespace internal {
+
+	GfxApplicationImpl* GfxApplicationImpl::m_self = 0;
+	
+
+	GfxApplicationImpl::GfxApplicationImpl(GfxApplication::Delegate *delegate)
+		: m_delegate(delegate)
+		, m_deltaTime(0.f)
+		, m_hDC(NULL)
+		, m_hRC(NULL)
+		, m_wnd(NULL)
+		, m_delay(0)
+		, m_interval(0.16666f)
+		, m_isTextInputEnabled(false)
+		{
+			m_self = this;
+		}
+
+	GfxApplicationImpl::~GfxApplicationImpl() {
+
+	}
+
+	void GfxApplicationImpl::set_delegate(GfxApplication::Delegate *delegate) {
+		m_delegate = delegate;
+		
+	}
+
+	void * GfxApplicationImpl::create_view(u32 width, u32 height, const char* title) 
+	{
+		
+		if (m_wnd){
+			::SetWindowPos(m_wnd, 0, 0, 0, width, height, SWP_NOMOVE | SWP_NOZORDER | SWP_NOREDRAW);
+			::SetWindowTextA(m_wnd, title);
+			return m_wnd;
+		}
+
+	
+		m_wndThreadId = ::GetCurrentThreadId();
+
+		WNDCLASSW wc;
+		wc.style = CS_HREDRAW | CS_VREDRAW;
+		wc.lpfnWndProc = windowProc;
+		wc.cbClsExtra = 0;
+		wc.cbWndExtra = 0;
+		wc.hInstance = ::GetModuleHandleW(NULL);
+		wc.hIcon = LoadIconW(0, IDI_APPLICATION);
+		wc.hCursor = LoadCursorW(0, IDC_ARROW);
+		wc.hbrBackground = (HBRUSH)GetStockObject(NULL_BRUSH);
+		wc.lpszMenuName = 0;
+		wc.lpszClassName = L"111";
+
+		if (!::RegisterClassW(&wc))
+		{
+			return 0;
+		}
+		
+		DWORD wndStyle = WS_OVERLAPPED | WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU | WS_SIZEBOX;
+
+		RECT r = { 0, 0, (LONG)width, (LONG)height };
+		::AdjustWindowRect(&r, wndStyle, FALSE);
+		r.right -= r.left;
+		r.bottom -= r.top;
+
+		wchar_t buf[256];
+		swprintf_s(buf, L"%S", title);
+
+		m_wnd = ::CreateWindowW(
+			L"111"
+			, buf
+			, wndStyle
+			, CW_USEDEFAULT
+			, CW_USEDEFAULT
+			, r.right
+			, r.bottom
+			, 0
+			, 0
+			, wc.hInstance
+			, 0);
+
+		if (!m_wnd)
+		{
+			return 0;
+		}
+
+		m_hDC = GetDC(m_wnd); 
+
+		m_delegate->initialize(width, height);
+
+		
+		m_track.cbSize = sizeof(TRACKMOUSEEVENT);
+		m_track.dwFlags = TME_LEAVE;
+		m_track.hwndTrack = m_wnd;
+		m_track.dwHoverTime = HOVER_DEFAULT;
+		
+		BOOL isTrack = ::TrackMouseEvent(&m_track); 
+
+		if (!isTrack)
+		{
+			printf("Mouse Event Track filed");
+		}
+
+		
+		CreateCaret(m_wnd, NULL, 0, 0);
+		HideCaret(m_wnd);
+		
+
+		//forbidden HIMC
+		m_hIMC = ::ImmAssociateContext(m_wnd, NULL);
+
+		
+
+        return m_wnd;
+    }
+   
+
+  
+ 
+
+
+
+
+    int GfxApplicationImpl::run() {
+
+		if (!m_wnd)
+		{
+			return 0;
+		}
+
+		ShowWindow(m_wnd, SW_NORMAL);
+
+		::timeBeginPeriod(1);
+		u32 oTime = ::timeGetTime();
+		u32 nTime = 0;
+	
+		for (;;) { 			
+			if (::PeekMessageW(&m_msg, NULL, 0, 0, PM_REMOVE)) {
+				if (m_msg.message == WM_QUIT) {
+					quit(WM_QUIT);
+					break;
+				}		
+				::TranslateMessage(&m_msg);
+				::DispatchMessageW(&m_msg);
+			}
+			else {
+					nTime = ::timeGetTime();
+					m_deltaTime = (nTime - oTime) / 1000.f;
+					m_delay += m_deltaTime;
+					
+					if (m_delay > m_interval)
+					{
+						m_delay = 0;
+						thread_lock();
+						m_delegate->update(m_deltaTime);
+						m_delegate->draw();
+						thread_unlock();
+						SwapBuffers(m_hDC);
+					}	
+					oTime = nTime;
+			}
+		}
+		::timeEndPeriod(1);	
+        return 0;
+    }
+    
+    void GfxApplicationImpl::quit(int code) {
+		
+		m_delegate->finalize();
+		
+		if (m_wnd) {
+			::DestroyWindow(m_wnd);
+			m_wnd = 0;
+		}
+    }
+
+
+	void GfxApplicationImpl::setupPixelFormat(HDC hDC)
+	{
+		int pixelFormat;
+
+		PIXELFORMATDESCRIPTOR pfd =
+		{
+			sizeof(PIXELFORMATDESCRIPTOR), // size
+			1,                             // version
+			PFD_SUPPORT_OPENGL |          
+			PFD_DRAW_TO_WINDOW |
+			PFD_GENERIC_ACCELERATED |		
+			PFD_DOUBLEBUFFER,              
+			PFD_TYPE_RGBA,                 
+			32,                            
+			0, 0, 0, 0, 0, 0,             
+			0,                             
+			0,                             
+			0,                             
+			0, 0, 0, 0,
+			24,
+			8,
+			0,
+			PFD_MAIN_PLANE,
+			0,
+			0, 0, 0,
+		};
+		pixelFormat = ::ChoosePixelFormat(hDC, &pfd);
+		
+		
+		if (pixelFormat == -1)
+		{
+			printf("error pixelFormat can not find");
+		}
+		SetPixelFormat(hDC, pixelFormat, &pfd);
+	}
+
+
+	//window event
+ LRESULT CALLBACK GfxApplicationImpl::windowProc(HWND wnd, UINT msg, WPARAM wparam, LPARAM lparam)
+	{
+		static HDC hDC;
+		static HGLRC hRC;
+		int width, height;
+		
+
+		switch (msg)
+		{
+		case WM_CREATE:
+			hDC = GetDC(wnd);
+			setupPixelFormat(hDC);
+			hRC = ::wglCreateContext(hDC);
+			wglMakeCurrent(hDC, hRC);
+			break;
+		case WM_CLOSE:
+			wglMakeCurrent(hDC, NULL);
+			wglDeleteContext(hRC);
+			PostQuitMessage(0);
+			break;
+		case WM_SIZE:
+			width = LOWORD(lparam);
+			height = HIWORD(wparam);
+			m_self->m_delegate->resize(width, height);
+			break;
+		
+		default:
+			break;
+		}
+
+		if (msg >= WM_MOUSEFIRST && msg <= WM_MOUSELAST || msg == WM_MOUSELEAVE) {
+			onMouseMessage(wnd, msg, wparam, lparam);
+		}
+		else if (msg >= WM_KEYFIRST && msg <= WM_KEYLAST) {
+			onKeyboardMessage(wnd, msg, wparam, lparam);
+		}
+		
+		return DefWindowProc(wnd, msg, wparam, lparam);
+	}
+
+
+	//mouse event
+	void GfxApplicationImpl::onMouseMessage(HWND wnd, UINT msg, WPARAM wparam, LPARAM lparam)
+	{
+		static s32 capture = 0;
+		static bool ldown = false;
+		static bool rdown = false;
+		static bool leave = false;
+
+		switch (msg)
+		{
+		case WM_MOUSELEAVE:
+			{
+				if (!leave)
+				{
+					m_self->m_delegate->mouse_leave((short)LOWORD(lparam), (short)HIWORD(lparam));
+					leave = true;
+					printf("leave \n");
+					
+				}
+			}
+		    break;
+		case WM_LBUTTONDOWN:
+			{	
+				m_self->setTextInputEnabled(true);
+				printf("open text input \n");
+				if (capture++ == 0)
+				{
+					::SetCapture(wnd);
+				}
+				ldown = true;
+				m_self->m_delegate->mouse_button_down(0, (short)LOWORD(lparam), (short)HIWORD(lparam));
+
+			}
+			break;
+		case WM_LBUTTONUP:
+			{
+				
+				if (ldown)
+				{
+					ldown = false;
+					if (--capture == 0) 
+					{
+						::ReleaseCapture();
+					}
+					m_self->m_delegate->mouse_button_up(0, (short)LOWORD(lparam), (short)HIWORD(lparam));
+				}
+
+			}
+			break;
+		case WM_RBUTTONDOWN:
+			{
+				m_self->setTextInputEnabled(false);
+				printf("close text input \n");
+				if (capture++ == 0) {
+					::SetCapture(wnd);
+				}
+				rdown = true;
+				m_self->m_delegate->mouse_button_down(1, (short)LOWORD(lparam), (short)HIWORD(lparam));
+			}
+			break;
+		case WM_RBUTTONUP:
+			{
+				if (rdown) {
+					if (--capture == 0) { 
+						::ReleaseCapture();
+					}
+					rdown = false;
+					m_self->m_delegate->mouse_button_up(1, (short)LOWORD(lparam), (short)HIWORD(lparam));
+				}
+			}
+			break;
+		case WM_MOUSEMOVE:
+			{
+				if (leave)
+				{
+					m_self->m_delegate->mouse_enter((short)LOWORD(lparam), (short)HIWORD(lparam));
+					leave = false;
+					printf("enter \n");
+					::TrackMouseEvent(&(m_self->m_track));
+				}
+				m_self->m_delegate->mouse_moved((short)LOWORD(lparam), (short)HIWORD(lparam));
+			}
+			break;
+		case WM_MOUSEWHEEL:
+			{
+				POINT point = { (short)LOWORD(lparam), (short)HIWORD(lparam) };
+				::ScreenToClient(wnd, &point);
+				m_self->m_delegate->mouse_wheel((short)point.x, (short)point.y, 0, (short)HIWORD(wparam));
+				printf("mouse wheel    %d \n", (short)HIWORD(wparam));
+			}
+			break;
+		case WM_MOUSEHWHEEL:
+			{
+				POINT point = { (short)LOWORD(lparam), (short)HIWORD(lparam) };
+				::ScreenToClient(wnd, &point);
+				  m_self->m_delegate->mouse_wheel((short)point.x, (short)point.y, 0, (short)HIWORD(wparam));
+			}
+		}
+	
+	}
+
+	//keyboard event
+	void GfxApplicationImpl::onKeyboardMessage(HWND wnd, UINT msg, WPARAM wparam, LPARAM lparam)
+	{
+		switch (msg) {
+		case WM_KEYDOWN:
+		{	
+			if (m_self->m_isTextInputEnabled)
+			{
+				if (wparam == 46)
+				{
+					m_self->m_delegate->text_delete_forward();
+					printf("text_delete_forward \n");
+				}
+			}
+
+			if (lparam & (1 << 30))
+			{
+				m_self->m_delegate->key_down((c32)wparam, true);
+			}
+			else
+			{	
+				m_self->m_delegate->key_down((c32)wparam, false);
+			}	
+		}
+			break;
+		case WM_KEYUP:
+		{
+			m_self->m_delegate->key_up((c32)wparam);
+		}
+			break;
+		case WM_CHAR:
+		{
+			if (m_self->m_isTextInputEnabled)
+			{
+
+				if (wparam == '\r')
+				{
+					m_self->m_delegate->text_new_line();
+					printf("text_new_line \n");
+					printf("%d", (-45 % 7));
+				}
+				else if (wparam == '\b')
+				{
+					m_self->m_delegate->text_delete_backward();
+					printf("text_delete_backward \n");
+				}
+				else
+				{
+					str32 text;
+					text.push_back((c32)wparam);
+					m_self->m_delegate->text_insert(text);
+					printf("text_insert: \'%C\' %u \n", (wchar_t)wparam, wparam);
+				}
+			}
+			break;
+		}
+
+		}
+	}
+	
+
+	bool GfxApplicationImpl::isTextInputEnabled()
+	{
+		return m_isTextInputEnabled;
+	}
+
+	void GfxApplicationImpl::setTextInputEnabled(bool enabled)
+	{
+		if (enabled)
+		{
+			::ImmAssociateContext(m_wnd, m_hIMC);
+			m_isTextInputEnabled = true;
+		}
+		else
+		{
+			m_hIMC = ::ImmAssociateContext(m_wnd, NULL);
+			m_isTextInputEnabled = false;
+		} 
+	}
+
+	void GfxApplicationImpl::setTextInputPosition(f32 x, f32 y)
+	{
+		::SetCaretPos(int(x), int(y));
+	}
+
+	void GfxApplicationImpl::thread_init()
+	{
+		m_hRC = ::wglCreateContext(m_hDC);
+		wglMakeCurrent(m_hDC, m_hRC);
+	}
+
+	void GfxApplicationImpl::thread_lock()
+	{
+		m_mutex.lock();
+	}
+
+	void GfxApplicationImpl::thread_unlock()
+	{
+		m_mutex.unlock();
+	}    
+}
+_vn_end

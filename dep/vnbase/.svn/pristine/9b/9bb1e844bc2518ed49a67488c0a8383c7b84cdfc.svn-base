@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\inc\vnAllocatedObject.h" />
+    <ClInclude Include="..\..\inc\vnAssert.h" />
+    <ClInclude Include="..\..\inc\vnAtomic.h" />
+    <ClInclude Include="..\..\inc\vnBaseDef.h" />
+    <ClInclude Include="..\..\inc\vnBuffer.h" />
+    <ClInclude Include="..\..\inc\vnCommandList.h" />
+    <ClInclude Include="..\..\inc\vnConditionMutex.h" />
+    <ClInclude Include="..\..\inc\vnDataStream.h" />
+    <ClInclude Include="..\..\inc\vnEditType.h" />
+    <ClInclude Include="..\..\inc\vnEditTypeFactory.h" />
+    <ClInclude Include="..\..\inc\vnEditValue.h" />
+    <ClInclude Include="..\..\inc\vnFastMutex.h" />
+    <ClInclude Include="..\..\inc\vnFileManager.h" />
+    <ClInclude Include="..\..\inc\vnFilePath.h" />
+    <ClInclude Include="..\..\inc\vnFileSystem.h" />
+    <ClInclude Include="..\..\inc\vnFixedAllocator.h" />
+    <ClInclude Include="..\..\inc\vnFunction.h" />
+    <ClInclude Include="..\..\inc\vnFunction0.h" />
+    <ClInclude Include="..\..\inc\vnFunction1.h" />
+    <ClInclude Include="..\..\inc\vnFunction2.h" />
+    <ClInclude Include="..\..\inc\vnFunction3.h" />
+    <ClInclude Include="..\..\inc\vnFunction4.h" />
+    <ClInclude Include="..\..\inc\vnFunctionBase.h" />
+    <ClInclude Include="..\..\inc\vnLog.h" />
+    <ClInclude Include="..\..\inc\vnMemory.h" />
+    <ClInclude Include="..\..\inc\vnMemoryTracker.h" />
+    <ClInclude Include="..\..\inc\vnMutex.h" />
+    <ClInclude Include="..\..\inc\vnNonCopyable.h" />
+    <ClInclude Include="..\..\inc\vnPlatform.h" />
+    <ClInclude Include="..\..\inc\vnRecursiveLock.h" />
+    <ClInclude Include="..\..\inc\vnRefCounted.h" />
+    <ClInclude Include="..\..\inc\vnScopedLock.h" />
+    <ClInclude Include="..\..\inc\vnSingleton.h" />
+    <ClInclude Include="..\..\inc\vnSingletonManager.h" />
+    <ClInclude Include="..\..\inc\vnSmallObject.h" />
+    <ClInclude Include="..\..\inc\vnThread.h" />
+    <ClInclude Include="..\..\inc\vnTreeData.h" />
+    <ClInclude Include="..\..\inc\vnTypes.h" />
+    <ClInclude Include="..\..\inc\vnUnicode.h" />
+    <ClInclude Include="..\..\inc\vnVariable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\vnAllocatedObject.cpp" />
+    <ClCompile Include="..\..\src\vnBuffer.cpp" />
+    <ClCompile Include="..\..\src\vnCommandList.cpp" />
+    <ClCompile Include="..\..\src\vnDataStream.cpp" />
+    <ClCompile Include="..\..\src\vnEditType.cpp" />
+    <ClCompile Include="..\..\src\vnEditTypeFactory.cpp" />
+    <ClCompile Include="..\..\src\vnEditValue.cpp" />
+    <ClCompile Include="..\..\src\vnFileManager.cpp" />
+    <ClCompile Include="..\..\src\vnFilePath.cpp" />
+    <ClCompile Include="..\..\src\vnLog.cpp" />
+    <ClCompile Include="..\..\src\vnMemory.cpp" />
+    <ClCompile Include="..\..\src\vnMemoryTracker.cpp" />
+    <ClCompile Include="..\..\src\vnNonCopyable.cpp" />
+    <ClCompile Include="..\..\src\vnRefCounted.cpp" />
+    <ClCompile Include="..\..\src\vnSingletonManager.cpp" />
+    <ClCompile Include="..\..\src\vnSmallObject.cpp" />
+    <ClCompile Include="..\..\src\vnTreeData.cpp" />
+    <ClCompile Include="..\..\src\vnUnicode.cpp" />
+    <ClCompile Include="..\..\src\vnVariable.cpp" />
+    <ClCompile Include="..\..\src\win\vnAtomic.cpp" />
+    <ClCompile Include="..\..\src\win\vnConditionMutex.cpp" />
+    <ClCompile Include="..\..\src\win\vnFastMutex.cpp" />
+    <ClCompile Include="..\..\src\win\vnFileSystem.cpp" />
+    <ClCompile Include="..\..\src\win\vnMutex.cpp" />
+    <ClCompile Include="..\..\src\win\vnThread.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E6A1BD1B-B448-48A8-B734-7F1A91FA0C6F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>vnbase</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

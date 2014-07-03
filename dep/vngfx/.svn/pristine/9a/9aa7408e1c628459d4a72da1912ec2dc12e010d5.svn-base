@@ -1,0 +1,257 @@
+//
+//  vnUIRoot.cpp
+//  vngfx
+//
+//  Created by Wayne on 13-12-18.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnUIRoot.h"
+#include "vnUIElement.h"
+#include "vnGfxApplication.h"
+#include "vnUILocator.h"
+
+
+_vn_begin
+
+UIRoot::UIRoot()
+: m_root(0)
+, m_focus(0)
+, m_hover(0)
+, m_capture(0) {
+    
+}
+
+UIRoot::~UIRoot() {
+    VN_SAFE_DROP(m_root);
+}
+
+void UIRoot::update(f32 deltaTime) {
+    _updateMouse();
+    if (m_root) {
+        m_root->update(deltaTime);
+    }
+}
+
+void UIRoot::render() {
+    if (m_root) {
+        m_root->render(&m_renderer);
+    }
+}
+
+void UIRoot::setRootElement(vn::UIElement *root, bool grab) {
+    if (m_root) {
+        reset();
+		m_root->drop();
+	}
+	if((m_root = root)) {
+        if (grab) {
+            root->grab();
+        }
+        UILocator *loc = m_root->locator();
+        if (loc) {
+            loc->markDirty();
+        }
+	}
+}
+
+const vector2f & UIRoot::getViewSize() {
+    return m_viewSize;
+}
+
+void UIRoot::setViewSize(const vector2f &size) {
+    m_viewSize = size;
+    if (m_root) {
+        UILocator *loc = m_root->locator();
+        if (loc) {
+            loc->markDirty();
+        }
+    }
+}
+
+void UIRoot::reset() {
+    if (m_hover) {
+        m_hover->onMouseLeave();
+        m_hover = 0;
+    }
+    if (m_capture) {
+        m_capture->onMouseCaptureCancelled();
+        m_capture = 0;
+    }
+    if (m_focus) {
+        m_focus->onFocusOut();
+        m_focus = 0;
+    }
+}
+
+bool UIRoot::dispath_mouseLeftDown(const vector2f &pos) {
+    if (m_capture) {
+        m_capture->onMouseLeftDown(pos);
+    } else if (m_hover) {
+        m_hover->onMouseLeftDown(pos);
+    } else {
+        return false;
+    }
+    return true;
+}
+
+bool UIRoot::dispath_mouseLeftUp(const vector2f &pos) {
+    if (m_capture) {
+        m_capture->onMouseLeftUp(pos);
+    } else if (m_hover) {
+        m_hover->onMouseLeftUp(pos);
+    } else {
+        return false;
+    }
+    return true;
+}
+
+bool UIRoot::dispath_mouseRightDown(const vector2f &pos) {
+    if (m_capture) {
+        m_capture->onMouseRightDown(pos);
+    } else if (m_hover) {
+        m_hover->onMouseRightDown(pos);
+    } else {
+        return false;
+    }
+    return true;
+}
+
+bool UIRoot::dispath_mouseRightUp(const vector2f &pos) {
+    if (m_capture) {
+        m_capture->onMouseRightUp(pos);
+    } else if (m_hover) {
+        m_hover->onMouseRightUp(pos);
+    } else {
+        return false;
+    }
+    return true;
+}
+
+bool UIRoot::dispath_mouseWheel(const vector2f &pos, const vector2f &delta) {
+    if (m_capture) {
+        m_capture->onMouseWheel(pos, delta);
+    } else if (m_hover) {
+        m_hover->onMouseWheel(pos, delta);
+    } else {
+        return false;
+    }
+    return true;
+}
+
+bool UIRoot::dispath_keyDown(c32 chr, bool repeat) {
+    if (m_focus) {
+        m_focus->onKeyDown(chr, repeat);
+        return true;
+    }
+    return false;
+}
+
+bool UIRoot::dispath_keyUp(c32 chr) {
+    if (m_focus) {
+        m_focus->onKeyUp(chr);
+        return true;
+    }
+    return false;
+}
+
+void UIRoot::dispath_textInsert(const str32 &text) {
+    if (m_focus) {
+        m_focus->onTextInsert(text);
+    }
+}
+
+void UIRoot::dispath_textMark(const str32 &text, u32 caretPos) {
+    if (m_focus) {
+        m_focus->onTextMark(text, caretPos);
+    }
+}
+
+void UIRoot::dispath_textUnmark() {
+    if (m_focus) {
+        m_focus->onTextUnmark();
+    }
+}
+
+void UIRoot::dispath_textNewLine() {
+    if (m_focus) {
+        m_focus->onTextNewLine();
+    }
+}
+
+void UIRoot::dispath_textDeleteBackward() {
+    if (m_focus) {
+        m_focus->onTextDeleteBackward();
+    }
+}
+
+void UIRoot::dispath_textDeleteForward() {
+    if (m_focus) {
+        m_focus->onTextDeleteForward();
+    }
+}
+
+void UIRoot::captureMouse(UIElement *element) {
+    vnassert(element);
+    if (m_capture != element) {
+        if (m_capture) {
+            m_capture->onMouseCaptureCancelled();
+        }
+        m_capture = element;
+    }
+}
+
+void UIRoot::releaseMouse(UIElement *element) {
+    vnassert(element);
+    if (m_capture == element) {
+        m_capture = 0;
+    }
+}
+
+void UIRoot::requireFocus(UIElement *element) {
+    vnassert(element);
+    if (element == m_focus) {
+        return ;
+    }
+    if (m_focus) {
+        m_focus->onFocusOut();
+    }
+    m_focus = element;
+    m_focus->onFocusIn();
+}
+
+void UIRoot::releaseFocus(UIElement *element) {
+    vnassert(element);
+    if (m_focus != element) {
+        return ;
+    }
+    m_focus = 0;
+    element->onFocusOut();
+}
+
+
+void UIRoot::_updateMouse() {
+    vector2f mpos = GfxApplication::instance().getMousePosition();
+    UIElement *p = 0;
+    if (mpos >= vector2f::kZero && mpos < m_viewSize) {
+        if (m_root && m_root->isEnabled() && m_root->isVisible()) {
+            p = m_root->pick(mpos);
+        }
+    }
+    if (m_capture && p != m_capture) {
+        p = 0;
+    }
+    if (m_hover != p) {
+        if (m_hover) {
+            m_hover->onMouseLeave();
+        }
+        m_hover = p;
+        if (m_hover) {
+            m_hover->onMouseEnter();
+        }
+    }
+}
+
+
+
+_vn_end

@@ -1,0 +1,17 @@
+﻿生成启动时间为 2014/7/2 10:59:06。
+     1>项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vnlex\prj\vc12\vnlex.vcxproj”在节点 3 上(Build 个目标)。
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\tblcoder\Release\vnlex.lib" /NOLOGO /LTCG Release\vnLexer.obj
+         Release\vnLexicalAnalizer.obj
+         Release\vnLR_Node.obj
+         Release\vnLR_Parser.obj
+         Release\vnToken.obj
+         Release\vnTreeDataScript.obj
+         Release\vnVariableJSON.obj
+         Release\vnVariableScript.obj
+         vnlex.vcxproj -> C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\tblcoder\Release\vnlex.lib
+     1>已完成生成项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vnlex\prj\vc12\vnlex.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.05

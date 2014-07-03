@@ -1,0 +1,49 @@
+
+value
+	: 'null'
+	| 'true'
+	| 'false'
+	| @integer
+	| @long_integer
+	| @float
+	| @double
+	| @string_literal
+	| reference
+	| array
+	| object
+	;
+
+reference
+	: '@' @identifier
+	| @identifier
+	| @identifier ':' value
+	;
+
+value_list
+	: value
+	| value_list value
+	;
+
+array
+	: '[' ']'
+	| '[' value_list ']'
+	;
+
+item
+	: @identifier
+	| @identifier '=' value
+	;
+
+item_list
+	: item
+	| item_list item
+	;
+
+object
+	: '{' '}'
+	| '{' item_list '}'
+	;
+
+script
+	: value_list
+	;

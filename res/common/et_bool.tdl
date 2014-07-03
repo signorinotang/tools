@@ -1,0 +1,24 @@
+@<ListItemETBool {
+	height = 24
+	root = 
+		@<Frame { locator = @Border{} }
+			@<Label {
+				id = "text"
+				locator = @Border{}
+			}
+			@>Label
+			
+			@<CheckBox {
+				id = "checkbox"
+				locator = @RectEx {
+					x = 2
+					x_align = 1
+					y_align = 2
+					width = 20
+					height = 20
+				}
+			}
+			@>CheckBox
+		@>Frame
+}
+@>ListItemETBool

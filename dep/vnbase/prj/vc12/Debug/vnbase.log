@@ -1,0 +1,36 @@
+﻿生成启动时间为 2014/6/26 13:33:41。
+     1>项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vnbase\prj\vc12\vnbase.vcxproj”在节点 2 上(Build 个目标)。
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\TDMapEditor\Debug\vnbase.lib" /NOLOGO Debug\vnAllocatedObject.obj
+         Debug\vnBuffer.obj
+         Debug\vnCommandList.obj
+         Debug\vnDataStream.obj
+         Debug\vnEditType.obj
+         Debug\vnEditTypeFactory.obj
+         Debug\vnEditValue.obj
+         Debug\vnFileManager.obj
+         Debug\vnFilePath.obj
+         Debug\vnLog.obj
+         Debug\vnMemory.obj
+         Debug\vnMemoryTracker.obj
+         Debug\vnNonCopyable.obj
+         Debug\vnRefCounted.obj
+         Debug\vnSingletonManager.obj
+         Debug\vnSmallObject.obj
+         Debug\vnTreeData.obj
+         Debug\vnUnicode.obj
+         Debug\vnVariable.obj
+         Debug\vnAtomic.obj
+         Debug\vnConditionMutex.obj
+         Debug\vnFastMutex.obj
+         Debug\vnFileSystem.obj
+         Debug\vnMutex.obj
+         Debug\vnThread.obj
+     1>vnRefCounted.obj : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+     1>vnAllocatedObject.obj : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+         vnbase.vcxproj -> C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\TDMapEditor\Debug\vnbase.lib
+     1>已完成生成项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vnbase\prj\vc12\vnbase.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.89

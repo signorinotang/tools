@@ -1,0 +1,218 @@
+@<PropertyList {
+    root = 
+        @<Picture {
+            locator = @Border {}
+            color = 0xFF202020
+        }
+            @<List {
+                id = "list"
+                locator = @Border {}
+                scroll_bar = @ScrollBar {
+                    slider_unit = 8
+                }
+                scroll_bar_size = 12
+            }
+            @>List
+        
+        @>Picture
+//////////////////////////////////////////
+
+    li_bool = @ListItemETBool {
+        height = 25
+        root =
+            @<Frame
+                @<Label {
+                    id = "text"
+                    locator = @Border{ bottom = 1 }
+                }
+                @>Label
+                
+                @<CheckBox {
+                    id = "checkbox"
+                    locator = @RectEx {
+                        x = 2
+                        y = 2
+                        x_align = 1
+                        width = 20
+                        height = 20
+                    }
+                }
+                @>CheckBox
+                
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 x_align = 2 height_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 y_align = 1 width_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+            @>Frame
+    }
+
+//////////////////////////////////////////
+
+    li_enum = @ListItemETEnum {
+        height = 25
+        root = 
+            @<Frame
+                @<Label {
+                    id = "text"
+                    locator = @Border{ bottom = 1 }
+                    alignment = 12
+                }
+                @>Label
+                
+                @<PopList {
+                    id = "list"
+                    locator = @BoxEx {
+                        left_align = 2
+                        right_align = 1
+                        bottom_align = 1
+                        bottom = 1
+                    }
+                }
+
+                    @<Label {
+                        id = "value"
+                        locator = @Border{}
+                        alignment = 14
+                    }
+                    @>Label
+                    
+                    @<Button {
+                        id = "button"
+                        locator = @Border{}
+                    }
+                    @>Button
+                    
+                @>PopList
+                
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 x_align = 2 height_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 y_align = 1 width_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+            @>Frame
+    }
+//////////////////////////////////////////
+
+    li_int = @ListItemETInt {
+        height = 24
+        root = 
+            @<Frame
+                @<Label {
+                    id = "text"
+                    locator = @Border{ bottom = 1 }
+                }
+                @>Label
+                
+                @<TextField {
+                    id = "editbox"
+                    locator = @BoxEx {
+                        left_align = 2
+                        right_align = 1
+                        bottom_align = 1
+                        bottom = 1
+                    }
+                    alignment = 14
+                }
+                @>TextField
+                
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 x_align = 2 height_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 y_align = 1 width_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+            @>Frame
+    }
+
+//////////////////////////////////////////
+
+    li_float = @ListItemETFloat {
+        height = 24
+        root = 
+            @<Frame
+                @<Label {
+                    id = "text"
+                    locator = @Border{ bottom = 1 }
+                }
+                @>Label
+                
+                @<TextField {
+                    id = "editbox"
+                    locator = @BoxEx {
+                        left_align = 2
+                        right_align = 1
+                        bottom_align = 1
+                        bottom = 1
+                    }
+                    alignment = 14
+                }
+                @>TextField
+                
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 x_align = 2 height_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 y_align = 1 width_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+            @>Frame
+    }
+
+//////////////////////////////////////////
+   
+    li_string = @ListItemETString {
+        height = 24
+        root = 
+            @<Frame
+                @<Label {
+                    id = "text"
+                    locator = @Border{ bottom = 1 }
+                }
+                @>Label
+                
+                @<TextField {
+                    id = "editbox"
+                    locator = @BoxEx {
+                        left_align = 2
+                        right_align = 1
+                        bottom_align = 1
+                        bottom = 1
+                    }
+                    alignment = 14
+                }
+                @>TextField
+                
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 x_align = 2 height_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+                @<Picture {
+                    locator = @RectEx { width = 1 height = 1 y_align = 1 width_unit = 1 }
+                    color = 0xFF808080
+                }
+                @>Picture
+            @>Frame
+    }
+
+//////////////////////////////////////////
+}
+@>PropertyList

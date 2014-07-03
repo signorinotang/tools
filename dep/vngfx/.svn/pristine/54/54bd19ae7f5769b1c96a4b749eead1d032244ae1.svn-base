@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\inc\vnGfxApplication.h" />
+    <ClInclude Include="..\..\inc\vnGfxDef.h" />
+    <ClInclude Include="..\..\inc\vnGpuProgram.h" />
+    <ClInclude Include="..\..\inc\vnIndexBuffer.h" />
+    <ClInclude Include="..\..\inc\vnPicture.h" />
+    <ClInclude Include="..\..\inc\vnRenderSystem.h" />
+    <ClInclude Include="..\..\inc\vnTexture.h" />
+    <ClInclude Include="..\..\inc\vnTexture2D.h" />
+    <ClInclude Include="..\..\inc\vnVertexBuffer.h" />
+    <ClInclude Include="..\..\src\vnFontFreeType.h" />
+    <ClInclude Include="..\..\src\win\vnGfxApplicationImpl.h" />
+    <ClInclude Include="..\..\src\win\vnRender2DDeviceImpl.h" />
+    <ClInclude Include="..\..\src\win\vnTexture2DImpl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\dep\libpng\src\png.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngerror.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngget.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngmem.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngpread.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngread.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngrio.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngrtran.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngrutil.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngset.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngtrans.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngwio.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngwrite.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngwtran.c" />
+    <ClCompile Include="..\..\dep\libpng\src\pngwutil.c" />
+    <ClCompile Include="..\..\dep\zlib\src\adler32.c" />
+    <ClCompile Include="..\..\dep\zlib\src\compress.c" />
+    <ClCompile Include="..\..\dep\zlib\src\crc32.c" />
+    <ClCompile Include="..\..\dep\zlib\src\deflate.c" />
+    <ClCompile Include="..\..\dep\zlib\src\gzclose.c" />
+    <ClCompile Include="..\..\dep\zlib\src\gzlib.c" />
+    <ClCompile Include="..\..\dep\zlib\src\gzread.c" />
+    <ClCompile Include="..\..\dep\zlib\src\gzwrite.c" />
+    <ClCompile Include="..\..\dep\zlib\src\infback.c" />
+    <ClCompile Include="..\..\dep\zlib\src\inffast.c" />
+    <ClCompile Include="..\..\dep\zlib\src\inflate.c" />
+    <ClCompile Include="..\..\dep\zlib\src\inftrees.c" />
+    <ClCompile Include="..\..\dep\zlib\src\trees.c" />
+    <ClCompile Include="..\..\dep\zlib\src\uncompr.c" />
+    <ClCompile Include="..\..\dep\zlib\src\zutil.c" />
+    <ClCompile Include="..\..\src\vnColor.cpp" />
+    <ClCompile Include="..\..\src\vnFontFreeType.cpp" />
+    <ClCompile Include="..\..\src\vnFontManager.cpp" />
+    <ClCompile Include="..\..\src\vnGfxApplication.cpp" />
+    <ClCompile Include="..\..\src\vnPicture.cpp" />
+    <ClCompile Include="..\..\src\vnPictureManager.cpp" />
+    <ClCompile Include="..\..\src\vnRender2DInterface.cpp" />
+    <ClCompile Include="..\..\src\vnRenderText.cpp" />
+    <ClCompile Include="..\..\src\vnTexture.cpp" />
+    <ClCompile Include="..\..\src\vnTexture2D.cpp" />
+    <ClCompile Include="..\..\src\vnTextureManager.cpp" />
+    <ClCompile Include="..\..\src\vnUIButton.cpp" />
+    <ClCompile Include="..\..\src\vnUIButtonDefault.cpp" />
+    <ClCompile Include="..\..\src\vnUIElement.cpp" />
+    <ClCompile Include="..\..\src\vnUIFactory.cpp" />
+    <ClCompile Include="..\..\src\vnUIFrame.cpp" />
+    <ClCompile Include="..\..\src\vnUILabel.cpp" />
+    <ClCompile Include="..\..\src\vnUIList.cpp" />
+    <ClCompile Include="..\..\src\vnUIListItem.cpp" />
+    <ClCompile Include="..\..\src\vnUILocator.cpp" />
+    <ClCompile Include="..\..\src\vnUILocatorBorder.cpp" />
+    <ClCompile Include="..\..\src\vnUILocatorBox.cpp" />
+    <ClCompile Include="..\..\src\vnUILocatorRect.cpp" />
+    <ClCompile Include="..\..\src\vnUILogic.cpp" />
+    <ClCompile Include="..\..\src\vnUIPicture.cpp" />
+    <ClCompile Include="..\..\src\vnUIRenderer.cpp" />
+    <ClCompile Include="..\..\src\vnUIRenderPicture.cpp" />
+    <ClCompile Include="..\..\src\vnUIRenderText.cpp" />
+    <ClCompile Include="..\..\src\vnUIRoot.cpp" />
+    <ClCompile Include="..\..\src\vnUIScrollBar.cpp" />
+    <ClCompile Include="..\..\src\vnUITextField.cpp" />
+    <ClCompile Include="..\..\src\vnUIWindow.cpp" />
+    <ClCompile Include="..\..\src\win\vnGfxApplicationImpl.cpp" />
+    <ClCompile Include="..\..\src\win\vnPNGLoader.cpp" />
+    <ClCompile Include="..\..\src\win\vnRender2DDeviceImpl.cpp" />
+    <ClCompile Include="..\..\src\win\vnTexture2DImp.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FCD60638-CC6E-4541-AD23-A13A4B53AE8A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>vngfx</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../inc;../../dep/vnbase;../../dep/vnlex;../../dep/vnmath;../../dep/freetype/include;../../dep/libpng/inc;../../dep/zlib/inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../inc;../../dep/vnbase;../../dep/vnlex;../../dep/vnmath;../../dep/freetype/include;../../dep/libpng/inc;../../dep/zlib/inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

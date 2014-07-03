@@ -1,0 +1,45 @@
+//
+//  vnTexture2D.cpp
+//  vngfx
+//
+//  Created by Wayne on 13-12-9.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnTexture2D.h"
+
+#if VN_PLATFORM == VN_PLATFORM_MAC
+#	include <OpenGL/gl3.h>
+#elif VN_PLATFORM == VN_PLATFORM_WIN
+#	include <Windows.h>
+#	include <gl\GL.h>
+#endif
+
+_vn_begin
+
+Texture::Type Texture2D::type() const {
+    return kTT_Texture2D;
+}
+
+//bool Texture2D::init(const vector2i &size, PixelFormat format, const void *pixels) {
+//    if (size.x <= 0 || size.y <= 0 || format == kTPF_Unknown) {
+//        return false;
+//    }
+//    m_size = size;
+//    m_format = format;
+//    glBindTexture(GL_TEXTURE_2D, m_object);
+//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+//    
+//    GLenum pf = _cast_pixel_format(format);
+//    glTexImage2D(GL_TEXTURE_2D, 0, pf, size.x, size.y, 0, pf, GL_UNSIGNED_BYTE, pixels);
+//    return true;
+//}
+//
+//bool Texture2D::updatePixels(const vector2i &offset, const vector2i &size, const void *pixels) {
+//    glBindTexture(GL_TEXTURE_2D, m_object);
+//    glTexSubImage2D(GL_TEXTURE_2D, 0, offset.x, offset.y, size.x, size.y, _cast_pixel_format(m_format), GL_UNSIGNED_BYTE, pixels);
+//    return true;
+//}
+
+_vn_end

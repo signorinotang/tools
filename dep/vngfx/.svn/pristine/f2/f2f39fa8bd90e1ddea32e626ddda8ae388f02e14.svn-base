@@ -1,0 +1,74 @@
+//
+//  vnUIFactory.cpp
+//  vngfx
+//
+//  Created by Wayne on 13-12-17.
+//  Copyright (c) 2013 viichi.com. All rights reserved.
+//
+
+#include "vnUIFactory.h"
+#include "vnUIElement.h"
+#include "vnUIFrame.h"
+#include "vnUIPicture.h"
+#include "vnUIButton.h"
+#include "vnUILabel.h"
+
+#include "vnUILocator.h"
+#include "vnUILocatorEx.h"
+
+_vn_begin
+
+////////////////////////////////////////
+VN_IMPL_UI_ELEMENT(UIElement, "Element")
+VN_IMPL_UI_ELEMENT(UIFrame, "Frame")
+VN_IMPL_UI_ELEMENT(UIPicture, "Picture")
+VN_IMPL_UI_ELEMENT(UIButton, "Button")
+VN_IMPL_UI_ELEMENT(UILabel, "Label")
+////////////////////////////////////////
+VN_IMPL_UI_LOCATOR(UILocator, "Rect")
+VN_IMPL_UI_LOCATOR(UILocatorEx, "RectEx")
+////////////////////////////////////////
+
+void UIFactory::_register(const c8 *name, UIElement *(*creator)()) {
+    m_factoryE[name] = creator;
+}
+
+void UIFactory::_register(const c8 *name, UILocator *(*creator)(UIElement *)) {
+    m_factoryL[name] = creator;
+}
+
+UIElement * UIFactory::createElement(const str8 &name) {
+    ElementFactory::iterator it = m_factoryE.find(name);
+    if (it == m_factoryE.end()) {
+        return 0;
+    }
+    return it->second();
+}
+
+UILocator * UIFactory::createLocator(const str8 &name, UIElement *owner) {
+    vnassert(owner != 0);
+    LocatorFactory::iterator it = m_factoryL.find(name);
+    if (it == m_factoryL.end()) {
+        return 0;
+    }
+    return it->second(owner);
+}
+
+void UIFactory::createElements(UIElement *root, const vn::TreeDataNode *node, ElementMap &namedElements) {
+    vnassert(root);
+    while (node) {
+        UIElement *p = createElement(node->name());
+        if (!p) {
+            // error!
+        
+        } else {
+            p->init(node, namedElements);
+            root->addChild(p, false);
+            createElements(p, node->firstChild(), namedElements);
+        }
+        node = node->nextNeighbour();
+    }
+}
+
+
+_vn_end

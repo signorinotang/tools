@@ -1,0 +1,37 @@
+@<ListItemETEnum {
+	height = 24
+	root = 
+		@<Frame { locator = @Border{} }
+			@<Label {
+				id = "text"
+				locator = @Border{}
+				alignment = 12
+			}
+			@>Label
+			
+			@<PopList {
+				id = "list"
+				locator = @BoxEx {
+					left_align = 2
+					right_align = 1
+					bottom_align = 1
+				}
+			}
+
+				@<Label {
+					id = "value"
+					locator = @Border{}
+					alignment = 14
+				}
+				@>Label
+				
+				@<Button {
+					id = "button"
+					locator = @Border{}
+				}
+				@>Button
+				
+			@>PopList
+		@>Frame
+}
+@>ListItemETEnum

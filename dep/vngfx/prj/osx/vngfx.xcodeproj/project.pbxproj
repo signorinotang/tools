@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00613D51856C13D00808716 /* vnPicture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B00613D41856C13D00808716 /* vnPicture.cpp */; };
+		B00613DE1856E0EF00808716 /* vnTextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B00613DD1856E0EF00808716 /* vnTextureManager.cpp */; };
+		B00614261856E53A00808716 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B00614231856E50700808716 /* libpng.a */; };
+		B006142D18570C6400808716 /* vnPictureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B006142C18570C6400808716 /* vnPictureManager.cpp */; };
+		B02D3D2F18604FCC00E02B0B /* vnUIFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02D3D2E18604FCC00E02B0B /* vnUIFactory.cpp */; };
+		B02D3D321860516500E02B0B /* vnUIElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02D3D311860516500E02B0B /* vnUIElement.cpp */; };
+		B02D3D3B186054B000E02B0B /* vnUILocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02D3D3A186054B000E02B0B /* vnUILocator.cpp */; };
+		B02D3D3E18605D1C00E02B0B /* vnUIRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02D3D3D18605D1C00E02B0B /* vnUIRenderer.cpp */; };
+		B02D963C18618CBB00A66B65 /* vnUIRoot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02D963B18618CBB00A66B65 /* vnUIRoot.cpp */; };
+		B02D963F1861A47400A66B65 /* vnUILocatorRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02D963E1861A47400A66B65 /* vnUILocatorRect.cpp */; };
+		B02D965D1862C70100A66B65 /* vnUIFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02D965C1862C70100A66B65 /* vnUIFrame.cpp */; };
+		B02D96601862CE0900A66B65 /* vnUIPicture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02D965F1862CE0900A66B65 /* vnUIPicture.cpp */; };
+		B02D96671862DDB700A66B65 /* vnUIButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02D96661862DDB700A66B65 /* vnUIButton.cpp */; };
+		B03699521851D36700AE3682 /* vnColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03699511851D36700AE3682 /* vnColor.cpp */; };
+		B06BB9A91862F13000D813F4 /* vnUIRenderText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B06BB9A81862F13000D813F4 /* vnUIRenderText.cpp */; };
+		B06BB9AC1862FC6800D813F4 /* vnUILabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B06BB9AB1862FC6800D813F4 /* vnUILabel.cpp */; };
+		B0784148186929FC0062F90A /* vnUILogic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0784147186929FC0062F90A /* vnUILogic.cpp */; };
+		B07841CC186ABE840062F90A /* vnUIWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B07841CB186ABE840062F90A /* vnUIWindow.cpp */; };
+		B0891683185EAA260093ABF2 /* vnFontFreeType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0891681185EAA260093ABF2 /* vnFontFreeType.cpp */; };
+		B0891684185EAA260093ABF2 /* vnFontFreeType.h in Headers */ = {isa = PBXBuildFile; fileRef = B0891682185EAA260093ABF2 /* vnFontFreeType.h */; };
+		B089168D185EDD1A0093ABF2 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B089168A185EAA3B0093ABF2 /* libfreetype.a */; };
+		B0891693185F0FCD0093ABF2 /* vnFontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0891692185F0FCD0093ABF2 /* vnFontManager.cpp */; };
+		B08F9D2F18670F4500CB4671 /* vnUIRenderPicture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B08F9D2E18670F4500CB4671 /* vnUIRenderPicture.cpp */; };
+		B08F9D3E1867530500CB4671 /* vnUIScrollBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B08F9D3D1867530500CB4671 /* vnUIScrollBar.cpp */; };
+		B0AB798918581795009CEECE /* vnRender2DInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0AB798818581795009CEECE /* vnRender2DInterface.cpp */; };
+		B0B0F80D1863E4CB003607CE /* vnUIButtonDefault.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0B0F80C1863E4CB003607CE /* vnUIButtonDefault.cpp */; };
+		B0B0F825186439EE003607CE /* vnUITextField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0B0F824186439EE003607CE /* vnUITextField.cpp */; };
+		B0B3F1AF185AD4B000F2AC36 /* vnRender2DDeviceImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0B3F1AD185AD4B000F2AC36 /* vnRender2DDeviceImpl.mm */; };
+		B0B3F1B0185AD4B000F2AC36 /* vnRender2DDeviceImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B3F1AE185AD4B000F2AC36 /* vnRender2DDeviceImpl.h */; };
+		B0B3F1B3185AD76800F2AC36 /* vnRender2DView.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B3F1B1185AD76800F2AC36 /* vnRender2DView.h */; };
+		B0B3F1B4185AD76800F2AC36 /* vnRender2DView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0B3F1B2185AD76800F2AC36 /* vnRender2DView.mm */; };
+		B0B3F1B7185AE4AE00F2AC36 /* vnTexture2DImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0B3F1B5185AE4AE00F2AC36 /* vnTexture2DImpl.cpp */; };
+		B0B3F1B8185AE4AE00F2AC36 /* vnTexture2DImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B3F1B6185AE4AE00F2AC36 /* vnTexture2DImpl.h */; };
+		B0B3F1BA185AE83600F2AC36 /* vnPngLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0B3F1B9185AE83600F2AC36 /* vnPngLoader.cpp */; };
+		B0BFFF0E184F150C000DEC1A /* vnGfxApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0BFFF0D184F150C000DEC1A /* vnGfxApplication.cpp */; };
+		B0BFFF12184F1726000DEC1A /* vnGfxApplicationImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0BFFF10184F1726000DEC1A /* vnGfxApplicationImpl.mm */; };
+		B0BFFF13184F1726000DEC1A /* vnGfxApplicationImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = B0BFFF11184F1726000DEC1A /* vnGfxApplicationImpl.h */; };
+		B0CCDD5E186B319F007FA4FD /* vnUILocatorBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CCDD5D186B319F007FA4FD /* vnUILocatorBox.cpp */; };
+		B0D0B0A51855B8EB002379D9 /* vnTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D0B0A41855B8EB002379D9 /* vnTexture.cpp */; };
+		B0D0B0A71855BE03002379D9 /* vnTexture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D0B0A61855BE03002379D9 /* vnTexture2D.cpp */; };
+		B0D2F9CF18601F3300A38034 /* vnRenderText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D2F9CE18601F3300A38034 /* vnRenderText.cpp */; };
+		B0DD76991868215E00B66524 /* vnUIList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0DD76981868215E00B66524 /* vnUIList.cpp */; };
+		B0DD76A218683C7600B66524 /* vnUIListItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0DD76A118683C7600B66524 /* vnUIListItem.cpp */; };
+		B0E442351869D3FB006B2D8C /* vnUILocatorBorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E442341869D3FB006B2D8C /* vnUILocatorBorder.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B006141F1856E50700808716 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B00613F01856E3AA00808716 /* png.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B00614191856E47000808716;
+			remoteInfo = png;
+		};
+		B00614221856E50700808716 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B00613F01856E3AA00808716 /* png.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B006141A1856E47000808716;
+			remoteInfo = png;
+		};
+		B0891689185EAA3B0093ABF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0891685185EAA3B0093ABF2 /* freetype.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B0B3F4A1185B0ADD00F2AC36;
+			remoteInfo = freetype;
+		};
+		B089168B185EDD160093ABF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0891685185EAA3B0093ABF2 /* freetype.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B0B3F4A0185B0ADD00F2AC36;
+			remoteInfo = freetype;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18077E161828D06300400C05 /* vnGfxDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnGfxDef.h; path = ../../inc/vnGfxDef.h; sourceTree = "<group>"; };
+		18077E2B1828E00100400C05 /* vnRenderSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnRenderSystem.h; path = ../../inc/vnRenderSystem.h; sourceTree = "<group>"; };
+		18077E2C1828EAA300400C05 /* vnVertexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnVertexBuffer.h; path = ../../inc/vnVertexBuffer.h; sourceTree = "<group>"; };
+		18077E2D1828EBC700400C05 /* vnIndexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnIndexBuffer.h; path = ../../inc/vnIndexBuffer.h; sourceTree = "<group>"; };
+		18077E2E1828ECA300400C05 /* vnGpuProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnGpuProgram.h; path = ../../inc/vnGpuProgram.h; sourceTree = "<group>"; };
+		B00613D31856C12200808716 /* vnPicture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnPicture.h; path = ../../inc/vnPicture.h; sourceTree = "<group>"; };
+		B00613D41856C13D00808716 /* vnPicture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnPicture.cpp; path = ../../src/vnPicture.cpp; sourceTree = "<group>"; };
+		B00613DC1856E0D100808716 /* vnTextureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnTextureManager.h; path = ../../inc/vnTextureManager.h; sourceTree = "<group>"; };
+		B00613DD1856E0EF00808716 /* vnTextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnTextureManager.cpp; path = ../../src/vnTextureManager.cpp; sourceTree = "<group>"; };
+		B00613F01856E3AA00808716 /* png.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = png.xcodeproj; path = ../../dep/libpng/prj/osx/png.xcodeproj; sourceTree = "<group>"; };
+		B006142B18570C0C00808716 /* vnPictureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnPictureManager.h; path = ../../inc/vnPictureManager.h; sourceTree = "<group>"; };
+		B006142C18570C6400808716 /* vnPictureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnPictureManager.cpp; path = ../../src/vnPictureManager.cpp; sourceTree = "<group>"; };
+		B02D3D2D18604FB300E02B0B /* vnUIFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIFactory.h; path = ../../inc/vnUIFactory.h; sourceTree = "<group>"; };
+		B02D3D2E18604FCC00E02B0B /* vnUIFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIFactory.cpp; path = ../../src/vnUIFactory.cpp; sourceTree = "<group>"; };
+		B02D3D301860515100E02B0B /* vnUIElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIElement.h; path = ../../inc/vnUIElement.h; sourceTree = "<group>"; };
+		B02D3D311860516500E02B0B /* vnUIElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIElement.cpp; path = ../../src/vnUIElement.cpp; sourceTree = "<group>"; };
+		B02D3D391860546000E02B0B /* vnUILocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUILocator.h; path = ../../inc/vnUILocator.h; sourceTree = "<group>"; };
+		B02D3D3A186054B000E02B0B /* vnUILocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUILocator.cpp; path = ../../src/vnUILocator.cpp; sourceTree = "<group>"; };
+		B02D3D3C18605D0A00E02B0B /* vnUIRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIRenderer.h; path = ../../inc/vnUIRenderer.h; sourceTree = "<group>"; };
+		B02D3D3D18605D1C00E02B0B /* vnUIRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIRenderer.cpp; path = ../../src/vnUIRenderer.cpp; sourceTree = "<group>"; };
+		B02D963A18618C9A00A66B65 /* vnUIRoot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIRoot.h; path = ../../inc/vnUIRoot.h; sourceTree = "<group>"; };
+		B02D963B18618CBB00A66B65 /* vnUIRoot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIRoot.cpp; path = ../../src/vnUIRoot.cpp; sourceTree = "<group>"; };
+		B02D963D1861A40C00A66B65 /* vnUILocatorRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUILocatorRect.h; path = ../../inc/vnUILocatorRect.h; sourceTree = "<group>"; };
+		B02D963E1861A47400A66B65 /* vnUILocatorRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUILocatorRect.cpp; path = ../../src/vnUILocatorRect.cpp; sourceTree = "<group>"; };
+		B02D965B1862C6E200A66B65 /* vnUIFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIFrame.h; path = ../../inc/vnUIFrame.h; sourceTree = "<group>"; };
+		B02D965C1862C70100A66B65 /* vnUIFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIFrame.cpp; path = ../../src/vnUIFrame.cpp; sourceTree = "<group>"; };
+		B02D965E1862CDF300A66B65 /* vnUIPicture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIPicture.h; path = ../../inc/vnUIPicture.h; sourceTree = "<group>"; };
+		B02D965F1862CE0900A66B65 /* vnUIPicture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIPicture.cpp; path = ../../src/vnUIPicture.cpp; sourceTree = "<group>"; };
+		B02D96651862DDA500A66B65 /* vnUIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIButton.h; path = ../../inc/vnUIButton.h; sourceTree = "<group>"; };
+		B02D96661862DDB700A66B65 /* vnUIButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIButton.cpp; path = ../../src/vnUIButton.cpp; sourceTree = "<group>"; };
+		B03699511851D36700AE3682 /* vnColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnColor.cpp; path = ../../src/vnColor.cpp; sourceTree = "<group>"; };
+		B06BB9A71862F11C00D813F4 /* vnUIRenderText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIRenderText.h; path = ../../inc/vnUIRenderText.h; sourceTree = "<group>"; };
+		B06BB9A81862F13000D813F4 /* vnUIRenderText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIRenderText.cpp; path = ../../src/vnUIRenderText.cpp; sourceTree = "<group>"; };
+		B06BB9AA1862FC3200D813F4 /* vnUILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUILabel.h; path = ../../inc/vnUILabel.h; sourceTree = "<group>"; };
+		B06BB9AB1862FC6800D813F4 /* vnUILabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUILabel.cpp; path = ../../src/vnUILabel.cpp; sourceTree = "<group>"; };
+		B0784146186929EA0062F90A /* vnUILogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUILogic.h; path = ../../inc/vnUILogic.h; sourceTree = "<group>"; };
+		B0784147186929FC0062F90A /* vnUILogic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUILogic.cpp; path = ../../src/vnUILogic.cpp; sourceTree = "<group>"; };
+		B07841CA186ABE380062F90A /* vnUIWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIWindow.h; path = ../../inc/vnUIWindow.h; sourceTree = "<group>"; };
+		B07841CB186ABE840062F90A /* vnUIWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIWindow.cpp; path = ../../src/vnUIWindow.cpp; sourceTree = "<group>"; };
+		B0891680185E9FB80093ABF2 /* vnFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnFont.h; path = ../../inc/vnFont.h; sourceTree = "<group>"; };
+		B0891681185EAA260093ABF2 /* vnFontFreeType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnFontFreeType.cpp; path = ../../src/vnFontFreeType.cpp; sourceTree = "<group>"; };
+		B0891682185EAA260093ABF2 /* vnFontFreeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vnFontFreeType.h; path = ../../src/vnFontFreeType.h; sourceTree = "<group>"; };
+		B0891685185EAA3B0093ABF2 /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../dep/freetype/builds/osx/freetype.xcodeproj; sourceTree = "<group>"; };
+		B0891691185F0FBC0093ABF2 /* vnFontManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnFontManager.h; path = ../../inc/vnFontManager.h; sourceTree = "<group>"; };
+		B0891692185F0FCD0093ABF2 /* vnFontManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnFontManager.cpp; path = ../../src/vnFontManager.cpp; sourceTree = "<group>"; };
+		B08F9D2D18670F2D00CB4671 /* vnUIRenderPicture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIRenderPicture.h; path = ../../inc/vnUIRenderPicture.h; sourceTree = "<group>"; };
+		B08F9D2E18670F4500CB4671 /* vnUIRenderPicture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIRenderPicture.cpp; path = ../../src/vnUIRenderPicture.cpp; sourceTree = "<group>"; };
+		B08F9D3C186752E200CB4671 /* vnUIScrollBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIScrollBar.h; path = ../../inc/vnUIScrollBar.h; sourceTree = "<group>"; };
+		B08F9D3D1867530500CB4671 /* vnUIScrollBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIScrollBar.cpp; path = ../../src/vnUIScrollBar.cpp; sourceTree = "<group>"; };
+		B08FF08B1851BF7200BBA971 /* vnColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnColor.h; path = ../../inc/vnColor.h; sourceTree = "<group>"; usesTabs = 1; };
+		B0AB79871858145E009CEECE /* vnRender2DInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnRender2DInterface.h; path = ../../inc/vnRender2DInterface.h; sourceTree = "<group>"; };
+		B0AB798818581795009CEECE /* vnRender2DInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnRender2DInterface.cpp; path = ../../src/vnRender2DInterface.cpp; sourceTree = "<group>"; };
+		B0AB798A18582DF3009CEECE /* vnRender2DDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnRender2DDevice.h; path = ../../inc/vnRender2DDevice.h; sourceTree = "<group>"; };
+		B0B0F80B1863E499003607CE /* vnUIButtonDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIButtonDefault.h; path = ../../inc/vnUIButtonDefault.h; sourceTree = "<group>"; };
+		B0B0F80C1863E4CB003607CE /* vnUIButtonDefault.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIButtonDefault.cpp; path = ../../src/vnUIButtonDefault.cpp; sourceTree = "<group>"; };
+		B0B0F823186439B1003607CE /* vnUITextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUITextField.h; path = ../../inc/vnUITextField.h; sourceTree = "<group>"; };
+		B0B0F824186439EE003607CE /* vnUITextField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUITextField.cpp; path = ../../src/vnUITextField.cpp; sourceTree = "<group>"; };
+		B0B3F1AC185ACEC200F2AC36 /* vnGfxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnGfxView.h; path = ../../src/osx/vnGfxView.h; sourceTree = "<group>"; };
+		B0B3F1AD185AD4B000F2AC36 /* vnRender2DDeviceImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = vnRender2DDeviceImpl.mm; path = ../../src/osx/vnRender2DDeviceImpl.mm; sourceTree = "<group>"; };
+		B0B3F1AE185AD4B000F2AC36 /* vnRender2DDeviceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vnRender2DDeviceImpl.h; path = ../../src/osx/vnRender2DDeviceImpl.h; sourceTree = "<group>"; };
+		B0B3F1B1185AD76800F2AC36 /* vnRender2DView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vnRender2DView.h; path = ../../src/osx/vnRender2DView.h; sourceTree = "<group>"; };
+		B0B3F1B2185AD76800F2AC36 /* vnRender2DView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = vnRender2DView.mm; path = ../../src/osx/vnRender2DView.mm; sourceTree = "<group>"; };
+		B0B3F1B5185AE4AE00F2AC36 /* vnTexture2DImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnTexture2DImpl.cpp; path = ../../src/osx/vnTexture2DImpl.cpp; sourceTree = "<group>"; };
+		B0B3F1B6185AE4AE00F2AC36 /* vnTexture2DImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vnTexture2DImpl.h; path = ../../src/osx/vnTexture2DImpl.h; sourceTree = "<group>"; };
+		B0B3F1B9185AE83600F2AC36 /* vnPngLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnPngLoader.cpp; path = ../../src/osx/vnPngLoader.cpp; sourceTree = "<group>"; };
+		B0BFFEFF184F05C2000DEC1A /* vngfx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = vngfx.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BFFF0C184F1152000DEC1A /* vnGfxApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnGfxApplication.h; path = ../../inc/vnGfxApplication.h; sourceTree = "<group>"; };
+		B0BFFF0D184F150C000DEC1A /* vnGfxApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnGfxApplication.cpp; path = ../../src/vnGfxApplication.cpp; sourceTree = "<group>"; };
+		B0BFFF10184F1726000DEC1A /* vnGfxApplicationImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = vnGfxApplicationImpl.mm; path = ../../src/osx/vnGfxApplicationImpl.mm; sourceTree = "<group>"; };
+		B0BFFF11184F1726000DEC1A /* vnGfxApplicationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vnGfxApplicationImpl.h; path = ../../src/osx/vnGfxApplicationImpl.h; sourceTree = "<group>"; };
+		B0CCDD5C186B3189007FA4FD /* vnUILocatorBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUILocatorBox.h; path = ../../inc/vnUILocatorBox.h; sourceTree = "<group>"; };
+		B0CCDD5D186B319F007FA4FD /* vnUILocatorBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUILocatorBox.cpp; path = ../../src/vnUILocatorBox.cpp; sourceTree = "<group>"; };
+		B0D0B0A21855A722002379D9 /* vnTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnTexture.h; path = ../../inc/vnTexture.h; sourceTree = "<group>"; };
+		B0D0B0A31855A865002379D9 /* vnTexture2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnTexture2D.h; path = ../../inc/vnTexture2D.h; sourceTree = "<group>"; };
+		B0D0B0A41855B8EB002379D9 /* vnTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnTexture.cpp; path = ../../src/vnTexture.cpp; sourceTree = "<group>"; };
+		B0D0B0A61855BE03002379D9 /* vnTexture2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnTexture2D.cpp; path = ../../src/vnTexture2D.cpp; sourceTree = "<group>"; };
+		B0D2F9CD18601F2100A38034 /* vnRenderText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnRenderText.h; path = ../../inc/vnRenderText.h; sourceTree = "<group>"; };
+		B0D2F9CE18601F3300A38034 /* vnRenderText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnRenderText.cpp; path = ../../src/vnRenderText.cpp; sourceTree = "<group>"; };
+		B0DD76971868212E00B66524 /* vnUIList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIList.h; path = ../../inc/vnUIList.h; sourceTree = "<group>"; };
+		B0DD76981868215E00B66524 /* vnUIList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIList.cpp; path = ../../src/vnUIList.cpp; sourceTree = "<group>"; };
+		B0DD76A01868294F00B66524 /* vnUIListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUIListItem.h; path = ../../inc/vnUIListItem.h; sourceTree = "<group>"; };
+		B0DD76A118683C7600B66524 /* vnUIListItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUIListItem.cpp; path = ../../src/vnUIListItem.cpp; sourceTree = "<group>"; };
+		B0E442331869D3D3006B2D8C /* vnUILocatorBorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vnUILocatorBorder.h; path = ../../inc/vnUILocatorBorder.h; sourceTree = "<group>"; };
+		B0E442341869D3FB006B2D8C /* vnUILocatorBorder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vnUILocatorBorder.cpp; path = ../../src/vnUILocatorBorder.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0BFFEFC184F05C2000DEC1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B089168D185EDD1A0093ABF2 /* libfreetype.a in Frameworks */,
+				B00614261856E53A00808716 /* libpng.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18A8518C181E0E5400F87E2C = {
+			isa = PBXGroup;
+			children = (
+				B00613E01856E2B700808716 /* Libraries */,
+				18A8519C181E166A00F87E2C /* Include */,
+				18A8519D181E167400F87E2C /* Source */,
+				18A85196181E0E5500F87E2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18A85196181E0E5500F87E2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFFEFF184F05C2000DEC1A /* vngfx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18A8519C181E166A00F87E2C /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				B08FF08B1851BF7200BBA971 /* vnColor.h */,
+				B0891680185E9FB80093ABF2 /* vnFont.h */,
+				B0891691185F0FBC0093ABF2 /* vnFontManager.h */,
+				B0BFFF0C184F1152000DEC1A /* vnGfxApplication.h */,
+				18077E161828D06300400C05 /* vnGfxDef.h */,
+				18077E2E1828ECA300400C05 /* vnGpuProgram.h */,
+				18077E2D1828EBC700400C05 /* vnIndexBuffer.h */,
+				B00613D31856C12200808716 /* vnPicture.h */,
+				B006142B18570C0C00808716 /* vnPictureManager.h */,
+				B0AB798A18582DF3009CEECE /* vnRender2DDevice.h */,
+				B0AB79871858145E009CEECE /* vnRender2DInterface.h */,
+				18077E2B1828E00100400C05 /* vnRenderSystem.h */,
+				B0D2F9CD18601F2100A38034 /* vnRenderText.h */,
+				B0D0B0A21855A722002379D9 /* vnTexture.h */,
+				B0D0B0A31855A865002379D9 /* vnTexture2D.h */,
+				B00613DC1856E0D100808716 /* vnTextureManager.h */,
+				B02D96651862DDA500A66B65 /* vnUIButton.h */,
+				B0B0F80B1863E499003607CE /* vnUIButtonDefault.h */,
+				B02D3D301860515100E02B0B /* vnUIElement.h */,
+				B02D3D2D18604FB300E02B0B /* vnUIFactory.h */,
+				B02D965B1862C6E200A66B65 /* vnUIFrame.h */,
+				B06BB9AA1862FC3200D813F4 /* vnUILabel.h */,
+				B0DD76971868212E00B66524 /* vnUIList.h */,
+				B0DD76A01868294F00B66524 /* vnUIListItem.h */,
+				B02D3D391860546000E02B0B /* vnUILocator.h */,
+				B0E442331869D3D3006B2D8C /* vnUILocatorBorder.h */,
+				B0CCDD5C186B3189007FA4FD /* vnUILocatorBox.h */,
+				B02D963D1861A40C00A66B65 /* vnUILocatorRect.h */,
+				B0784146186929EA0062F90A /* vnUILogic.h */,
+				B02D965E1862CDF300A66B65 /* vnUIPicture.h */,
+				B02D3D3C18605D0A00E02B0B /* vnUIRenderer.h */,
+				B08F9D2D18670F2D00CB4671 /* vnUIRenderPicture.h */,
+				B06BB9A71862F11C00D813F4 /* vnUIRenderText.h */,
+				B02D963A18618C9A00A66B65 /* vnUIRoot.h */,
+				B08F9D3C186752E200CB4671 /* vnUIScrollBar.h */,
+				B0B0F823186439B1003607CE /* vnUITextField.h */,
+				B07841CA186ABE380062F90A /* vnUIWindow.h */,
+				18077E2C1828EAA300400C05 /* vnVertexBuffer.h */,
+			);
+			name = Include;
+			sourceTree = "<group>";
+		};
+		18A8519D181E167400F87E2C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFFF0F184F170A000DEC1A /* osx */,
+				B03699511851D36700AE3682 /* vnColor.cpp */,
+				B0891681185EAA260093ABF2 /* vnFontFreeType.cpp */,
+				B0891682185EAA260093ABF2 /* vnFontFreeType.h */,
+				B0891692185F0FCD0093ABF2 /* vnFontManager.cpp */,
+				B0BFFF0D184F150C000DEC1A /* vnGfxApplication.cpp */,
+				B00613D41856C13D00808716 /* vnPicture.cpp */,
+				B006142C18570C6400808716 /* vnPictureManager.cpp */,
+				B0AB798818581795009CEECE /* vnRender2DInterface.cpp */,
+				B0D2F9CE18601F3300A38034 /* vnRenderText.cpp */,
+				B0D0B0A41855B8EB002379D9 /* vnTexture.cpp */,
+				B0D0B0A61855BE03002379D9 /* vnTexture2D.cpp */,
+				B00613DD1856E0EF00808716 /* vnTextureManager.cpp */,
+				B02D96661862DDB700A66B65 /* vnUIButton.cpp */,
+				B0B0F80C1863E4CB003607CE /* vnUIButtonDefault.cpp */,
+				B02D3D311860516500E02B0B /* vnUIElement.cpp */,
+				B02D3D2E18604FCC00E02B0B /* vnUIFactory.cpp */,
+				B02D965C1862C70100A66B65 /* vnUIFrame.cpp */,
+				B06BB9AB1862FC6800D813F4 /* vnUILabel.cpp */,
+				B0DD76981868215E00B66524 /* vnUIList.cpp */,
+				B0DD76A118683C7600B66524 /* vnUIListItem.cpp */,
+				B02D3D3A186054B000E02B0B /* vnUILocator.cpp */,
+				B0E442341869D3FB006B2D8C /* vnUILocatorBorder.cpp */,
+				B0CCDD5D186B319F007FA4FD /* vnUILocatorBox.cpp */,
+				B02D963E1861A47400A66B65 /* vnUILocatorRect.cpp */,
+				B0784147186929FC0062F90A /* vnUILogic.cpp */,
+				B02D965F1862CE0900A66B65 /* vnUIPicture.cpp */,
+				B02D3D3D18605D1C00E02B0B /* vnUIRenderer.cpp */,
+				B08F9D2E18670F4500CB4671 /* vnUIRenderPicture.cpp */,
+				B06BB9A81862F13000D813F4 /* vnUIRenderText.cpp */,
+				B02D963B18618CBB00A66B65 /* vnUIRoot.cpp */,
+				B08F9D3D1867530500CB4671 /* vnUIScrollBar.cpp */,
+				B0B0F824186439EE003607CE /* vnUITextField.cpp */,
+				B07841CB186ABE840062F90A /* vnUIWindow.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		B00613E01856E2B700808716 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B0891685185EAA3B0093ABF2 /* freetype.xcodeproj */,
+				B00613F01856E3AA00808716 /* png.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		B00613F11856E3AA00808716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B00614231856E50700808716 /* libpng.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0891686185EAA3B0093ABF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B089168A185EAA3B0093ABF2 /* libfreetype.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0BFFF0F184F170A000DEC1A /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFFF11184F1726000DEC1A /* vnGfxApplicationImpl.h */,
+				B0BFFF10184F1726000DEC1A /* vnGfxApplicationImpl.mm */,
+				B0B3F1AC185ACEC200F2AC36 /* vnGfxView.h */,
+				B0B3F1AD185AD4B000F2AC36 /* vnRender2DDeviceImpl.mm */,
+				B0B3F1AE185AD4B000F2AC36 /* vnRender2DDeviceImpl.h */,
+				B0B3F1B1185AD76800F2AC36 /* vnRender2DView.h */,
+				B0B3F1B2185AD76800F2AC36 /* vnRender2DView.mm */,
+				B0B3F1B5185AE4AE00F2AC36 /* vnTexture2DImpl.cpp */,
+				B0B3F1B6185AE4AE00F2AC36 /* vnTexture2DImpl.h */,
+				B0B3F1B9185AE83600F2AC36 /* vnPngLoader.cpp */,
+			);
+			name = osx;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B0BFFEFD184F05C2000DEC1A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B3F1B3185AD76800F2AC36 /* vnRender2DView.h in Headers */,
+				B0891684185EAA260093ABF2 /* vnFontFreeType.h in Headers */,
+				B0B3F1B0185AD4B000F2AC36 /* vnRender2DDeviceImpl.h in Headers */,
+				B0B3F1B8185AE4AE00F2AC36 /* vnTexture2DImpl.h in Headers */,
+				B0BFFF13184F1726000DEC1A /* vnGfxApplicationImpl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B0BFFEFE184F05C2000DEC1A /* vngfx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0BFFF00184F05C2000DEC1A /* Build configuration list for PBXNativeTarget "vngfx" */;
+			buildPhases = (
+				B0BFFEFB184F05C2000DEC1A /* Sources */,
+				B0BFFEFC184F05C2000DEC1A /* Frameworks */,
+				B0BFFEFD184F05C2000DEC1A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B089168C185EDD160093ABF2 /* PBXTargetDependency */,
+				B00614201856E50700808716 /* PBXTargetDependency */,
+			);
+			name = vngfx;
+			productName = vngfx;
+			productReference = B0BFFEFF184F05C2000DEC1A /* vngfx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18A8518D181E0E5400F87E2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = viichi.com;
+			};
+			buildConfigurationList = 18A85190181E0E5400F87E2C /* Build configuration list for PBXProject "vngfx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 18A8518C181E0E5400F87E2C;
+			productRefGroup = 18A85196181E0E5500F87E2C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B0891686185EAA3B0093ABF2 /* Products */;
+					ProjectRef = B0891685185EAA3B0093ABF2 /* freetype.xcodeproj */;
+				},
+				{
+					ProductGroup = B00613F11856E3AA00808716 /* Products */;
+					ProjectRef = B00613F01856E3AA00808716 /* png.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B0BFFEFE184F05C2000DEC1A /* vngfx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B00614231856E50700808716 /* libpng.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpng.a;
+			remoteRef = B00614221856E50700808716 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B089168A185EAA3B0093ABF2 /* libfreetype.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfreetype.a;
+			remoteRef = B0891689185EAA3B0093ABF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0BFFEFB184F05C2000DEC1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0DD76A218683C7600B66524 /* vnUIListItem.cpp in Sources */,
+				B08F9D2F18670F4500CB4671 /* vnUIRenderPicture.cpp in Sources */,
+				B0CCDD5E186B319F007FA4FD /* vnUILocatorBox.cpp in Sources */,
+				B0B3F1BA185AE83600F2AC36 /* vnPngLoader.cpp in Sources */,
+				B02D96671862DDB700A66B65 /* vnUIButton.cpp in Sources */,
+				B0B3F1AF185AD4B000F2AC36 /* vnRender2DDeviceImpl.mm in Sources */,
+				B0B3F1B7185AE4AE00F2AC36 /* vnTexture2DImpl.cpp in Sources */,
+				B02D965D1862C70100A66B65 /* vnUIFrame.cpp in Sources */,
+				B02D96601862CE0900A66B65 /* vnUIPicture.cpp in Sources */,
+				B02D3D3E18605D1C00E02B0B /* vnUIRenderer.cpp in Sources */,
+				B07841CC186ABE840062F90A /* vnUIWindow.cpp in Sources */,
+				B0B0F825186439EE003607CE /* vnUITextField.cpp in Sources */,
+				B0AB798918581795009CEECE /* vnRender2DInterface.cpp in Sources */,
+				B0BFFF12184F1726000DEC1A /* vnGfxApplicationImpl.mm in Sources */,
+				B0BFFF0E184F150C000DEC1A /* vnGfxApplication.cpp in Sources */,
+				B02D963F1861A47400A66B65 /* vnUILocatorRect.cpp in Sources */,
+				B08F9D3E1867530500CB4671 /* vnUIScrollBar.cpp in Sources */,
+				B0D0B0A51855B8EB002379D9 /* vnTexture.cpp in Sources */,
+				B0784148186929FC0062F90A /* vnUILogic.cpp in Sources */,
+				B0E442351869D3FB006B2D8C /* vnUILocatorBorder.cpp in Sources */,
+				B06BB9AC1862FC6800D813F4 /* vnUILabel.cpp in Sources */,
+				B02D3D2F18604FCC00E02B0B /* vnUIFactory.cpp in Sources */,
+				B06BB9A91862F13000D813F4 /* vnUIRenderText.cpp in Sources */,
+				B0891693185F0FCD0093ABF2 /* vnFontManager.cpp in Sources */,
+				B02D3D3B186054B000E02B0B /* vnUILocator.cpp in Sources */,
+				B0B3F1B4185AD76800F2AC36 /* vnRender2DView.mm in Sources */,
+				B02D963C18618CBB00A66B65 /* vnUIRoot.cpp in Sources */,
+				B00613D51856C13D00808716 /* vnPicture.cpp in Sources */,
+				B00613DE1856E0EF00808716 /* vnTextureManager.cpp in Sources */,
+				B02D3D321860516500E02B0B /* vnUIElement.cpp in Sources */,
+				B03699521851D36700AE3682 /* vnColor.cpp in Sources */,
+				B0891683185EAA260093ABF2 /* vnFontFreeType.cpp in Sources */,
+				B0DD76991868215E00B66524 /* vnUIList.cpp in Sources */,
+				B006142D18570C6400808716 /* vnPictureManager.cpp in Sources */,
+				B0B0F80D1863E4CB003607CE /* vnUIButtonDefault.cpp in Sources */,
+				B0D2F9CF18601F3300A38034 /* vnRenderText.cpp in Sources */,
+				B0D0B0A71855BE03002379D9 /* vnTexture2D.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B00614201856E50700808716 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = png;
+			targetProxy = B006141F1856E50700808716 /* PBXContainerItemProxy */;
+		};
+		B089168C185EDD160093ABF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = freetype;
+			targetProxy = B089168B185EDD160093ABF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18A85197181E0E5500F87E2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../inc ../../dep/vnbase ../../dep/vnlex ../../dep/vnmath";
+			};
+			name = Debug;
+		};
+		18A85198181E0E5500F87E2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../inc ../../dep/vnbase ../../dep/vnlex ../../dep/vnmath";
+			};
+			name = Release;
+		};
+		B0BFFF01184F05C2000DEC1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../dep/freetype/include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../../inc ../../dep/vnbase ../../dep/vnlex ../../dep/vnmath ../../dep/libpng/inc";
+			};
+			name = Debug;
+		};
+		B0BFFF02184F05C2000DEC1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../dep/freetype/include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../../inc ../../dep/vnbase ../../dep/vnlex ../../dep/vnmath ../../dep/libpng/inc";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18A85190181E0E5400F87E2C /* Build configuration list for PBXProject "vngfx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A85197181E0E5500F87E2C /* Debug */,
+				18A85198181E0E5500F87E2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0BFFF00184F05C2000DEC1A /* Build configuration list for PBXNativeTarget "vngfx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BFFF01184F05C2000DEC1A /* Debug */,
+				B0BFFF02184F05C2000DEC1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18A8518D181E0E5400F87E2C /* Project object */;
+}

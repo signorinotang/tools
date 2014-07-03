@@ -1,0 +1,58 @@
+@<root
+	@<anim {
+		name = "01"
+		pointX = 100
+		pointY = 30
+		layer = 0
+		fps = 20
+	}
+			@<frame {
+				name = "010000.png"
+				image = "1:/AMEditor/test.imgs"
+				pointX = 1
+				pointY = 0
+				dummies = [
+							"01" 0 0
+				          ]
+			}
+			@>frame
+			@<frame {
+				name = "010001.png"
+				image = "1:/AMEditor/test.imgs"
+				pointX = 0
+				pointY = 0
+				dummies = [
+				          ]
+			}
+			@>frame
+	@>anim
+
+	@<anim {
+		name = "02"
+		pointX = 0
+		pointY = 0
+		layer = 0
+		fps = 20
+	}
+			@<frame {
+				name = "010001.png"
+				image = "1:/AMEditor/test.imgs"
+				pointX = 0
+				pointY = 0
+				dummies = [
+							"02" 0 0
+				          ]
+			}
+			@>frame
+			@<frame {
+				name = "010002.png"
+				image = "1:/AMEditor/test.imgs"
+				pointX = 0
+				pointY = 0
+				dummies = [
+				          ]
+			}
+			@>frame
+	@>anim
+
+@>root

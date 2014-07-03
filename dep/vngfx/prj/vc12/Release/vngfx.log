@@ -1,0 +1,75 @@
+﻿生成启动时间为 2014/6/23 15:49:14。
+     1>项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vngfx\prj\vc12\vngfx.vcxproj”在节点 3 上(Build 个目标)。
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\TDMapEditor\Release\vngfx.lib" /NOLOGO /LTCG Release\png.obj
+         Release\pngerror.obj
+         Release\pngget.obj
+         Release\pngmem.obj
+         Release\pngpread.obj
+         Release\pngread.obj
+         Release\pngrio.obj
+         Release\pngrtran.obj
+         Release\pngrutil.obj
+         Release\pngset.obj
+         Release\pngtrans.obj
+         Release\pngwio.obj
+         Release\pngwrite.obj
+         Release\pngwtran.obj
+         Release\pngwutil.obj
+         Release\adler32.obj
+         Release\compress.obj
+         Release\crc32.obj
+         Release\deflate.obj
+         Release\gzclose.obj
+         Release\gzlib.obj
+         Release\gzread.obj
+         Release\gzwrite.obj
+         Release\infback.obj
+         Release\inffast.obj
+         Release\inflate.obj
+         Release\inftrees.obj
+         Release\trees.obj
+         Release\uncompr.obj
+         Release\zutil.obj
+         Release\vnColor.obj
+         Release\vnFontFreeType.obj
+         Release\vnFontManager.obj
+         Release\vnGfxApplication.obj
+         Release\vnPicture.obj
+         Release\vnPictureManager.obj
+         Release\vnRender2DInterface.obj
+         Release\vnRenderText.obj
+         Release\vnTexture.obj
+         Release\vnTexture2D.obj
+         Release\vnTextureManager.obj
+         Release\vnUIButton.obj
+         Release\vnUIButtonDefault.obj
+         Release\vnUIElement.obj
+         Release\vnUIFactory.obj
+         Release\vnUIFrame.obj
+         Release\vnUILabel.obj
+         Release\vnUIList.obj
+         Release\vnUIListItem.obj
+         Release\vnUILocator.obj
+         Release\vnUILocatorBorder.obj
+         Release\vnUILocatorBox.obj
+         Release\vnUILocatorRect.obj
+         Release\vnUILogic.obj
+         Release\vnUIPicture.obj
+         Release\vnUIRenderer.obj
+         Release\vnUIRenderPicture.obj
+         Release\vnUIRenderText.obj
+         Release\vnUIRoot.obj
+         Release\vnUIScrollBar.obj
+         Release\vnUITextField.obj
+         Release\vnUIWindow.obj
+         Release\vnGfxApplicationImpl.obj
+         Release\vnPNGLoader.obj
+         Release\vnRender2DDeviceImpl.obj
+         Release\vnTexture2DImp.obj
+         vngfx.vcxproj -> C:\Users\tanghailong\projects\worksnew\tools\prj\vc12\TDMapEditor\Release\vngfx.lib
+     1>已完成生成项目“C:\Users\tanghailong\projects\worksnew\tools\dep\vngfx\prj\vc12\vngfx.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:09.02
